@@ -1,8 +1,4 @@
-- 👋 Hi, I’m @tzolkowski96
-- 👀 I’m interested in data analytics and management
-- 🌱 I’m currently learning Python and SQL
-- 💞️ I’m looking to collaborate on data mining and data visualization and communication for decision-making
-- 📫 How to reach me via LinkedIn... :-) 
+Hi, I am Tobin! I have an international background and am pursuing a Master of Science in Information Science with a concentration in Data Analytics and Management at the University of Wisconsin–Madison. During my undergraduate and graduate studies, I participated in technical internships. Following graduation, I want to become a data analyst.
 
 <!---
 tzolkowski96/tzolkowski96 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
