@@ -1,4 +1,4 @@
-Hi, I am Tobin! I have an international background and am pursuing a Master of Science in Information Science with a concentration in Data Analytics and Management at the University of Wisconsin–Madison. During my undergraduate and graduate studies, I participated in technical internships. Following graduation, I want to become a data analyst.
+Multilingual graduate student in Data Analytics and Management/Governance with an international background. Looking to interpret, analyze, and manage data to aid in the creation of practical business solutions. 
 
 <!---
 tzolkowski96/tzolkowski96 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
