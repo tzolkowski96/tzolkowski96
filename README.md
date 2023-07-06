@@ -1,4 +1,4 @@
-Working as a Data Analyst in a prominent medical and genetics department at a leading university's school of medicine. Focused on assessing current data systems, addressing spontaneous reporting needs, and creating fresh report parameters. Key player in maintaining the precision, availability, and correctness of reports and dashboards. Skilled in evaluating and authorizing user data access requests. Dedicated to ongoing education, consistently studying new technologies and data analysis methods to remain updated with sector progress.
+Engaged in a Data Analyst role in a notable healthcare-related field. Key responsibilities include data system evaluation, spontaneous report generation, and creation of report guidelines. Involved in maintaining report accuracy and granting data access. Consistently updates professional skills by studying emerging technologies in the data analysis field.
 
 <!---
 tzolkowski96/tzolkowski96 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
