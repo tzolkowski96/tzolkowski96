@@ -1,61 +1,48 @@
-# Length Converter
+# Length Unit Converter
 
-The Length Converter is a Python-based utility designed to facilitate the conversion of lengths between various units. It leverages fuzzy matching to accommodate minor typos or variations in unit names, enhancing user experience by providing flexibility in input. This document outlines the features, installation guide, usage instructions, and how to contribute to the project.
+This is a length unit converter application built using Python and Shiny for Python. The application allows users to convert values between various length units such as inches, feet, yards, meters, centimeters, millimeters, kilometers, miles, and nautical miles.
 
 ## Features
 
-- **Support for Multiple Units:** Converts between inches, feet, yards, meters, centimeters, and millimeters.
-- **Fuzzy Matching:** Utilizes fuzzy matching to identify and correct minor typos in unit names, reducing input errors.
-- **Caching Mechanism:** Improves performance by caching the results of fuzzy matching, minimizing redundant computations.
-- **User-friendly Interface:** Provides a simple command-line interface for easy interaction.
+- Converts lengths between different units.
+- Ensures non-negative input values.
+- Provides a user-friendly interface with dropdowns for unit selection and a numeric input for the value.
+- Displays the conversion result in a text output.
 
 ## Installation
 
-To use the Length Converter, ensure you have Python 3.x installed on your system. Follow these steps:
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/tzolkowski96/length-converter.git
+    cd length-unit-converter
+    ```
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/tzolkowski96/length-converter.git
-   ```
-2. **Navigate to the Project Directory:**
-   ```bash
-   cd length-converter
-   ```
-3. **Install Dependencies:**
-   The project requires the `fuzzywuzzy` package. Install it using pip:
-   ```bash
-   pip install fuzzywuzzy
-   ```
+2. Create and activate a virtual environment (optional but recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # On Windows, use `venv\Scripts\activate`
+    ```
+
+3. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-To start the Length Converter, run the following command in the terminal:
+1. Run the application:
+    ```bash
+    python app.py
+    ```
 
-```bash
-python length_converter.py
-```
+2. Open a web browser and navigate to the URL provided by Shiny (typically `http://127.0.0.1:8000`).
 
-Follow the on-screen prompts to input the unit you are converting from, the unit you wish to convert to, and the value to be converted.
+3. Use the dropdown menus to select the units to convert from and to, and enter the value to be converted. The result will be displayed below.
 
-### Example
+## Code Overview
 
-```plaintext
-Convert from (e.g., inches, feet, yards, meters, centimeters, millimeters): inches
-Convert to (e.g., inches, feet, yards, meters, centimeters, millimeters): meters
-Enter number of inches: 12
-12 inches is 0.30 meters.
-```
+- `app.py`: The main script containing the Shiny app and the `LengthConverter` class.
 
-## Contributing
+## License
 
-Contributions to the Length Converter are welcome! Here's how you can contribute:
-
-- **Report Bugs:** Use the Issues section to report any bugs found.
-- **Suggest Enhancements:** Have ideas on how to make the Length Converter better? Share them in the Issues section.
-- **Submit Pull Requests:** Feel free to fork the repository and submit pull requests with bug fixes or feature additions.
-
-Before contributing, please read through the project's contribution guidelines (if available).
-
-## Acknowledgments
-
-- Thanks to the `fuzzywuzzy` library for providing the fuzzy matching functionality.
+This project is licensed under the MIT License.
