@@ -28,6 +28,16 @@ In this repository, you will find a collection of my projects showcasing my skil
 - **Technologies Used**: Python, Streamlit
 - **Highlights**: Supports basic arithmetic operations, displays calculation history, and includes reset functionality.
 
+### 5. [File Organizer](file_organizer/README.md)
+- **Objective**: Automatically sort files in a specified folder by file type using a graphical user interface (GUI).
+- **Technologies Used**: Python, Tkinter, Pathlib, Shutil, Logging
+- **Highlights**: 
+  - Dynamic file handling by creating folders based on file extensions.
+  - Option to create new folders or relocate files to an existing folder.
+  - Visual file selection with checkboxes.
+  - Options to handle duplicate files (skip, overwrite, or rename).
+  - User-friendly interface with logging and secure coding for restorable state on macOS.
+
 ## Skills
 
 - **Programming Languages**: Python, SQL
