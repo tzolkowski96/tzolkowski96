@@ -47,6 +47,16 @@ I come from a non-traditional background with a Master's in Information Science 
   - User-friendly interface with logging and secure coding for restorable state on macOS.
 - **Role & Responsibilities**: Developed the file sorting logic, designed the GUI, and implemented logging for tracking operations.
 
+### 6. [Crypto Market Insights](crypto_market_insights/README.md)
+- **Objective**: Develop a comprehensive cryptocurrency data pipeline for real-time market analysis.
+- **Technologies Used**: Python, Selenium, Pandas, Matplotlib, Seaborn, SciPy
+- **Highlights**: 
+  - Real-time data scraping from CoinMarketCap
+  - In-depth analysis of top cryptocurrencies
+  - Generation of various visualizations including price comparisons and correlation heatmaps
+  - Automated Excel report generation with raw data and analysis results
+- **Role & Responsibilities**: Designed and implemented the entire data pipeline, including web scraping, data processing, analysis, and visualization components.
+
 ## Skills
 
 - **Programming Languages**: Python, SQL (MySQL, PostgreSQL, learning MSSQL)
