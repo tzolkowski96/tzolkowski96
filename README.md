@@ -57,7 +57,7 @@ I come from a non-traditional background with a Master's in Information Science 
   - Automated Excel report generation with raw data and analysis results
 - **Role & Responsibilities**: Designed and implemented the entire data pipeline, including web scraping, data processing, analysis, and visualization components.
 
-### 7. [Web Data Insights Explorer](web-data-insights-explorer/README.md)
+### 7. [Web Data Insights Explorer](advanced_web_scraping_toolkit/README.md)
 - **Objective**: Develop a comprehensive web scraping and data analysis tool with a user-friendly interface.
 - **Technologies Used**: Python, Flask, BeautifulSoup, Pandas, NLTK, Matplotlib, Seaborn, WordCloud
 - **Highlights**: 
