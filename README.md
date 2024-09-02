@@ -1,14 +1,15 @@
 # Portfolio of Tobin Zolkowski
 
-Welcome to my professional portfolio! I am a passionate data professional with a strong background in data analysis, machine learning, and data-driven decision making.
+Welcome to my professional portfolio! I am a passionate data professional with a strong background in data analysis, machine learning, and data-driven decision making. I am particularly interested in roles such as data analyst, data engineer, and integration engineer.
 
 ## Key Highlights
 
-- 🔬 Expertise in data analysis, machine learning, and web development
-- 🐍 Proficient in Python, with skills in SQL, data visualization, and web frameworks
+- 🔬 Expertise in data analysis and machine learning, with a growing interest in data engineering
+- 🐍 Proficient in Python, with skills in SQL and data visualization
 - 📊 Successfully completed 10+ data-driven projects across various domains
 - 🎓 Master's in Information Science from the University of Wisconsin-Madison
 - 💡 Continuously expanding skills, including recent projects in cryptocurrency analysis and educational data mining
+- 🔧 Experience with data pipelines and ETL processes, relevant for data engineering roles
 
 ## Overview
 
