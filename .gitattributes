@@ -1,2 +1,4 @@
 *.ipynb filter=lfs diff=lfs merge=lfs -text
 *.html filter=lfs diff=lfs merge=lfs -text
+/Users/32654/Desktop/GitHub/tzolkowski96/us_accidents_analysis/us_traffic_safety_analysis.ipynb filter=lfs diff=lfs merge=lfs -text
+/Users/32654/Desktop/GitHub/tzolkowski96/us_accidents_analysis/us_traffic_safety_analysis.html filter=lfs diff=lfs merge=lfs -text
