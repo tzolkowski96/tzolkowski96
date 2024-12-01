@@ -1,0 +1,18 @@
+{
+    "chi_square": {
+        "value": 96229.38936784345,
+        "p_value": 0.0,
+        "dof": 15
+    },
+    "feature_importance": {
+        "Temperature(F)": 0.3307804570101665,
+        "Wind_Speed(mph)": 0.20890826183339342,
+        "Visibility(mi)": 0.08210356028687707,
+        "Pressure(in)": 0.3782077208695631
+    },
+    "data_summary": {
+        "total_accidents": 7728141,
+        "date_range": "2016-01-14 20:18:33 to 2023-03-31 23:30:00",
+        "states_covered": 49
+    }
+}

@@ -69,21 +69,32 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
   - Automated Excel report generation with raw data and analysis results
 - **Role & Responsibilities**: Designed and implemented the entire data pipeline, including web scraping, data processing, analysis, and visualization components.
 
+#### 6. [Traffic Accident Analytics Engine: Geospatial-Temporal Analysis System](us_accidents_analysis/README.md)
+- **Objective**: Comprehensive data analysis platform analyzing 7.7 million US traffic accidents (2016-2023). Utilizes advanced statistical modeling and machine learning to generate actionable insights for traffic management and public safety through interactive visualizations and predictive analytics.
+- **Technologies Used**: Python, NumPy, pandas, scikit-learn, SciPy, Matplotlib, Seaborn, Folium
+- **Highlights**: 
+  - Implemented robust weather impact analysis using chi-square testing and ANOVA
+  - Developed and optimized Random Forest classifier achieving 78% accuracy in severity prediction
+  - Processed and standardized nationwide temporal and geospatial data across 49 states
+  - Created interactive dashboard combining heat maps, temporal analysis, and weather correlations
+  - Optimized data processing pipeline reducing memory usage by 3.25%
+- **Role & Responsibilities**: Data preparation, statistical analysis, machine learning model development, feature importance analysis, cross-validation, testing, and visualization development.
+
 ### Web Development and Applications
 
-#### 6. [Length Unit Converter](measurement_converter/README.md)
+#### 7. [Length Unit Converter](measurement_converter/README.md)
 - **Objective**: Build a length unit converter application using Python and Shiny for Python.
 - **Technologies Used**: Python, Shiny for Python
 - **Highlights**: Converts values between various length units, ensures non-negative input values, and provides a user-friendly interface.
 - **Role & Responsibilities**: Developed the conversion logic, designed the user interface, and implemented real-time result display.
 
-#### 7. [Streamlit Calculator](streamlit_calculator/README.md)
+#### 8. [Streamlit Calculator](streamlit_calculator/README.md)
 - **Objective**: Create a web-based calculator application using Streamlit.
 - **Technologies Used**: Python, Streamlit
 - **Highlights**: Supports basic arithmetic operations, displays calculation history, and includes reset functionality.
 - **Role & Responsibilities**: Designed and implemented the calculator logic, developed the Streamlit interface, and ensured error handling.
 
-#### 8. [Web Data Insights Explorer](advanced_web_scraping_toolkit/README.md)
+#### 9. [Web Data Insights Explorer](advanced_web_scraping_toolkit/README.md)
 - **Objective**: Develop a comprehensive web scraping and data analysis tool with a user-friendly interface.
 - **Technologies Used**: Python, Flask, BeautifulSoup, Pandas, NLTK, Matplotlib, Seaborn, WordCloud
 - **Highlights**: 
@@ -97,13 +108,13 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
 
 ### Python Programming and Utilities
 
-#### 9. [Python Exercises](python_exercises/README.md)
+#### 10. [Python Exercises](python_exercises/README.md)
 - **Objective**: Solve various Python programming exercises to improve coding skills.
 - **Technologies Used**: Python
 - **Highlights**: Covered topics such as functions, modules, file I/O, and inheritance.
 - **Role & Responsibilities**: Independently solved exercises, documented solutions, and shared learnings with peers.
 
-#### 10. [File Organizer](file_organizer/README.md)
+#### 11. [File Organizer](file_organizer/README.md)
 - **Objective**: Automatically sort files in a specified folder by file type using a graphical user interface (GUI).
 - **Technologies Used**: Python, Tkinter, Pathlib, Shutil, Logging
 - **Highlights**: 
