@@ -1,0 +1,3 @@
+# Ignore .html and .ipynb files due to large size
+*.html
+*.ipynb

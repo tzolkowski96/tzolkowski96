@@ -3,6 +3,8 @@
 ## Project Overview
 Comprehensive data analysis platform analyzing 7.7 million US traffic accidents (2016-2023). Utilizes advanced statistical modeling and machine learning to generate actionable insights for traffic management and public safety through interactive visualizations and predictive analytics.
 
+**Important Note**: Due to GitHub's 100MB file size limitation, the original Jupyter notebook and HTML files could not be uploaded. The complete analysis is available in `us_traffic_safety_analysis.pdf`. While most visualizations are viewable in the PDF, the interactive Folium maps may not render correctly. To view the geospatial visualizations, please check `visualizations/accident_hotspots.png`.
+
 ## Technical Achievements
 - **Statistical Analysis**: Implemented robust weather impact analysis using chi-square testing (χ² = 96229.39, p < 0.001) and ANOVA
 - **Machine Learning**: Developed and optimized Random Forest classifier achieving 78% accuracy in severity prediction
