@@ -1,5 +1,13 @@
 # Traffic Accident Analytics Engine: Geospatial-Temporal Analysis System
 
+## Important Viewing Instructions
+**To View This Project:**
+1. Download the `us_traffic_safety_analysis.pdf` file directly from this repository
+2. If GitHub shows "Unable to render code block", simply click the "Download" button
+3. For optimal viewing of GIS visualizations, check the `visualizations/accident_hotspots.png` file
+
+**Note About Source Code**: Due to the extensive dataset (7.7M records) and resulting notebook size, the original Python code and Jupyter notebooks exceed GitHub's 100MB limit. The complete code, analysis, and interactive visualizations are available in the PDF. For access to the source code or to discuss the technical implementation, please contact me directly.
+
 ## Project Overview
 Comprehensive data analysis platform analyzing 7.7 million US traffic accidents (2016-2023). Utilizes advanced statistical modeling and machine learning to generate actionable insights for traffic management and public safety through interactive visualizations and predictive analytics.
 
@@ -11,6 +19,12 @@ Comprehensive data analysis platform analyzing 7.7 million US traffic accidents 
 - **Data Engineering**: Processed and standardized nationwide temporal and geospatial data across 49 states
 - **Visualization**: Created interactive dashboard combining heat maps, temporal analysis, and weather correlations
 - **Performance**: Optimized data processing pipeline reducing memory usage by 3.25%
+
+## GIS and Geospatial Analytics Highlights
+- Created interactive heat maps visualizing accident density across 49 states
+- Developed custom geospatial clustering algorithms for hotspot identification
+- Implemented coordinate-based analysis for high-risk corridor detection
+- Generated dynamic Folium maps for temporal-spatial pattern visualization
 
 ## Technology Stack
 - **Core Processing**: Python (NumPy, pandas)
