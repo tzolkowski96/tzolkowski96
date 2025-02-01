@@ -127,7 +127,21 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
 
 ### SQL Projects
 
-[Coming Soon]
+#### 1. [World Life Expectancy Data Cleaning](world_life_expectancy/README.md)
+- **Objective**: Implement comprehensive data cleaning and standardization for global life expectancy statistics
+- **Technologies Used**: MySQL, MySQL Workbench
+- **Dataset**: 2,938 records covering 183 countries (2007-2022)
+- **Key Achievements**:
+  - Developed 7-section SQL pipeline with 200+ lines of optimized code
+  - Improved data quality scores to 90+ for 98% of countries
+  - Resolved 37 duplicate records and standardized development status classifications
+  - Implemented sophisticated data interpolation using window functions
+  - Created strategic indexes for performance optimization
+- **Technical Highlights**:
+  - Advanced SQL techniques: CTEs, Window Functions, Complex JOINs
+  - Data validation and quality scoring system
+  - Performance optimization through strategic indexing
+  - Statistical view creation for analysis
 
 ### Excel Projects
 
