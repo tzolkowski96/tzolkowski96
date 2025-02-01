@@ -1,0 +1,200 @@
+Country,Status,start_year,end_year,avg_life_expectancy,avg_data_quality,record_count
+Afghanistan,Developing,2007,2022,58.2,99,15
+Afghanistan,Unknown,2014,2014,57.5,100,1
+Albania,Developing,2007,2022,74.9,97,15
+Albania,Unknown,2021,2021,77.5,100,1
+Algeria,Developing,2007,2022,73.6,99,16
+Angola,Developing,2007,2022,49.0,99,16
+"Antigua and Barbuda",Developing,2007,2022,75.1,90,16
+Argentina,Developing,2007,2022,75.2,99,16
+Armenia,Developing,2007,2022,73.4,98,16
+Australia,Developed,2007,2022,81.8,98,16
+Austria,Developed,2007,2022,81.5,98,16
+Azerbaijan,Developing,2007,2022,70.7,99,16
+Bahamas,Developing,2007,2022,74.3,78,16
+Bahrain,Developing,2007,2022,75.7,98,16
+Bangladesh,Developing,2007,2022,69.3,98,16
+Barbados,Developing,2007,2022,74.4,99,16
+Belarus,Developing,2007,2022,69.9,99,16
+Belgium,Developed,2007,2022,80.7,96,16
+Belize,Developing,2007,2022,69.3,96,16
+Benin,Developing,2007,2022,57.6,98,16
+Bhutan,Developing,2007,2022,66.2,99,16
+"Bolivia (Plurinational State of)",Developing,2007,2022,67.7,79,16
+"Bosnia and Herzegovina",Developing,2007,2022,76.0,98,16
+Botswana,Developing,2007,2022,56.1,99,16
+Brazil,Developing,2007,2022,73.4,99,16
+"Brunei Darussalam",Developing,2007,2022,76.5,98,16
+Bulgaria,Developed,2007,2022,72.9,98,16
+"Burkina Faso",Developing,2007,2022,55.6,100,16
+Burundi,Developing,2007,2022,55.5,100,16
+"Côte d'Ivoire",Developing,2007,2022,50.4,58,16
+"Cabo Verde",Developing,2007,2022,72.5,99,16
+Cambodia,Developing,2007,2022,64.3,100,16
+Cameroon,Developing,2007,2022,54.0,99,16
+Canada,Developing,2007,2022,81.7,98,16
+"Central African Republic",Developing,2007,2022,48.5,98,16
+Chad,Developing,2007,2022,50.4,100,16
+Chile,Developing,2007,2022,79.5,99,16
+China,Developing,2007,2022,74.3,96,16
+Colombia,Developing,2007,2022,73.3,99,16
+Comoros,Developing,2007,2022,61.6,98,16
+Congo,Developing,2007,2022,59.0,78,16
+"Cook Islands",Developing,2020,2020,0.0,40,1
+"Costa Rica",Developing,2007,2022,78.6,98,16
+Croatia,Developed,2007,2022,76.1,98,16
+Cuba,Developing,2007,2022,78.0,98,16
+Cyprus,Developed,2007,2022,79.7,99,16
+Czechia,Developed,2007,2022,76.8,58,16
+"Democratic People's Republic of Korea",Developing,2007,2022,69.2,58,16
+"Democratic Republic of the Congo",Developing,2007,2022,55.7,58,16
+Denmark,Developed,2007,2022,79.3,100,16
+Djibouti,Developing,2007,2022,60.8,96,16
+Dominica,Developing,2020,2020,0.0,80,1
+"Dominican Republic",Developing,2007,2022,72.3,99,16
+Ecuador,Developing,2007,2022,74.7,98,16
+Egypt,Developing,2007,2022,71.5,78,16
+"El Salvador",Developing,2007,2022,71.7,98,16
+"Equatorial Guinea",Developing,2007,2022,55.3,95,16
+Eritrea,Developing,2007,2022,60.7,95,16
+Estonia,Developing,2007,2022,74.9,100,16
+Ethiopia,Developing,2007,2022,59.1,100,16
+Fiji,Developing,2007,2022,68.7,98,16
+Finland,Developing,2007,2022,80.7,98,16
+France,Developing,2007,2022,82.2,98,16
+Gabon,Developing,2007,2022,62.2,98,16
+Gambia,Developing,2007,2022,59.5,78,16
+Georgia,Developing,2007,2022,73.5,99,14
+Georgia,Unknown,2010,2012,73.3,100,2
+Germany,Developed,2007,2022,81.2,98,16
+Ghana,Developing,2007,2022,60.9,98,16
+Greece,Developing,2007,2022,81.2,99,16
+Grenada,Developing,2007,2022,73.3,99,16
+Guatemala,Developing,2007,2022,71.7,98,16
+Guinea,Developing,2007,2022,56.0,98,16
+Guinea-Bissau,Developing,2007,2022,55.4,98,16
+Guyana,Developing,2007,2022,65.6,98,16
+Haiti,Developing,2007,2022,59.9,99,16
+Honduras,Developing,2007,2022,73.0,98,16
+Hungary,Developed,2007,2022,73.8,99,16
+Iceland,Developed,2007,2022,82.4,98,16
+India,Developing,2007,2022,65.4,100,16
+Indonesia,Developing,2007,2022,67.6,99,16
+"Iran (Islamic Republic of)",Developing,2007,2022,73.9,79,16
+Iraq,Developing,2007,2022,70.4,93,16
+Ireland,Developed,2007,2022,80.2,99,16
+Israel,Developing,2007,2022,81.3,98,16
+Italy,Developed,2007,2022,82.2,99,16
+Jamaica,Developing,2007,2022,74.3,99,16
+Japan,Developed,2007,2022,82.5,100,16
+Jordan,Developing,2007,2022,73.0,98,16
+Kazakhstan,Developing,2007,2022,66.8,99,16
+Kenya,Developing,2007,2022,57.5,98,16
+Kiribati,Developing,2007,2022,65.2,99,16
+Kuwait,Developing,2007,2022,73.8,98,16
+Kyrgyzstan,Developing,2007,2022,69.1,78,16
+"Lao People's Democratic Republic",Developing,2007,2022,62.4,78,16
+Latvia,Developed,2007,2022,73.7,98,16
+Lebanon,Developing,2007,2022,74.2,98,16
+Lesotho,Developing,2007,2022,48.8,98,16
+Liberia,Developing,2007,2022,57.5,96,16
+Libya,Developing,2007,2022,72.5,94,16
+Lithuania,Developed,2007,2022,72.8,96,16
+Luxembourg,Developed,2007,2022,80.8,96,16
+Madagascar,Developing,2007,2022,62.7,98,16
+Malawi,Developing,2007,2022,49.9,100,16
+Malaysia,Developing,2007,2022,73.8,98,16
+Maldives,Developing,2007,2022,75.5,99,16
+Mali,Developing,2007,2022,54.9,98,16
+Malta,Developed,2007,2022,80.4,100,16
+"Marshall Islands",Developing,2020,2020,0.0,60,1
+Mauritania,Developing,2007,2022,62.8,98,16
+Mauritius,Developing,2007,2022,72.7,98,16
+Mexico,Developing,2007,2022,75.7,98,16
+"Micronesia (Federated States of)",Developing,2007,2022,68.2,79,16
+Monaco,Developing,2020,2020,0.0,20,1
+Mongolia,Developing,2007,2022,65.9,98,16
+Montenegro,Developing,2007,2022,74.5,93,16
+Morocco,Developing,2007,2022,72.2,99,16
+Mozambique,Developing,2007,2022,53.4,96,16
+Myanmar,Developing,2007,2022,64.2,99,16
+Namibia,Developing,2007,2022,60.4,99,16
+Nauru,Developing,2020,2020,0.0,80,1
+Nepal,Developing,2007,2022,66.5,100,16
+Netherlands,Developed,2007,2022,81.1,99,16
+"New Zealand",Developed,2007,2022,81.3,98,16
+Nicaragua,Developing,2007,2022,73.5,98,16
+Niger,Developing,2007,2022,57.0,100,16
+Nigeria,Developing,2007,2022,51.4,99,16
+Niue,Developing,2020,2020,0.0,40,1
+Norway,Developed,2007,2022,81.8,98,16
+Oman,Developing,2007,2022,74.8,98,16
+Pakistan,Developing,2007,2022,64.5,98,16
+Palau,Developing,2020,2020,0.0,80,1
+Panama,Developing,2007,2022,76.5,99,16
+"Papua New Guinea",Developing,2007,2022,61.7,98,16
+Paraguay,Developing,2007,2022,73.1,98,16
+Peru,Developing,2007,2022,73.7,98,16
+Philippines,Developing,2007,2022,67.6,98,16
+Poland,Developed,2007,2022,75.7,99,16
+Portugal,Developed,2007,2022,80.0,95,16
+Qatar,Developing,2007,2022,77.0,100,16
+"Republic of Korea",Developing,2007,2022,80.5,56,16
+"Republic of Moldova",Developing,2007,2022,70.0,58,16
+Romania,Developed,2007,2022,74.1,99,16
+"Russian Federation",Developing,2007,2022,67.8,99,16
+Rwanda,Developing,2007,2022,59.3,98,16
+"Saint Kitts and Nevis",Developing,2020,2020,0.0,40,1
+"Saint Lucia",Developing,2007,2022,73.6,79,16
+"Saint Vincent and the Grenadines",Developing,2007,2022,73.5,78,16
+Samoa,Developing,2007,2022,73.6,98,16
+"San Marino",Developing,2020,2020,0.0,40,1
+"Sao Tome and Principe",Developing,2007,2022,65.2,95,16
+"Saudi Arabia",Developing,2007,2022,73.5,98,16
+Senegal,Developing,2007,2022,62.6,98,16
+Serbia,Developing,2007,2022,74.0,99,16
+Seychelles,Developing,2007,2022,72.4,98,16
+"Sierra Leone",Developing,2007,2022,46.1,98,16
+Singapore,Developed,2007,2022,81.5,96,16
+Slovakia,Developed,2007,2022,74.8,79,16
+Slovenia,Developed,2007,2022,79.7,99,16
+"Solomon Islands",Developing,2007,2022,67.7,98,16
+Somalia,Developing,2007,2022,53.3,61,16
+"South Africa",Developing,2007,2022,57.5,96,16
+"South Sudan",Developing,2007,2022,53.9,56,16
+Spain,Developed,2007,2022,82.1,99,16
+"Sri Lanka",Developing,2007,2022,73.4,99,16
+Sudan,Developing,2007,2022,61.8,80,16
+Suriname,Developing,2007,2022,70.1,99,16
+Swaziland,Developing,2007,2022,51.3,98,16
+Sweden,Developed,2007,2022,82.5,100,16
+Switzerland,Developed,2007,2022,82.3,99,16
+"Syrian Arab Republic",Developing,2007,2022,70.9,89,16
+Tajikistan,Developing,2007,2022,66.7,99,16
+Thailand,Developing,2007,2022,73.1,96,16
+"The former Yugoslav republic of Macedonia",Developing,2007,2022,74.1,79,16
+Timor-Leste,Developing,2007,2022,64.8,99,16
+Togo,Developing,2007,2022,56.7,98,16
+Tonga,Developing,2007,2022,72.5,98,16
+"Trinidad and Tobago",Developing,2007,2022,71.1,99,16
+Tunisia,Developing,2007,2022,74.4,98,16
+Turkey,Developing,2007,2022,73.9,99,16
+Turkmenistan,Developing,2007,2022,64.6,96,16
+Tuvalu,Developing,2020,2020,0.0,60,1
+Uganda,Developing,2007,2022,55.7,100,16
+Ukraine,Developing,2007,2022,69.9,98,16
+"United Arab Emirates",Developing,2007,2022,75.7,99,16
+"United Kingdom of Great Britain and Northern Ireland",Developed,2007,2022,80.8,58,16
+"United Republic of Tanzania",Developing,2007,2022,56.0,58,16
+"United States of America",Developed,2007,2022,78.0,57,15
+"United States of America",Unknown,2021,2021,79.1,60,1
+Uruguay,Developing,2007,2022,76.1,98,16
+Uzbekistan,Developing,2007,2022,68.0,98,16
+Vanuatu,Developing,2007,2022,71.4,99,15
+Vanuatu,Unknown,2020,2020,71.6,100,1
+"Venezuela (Bolivarian Republic of)",Developing,2007,2022,73.4,79,16
+"Viet Nam",Developing,2007,2022,74.8,74,16
+Yemen,Developing,2007,2022,63.9,79,16
+Zambia,Developing,2007,2022,54.0,99,14
+Zambia,Unknown,2012,2016,53.4,90,2
+Zimbabwe,Developing,2007,2022,50.5,98,16
