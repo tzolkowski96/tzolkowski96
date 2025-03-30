@@ -4,7 +4,7 @@
 ![Data Analysis](https://img.shields.io/badge/Data%20Analysis-Advanced-success?style=for-the-badge)
 ![Data Quality](https://img.shields.io/badge/Data%20Quality-9.62/10-blue?style=for-the-badge)
 
-A comprehensive SQL-based analysis of US household income patterns, demonstrating advanced data cleaning techniques, statistical analysis, and geospatial insights. This project transforms raw demographic data into actionable business intelligence with enterprise-grade SQL practices.
+A comprehensive SQL-based analysis of US household income patterns across geographic regions, demonstrating advanced data cleaning techniques, statistical analysis, and geospatial insights. This project transforms raw demographic data into actionable business intelligence using enterprise-grade SQL practices.
 
 ## Project Overview
 
@@ -13,10 +13,11 @@ This portfolio project showcases my ability to handle complex data cleaning chal
 ### Key Findings
 
 - **Regional Disparities**: Northeast region leads with $102,068 median income vs. Southeast at $71,307 (30% gap)
-- **Income Distribution**: National median household income of $51,871 with significant standard deviation ($87,809)
+- **Income Distribution**: Average US median household income of $85,452.94 with significant standard deviation ($87,809.55)
 - **Data Quality**: Achieved 9.62/10 quality score through systematic cleaning procedures
 - **Geographic Patterns**: Clear prosperity gradient from coastal to interior regions
 - **Income Inequality**: Some communities show mean-to-median ratios exceeding 3.65, indicating wealth concentration
+- **Data Ceiling Effect**: Top 10% of values capped at $300,000, affecting income distribution analysis
 
 ## Technical Highlights
 
@@ -25,7 +26,7 @@ This project demonstrates my proficiency with:
 ### Advanced SQL Techniques
 - **Window Functions**: Used `DENSE_RANK()`, `ROW_NUMBER()` and aggregates with `OVER()` clauses
 - **Common Table Expressions (CTEs)**: Applied for complex multi-stage analyses
-- **Dynamic SQL**: Implemented with parameterized procedures and proper variable handling
+- **Dynamic SQL**: Implemented with parameterized procedures for flexible execution
 - **Stored Procedures**: Created reusable components for standardized operations
 - **Transaction Management**: Ensured data integrity with proper savepoints and error handling
 
@@ -89,7 +90,7 @@ GROUP BY region.income_category
 ORDER BY avg_median_income DESC;
 ```
 
-Results revealed that the Northeast region leads with a median income of $102,068, followed by the West region, with the Southeast region significantly behind at $71,307.
+Results revealed that the Northeast region leads with a median income of $102,068.17, followed by the West region, with the Southeast region significantly behind at $71,307.15 (30% below Northeast).
 
 ### Income Distribution Analysis
 
@@ -110,9 +111,9 @@ SELECT
 FROM ordered_incomes;
 ```
 
-This analysis revealed the true national median income at $51,871, with the top 10% threshold at $300,000 (showing evidence of data capping).
+This analysis revealed the 25th percentile at $36,039, the true national median (50th percentile) at $51,871, the 75th percentile at $80,909, and the 90th percentile at $300,000 (confirming the data ceiling effect).
 
-### Advanced Text Standardization Process
+### Advanced Text Standardization Procedure
 
 ```sql
 DROP PROCEDURE IF EXISTS standardize_text_field;
@@ -123,9 +124,29 @@ CREATE PROCEDURE standardize_text_field(
     IN p_where_clause VARCHAR(255)
 )
 BEGIN
-    -- Procedure code handling complex text standardization
-    -- Handles both single and multi-word cases with proper capitalization
-    -- ...
+    DECLARE where_condition VARCHAR(300);
+    DECLARE affected_rows_count INT DEFAULT 0;
+    
+    -- Default WHERE clause if not provided
+    IF p_where_clause IS NULL OR p_where_clause = '' THEN
+        SET where_condition = '';
+    ELSE
+        SET where_condition = CONCAT(' WHERE ', p_where_clause);
+    END IF;
+    
+    -- First letter uppercase, rest lowercase
+    SET @sql = CONCAT('UPDATE ', p_table_name, 
+                    ' SET ', p_column_name, ' = CONCAT(UPPER(SUBSTRING(', p_column_name, ', 1, 1)), ',
+                    'LOWER(SUBSTRING(', p_column_name, ', 2)))', 
+                    where_condition);
+    
+    PREPARE stmt FROM @sql;
+    EXECUTE stmt;
+    SET affected_rows_count = ROW_COUNT();
+    DEALLOCATE PREPARE stmt;
+    
+    -- Handle multi-word text fields with proper capitalization
+    -- ...additional code...
 END //
 DELIMITER ;
 ```
@@ -150,18 +171,19 @@ SELECT
 ```
 
 Key quality metrics:
-- Only 1 missing Place value (0.003% of data)
-- 2,775 invalid ZIP codes (8.53% of data)
-- 623 invalid geographic coordinates (1.91% of data)
+- Only 1 missing Place value identified and fixed (0.003% of data)
+- 2,775 invalid ZIP codes detected (8.53% of data)
+- 623 invalid geographic coordinates identified (1.91% of data)
+- Overall data quality classified as "Excellent (Production-Ready)"
 
 ## Database Design
+
+The project works with two primary tables and creates several derived tables and views:
 
 ```mermaid
 erDiagram
     USHouseholdIncome {
-        int row_id PK
         int id
-        int State_Code
         varchar State_Name
         varchar State_ab
         varchar County
@@ -170,363 +192,243 @@ erDiagram
         varchar Type
         varchar Primary_
         varchar Zip_Code
-        varchar Area_Code
-        bigint ALand
-        bigint AWater
         decimal Lat
         decimal Lon
     }
     
     ushouseholdincome_statistics {
-        int id PK
+        int id
         varchar State_Name
         int Mean
         int Median
         int Stdev
-        decimal sum_w
     }
     
-    clean_state_reference {
-        int State_Code PK
+    USHouseholdIncome_Clean {
+        int clean_id PK
+        int id
         varchar State_Name
-        varchar State_ab
-        varchar Region
-        varchar Division
-    }
-    
-    clean_location_data {
-        int row_id PK
-        int original_id
-        int State_Code
-        varchar State_Name
-        varchar State_ab
-        varchar County
+        varchar County FK
         varchar City
         varchar Place
-        varchar Type
-        varchar Primary_Type
+        boolean invalid_zip_code
+        boolean invalid_coordinates
+    }
+    
+    v_income_by_location {
+        int id
+        varchar State_Name
+        varchar County
+        varchar City
         varchar Zip_Code
-        varchar Area_Code
-        bigint ALand
-        bigint AWater
         decimal Lat
         decimal Lon
-        varchar Region
-        varchar Division
-        int data_quality_score
+        int Mean_Income
+        int Median_Income
+        int Income_StdDev
     }
     
-    data_quality_issues {
-        int issue_id PK
-        varchar table_name
-        int record_id
-        varchar issue_type
-        text issue_description
-        timestamp detected_at
-        boolean fixed
+    v_income_by_state {
+        varchar State_Name
+        varchar State_ab
+        int Mean_Income
+        int Median_Income
+        int County_Count
+        int City_Count
     }
     
-    data_cleaning_log {
-        int log_id PK
-        varchar table_name
-        varchar field_name
-        varchar cleaning_operation
-        int records_affected
-        timestamp execution_time
+    v_income_inequality_metrics {
+        varchar State_Name
+        int Mean
+        int Median
+        int Stdev
+        decimal income_inequality_ratio
+        varchar income_inequality_category
+        int inequality_rank
     }
     
-    viz_income_map_data {
+    error_log {
         int id PK
-        varchar state_name
-        varchar county
-        decimal latitude
-        decimal longitude
-        int income_level
-        varchar income_category
-        decimal population_proxy
-        int data_quality_score
-        varchar color_value
-        decimal size_value
+        timestamp error_time
+        varchar error_section
+        text error_message
+        int affected_rows
     }
     
-    USHouseholdIncome ||--o{ clean_location_data : "cleaned into"
-    ushouseholdincome_statistics ||--o{ clean_location_data : "joined with"
-    clean_state_reference ||--o{ clean_location_data : "standardizes"
-    clean_location_data ||--o{ viz_income_map_data : "visualized as"
-    USHouseholdIncome ||--o{ data_quality_issues : "identified in"
-    ushouseholdincome_statistics ||--o{ data_quality_issues : "identified in"
+    duplicate_records_log {
+        int log_id PK
+        timestamp detection_time
+        varchar group_id
+        varchar record_ids
+        int occurrence_count
+        varchar resolution_action
+        timestamp resolution_time
+    }
+
+    USHouseholdIncome ||--o{ USHouseholdIncome_Clean : "cleaned into"
+    USHouseholdIncome_Clean ||--o{ v_income_by_location : "exposed as"
+    ushouseholdincome_statistics ||--o{ v_income_by_state : "aggregated in"
+    ushouseholdincome_statistics ||--o{ v_income_inequality_metrics : "analyzed in"
 ```
 
 ## Workflow
 
+The data cleaning and analysis workflow follows a systematic process:
+
 ```mermaid
 flowchart TD
-    A[Raw Data Import] --> B[Data Cleaning]
-    B --> C[Quality Assessment]
-    C --> D{Quality Score > 50?}
-    D -- Yes --> E[Advanced Analysis]
-    D -- No --> F[Basic Analysis]
-    
-    E --> G[Business Intelligence]
-    F --> G
-    
-    G --> H[Visualization Preparation]
+    A[Initial Data Inspection] --> B[Handle Missing Values]
+    B --> C[Fix Data Inconsistencies]
+    C --> D[Remove Duplicates]
+    D --> E[Standardize Text Data]
+    E --> F[Validate Geographic Data]
+    F --> G[Handle Outliers]
+    G --> H[Create Analysis Views]
+    H --> I[Generate Data Quality Report]
+    I --> J[Extract Statistical Insights]
+    J --> K[Optimize Performance]
+    K --> L[Present Findings]
     
     subgraph "Data Cleaning Process"
-    B1[Standardize State Names] --> B2[Fix Capitalization]
-    B2 --> B3[Clean ZIP Codes]
-    B3 --> B4[Validate Coordinates]
-    B4 --> B5[Handle Outliers]
+    B1[Fix missing Place values] --> B2[Standardize State names]
+    B2 --> B3[Standardize County names]
+    B3 --> B4[Standardize City names]
+    B4 --> B5[Validate ZIP codes]
+    B5 --> B6[Validate coordinates]
     end
     
     B --> B1
     
     subgraph "Analysis Types"
-    E1[Income Clustering]
-    E2[Inequality Analysis]
-    E3[Location Evaluation]
-    E4[Real Estate Potential]
-    end
-    
-    E --> E1
-    E --> E2
-    E --> E3
-    E --> E4
-    
-    subgraph "Visualization Exports"
-    H1[Choropleth Maps]
-    H2[Bubble Charts]
-    H3[Bar Charts]
-    H4[Quality-Filtered Views]
+    H1[Income by Location View]
+    H2[State-Level Income View]
+    H3[Income Inequality Metrics]
     end
     
     H --> H1
     H --> H2
     H --> H3
-    H --> H4
+    
+    subgraph "Key Insights"
+    J1[Regional Income Disparities]
+    J2[Income Distribution Analysis]
+    J3[Geographic Income Patterns]
+    J4[Inequality Measurements]
+    end
+    
+    J --> J1
+    J --> J2
+    J --> J3
+    J --> J4
 ```
 
 ## Usage Guide
 
+### Requirements
+- MySQL 8.0+ (Tested on MySQL 8.0.41-arm64)
+- Sufficient privileges to create tables, views, and indexes
+
 ### Installation
 
-1. Create a new database in MySQL:
+1. Create a database for the analysis:
    ```sql
-   CREATE DATABASE us_income_analysis
-   CHARACTER SET utf8 
-   COLLATE utf8_general_ci;
+   CREATE DATABASE us_income_analysis;
+   USE us_income_analysis;
    ```
 
-2. Run the script to set up tables, procedures, and views:
-   ```sql
-   SOURCE us_household_income_analysis.sql;
+2. Import the two source tables:
+   - USHouseholdIncome (location data)
+   - ushouseholdincome_statistics (income statistics)
+
+3. Execute the SQL script:
+   ```
+   SOURCE us_household_income_cleaning_analysis.sql;
    ```
 
-3. Import your household income data (supports up to 100,000 rows):
-   ```sql
-   LOAD DATA INFILE '/path/to/your/data.csv' 
-   INTO TABLE USHouseholdIncome 
-   FIELDS TERMINATED BY ',' 
-   ENCLOSED BY '"' 
-   LINES TERMINATED BY '\n' 
-   IGNORE 1 ROWS;
-   ```
+### Working with the Results
 
-### Running the Analysis
-
-The script provides multiple procedures for different types of analysis:
+The script creates three analytical views that are ready for immediate use:
 
 ```sql
--- Set up reference data first
-CALL setup_state_reference();
+-- Get location-specific income data
+SELECT * FROM v_income_by_location 
+WHERE State_Name = 'New York' 
+ORDER BY Median_Income DESC 
+LIMIT 10;
 
--- Clean the data
-CALL clean_household_income_data();
+-- Compare state-level income statistics
+SELECT * FROM v_income_by_state
+ORDER BY Mean_Income DESC;
 
--- Identify data quality issues
-CALL detect_data_quality_issues();
-
--- Run specific analyses
-CALL analyze_income_clusters();
-CALL analyze_income_inequality();
-CALL evaluate_business_locations(50000, 10, "South");
-CALL analyze_real_estate_potential();
-
--- Prepare data for visualization
-CALL export_visualization_data("choropleth", "");
-
--- Or run everything with one command
-CALL run_income_analysis();
+-- Analyze income inequality
+SELECT * FROM v_income_inequality_metrics
+WHERE income_inequality_category = 'High Income Inequality'
+ORDER BY income_inequality_ratio DESC;
 ```
-
-## Example Analyses
-
-### Income Distribution by Region
-
-```mermaid
-pie
-    title Household Income Distribution by Region
-    "Northeast" : 72500
-    "West" : 68300
-    "Midwest" : 58200
-    "South" : 55400
-```
-
-### Income Inequality Analysis
-
-The script calculates powerful inequality metrics including:
-
-- **Mean-to-median ratios**: Identifies areas with wealth concentration
-- **Income quintile distribution**: Shows how income is distributed across population segments
-- **Top 10% to bottom 50% income ratio**: Reveals the extent of economic polarization
-- **Geographic inequality patterns**: Maps inequality hotspots for targeted interventions
-
-### Business Location Evaluation
-
-The location evaluation procedure produces actionable business intelligence:
-
-```
-+---------------+------------+----------+-------------+------------+--------------------+-------------------+
-| State_Name    | County     | City     | avg_income  | pop_density| market_potential   | business_score    |
-+---------------+------------+----------+-------------+------------+--------------------+-------------------+
-| California    | San Mateo  | Atherton | 214281.50   | 684.3      | 94.2               | 92                |
-| New York      | New York   | Manhattan| 188642.32   | 2723.6     | 98.7               | 97                |
-| Connecticut   | Fairfield  | Greenwich| 175744.88   | 1035.2     | 91.5               | 89                |
-+---------------+------------+----------+-------------+------------+--------------------+-------------------+
-```
-
-This analysis helps businesses:
-- Target high-potential markets with optimal income profiles
-- Identify underserved areas with growth potential
-- Avoid locations with poor data quality that might lead to costly mistakes
 
 ## Data Quality Management
 
-The script implements a sophisticated quality scoring system that ensures transparency in data reliability:
+The script implements a comprehensive quality management approach:
 
-```mermaid
-graph TD
-    A[Data Quality Score 0-100] --> B{State Name Present?}
-    B -- Yes +20 --> C{County Present?}
-    B -- No +0 --> C
-    
-    C -- Yes +15 --> D{City Present?}
-    C -- No +0 --> D
-    
-    D -- Yes +15 --> E{ZIP Present?}
-    D -- No +0 --> E
-    
-    E -- Yes +10 --> F{Valid Coordinates?}
-    E -- No +0 --> F
-    
-    F -- Yes +20 --> G{Valid Land Area?}
-    F -- No +0 --> G
-    
-    G -- Yes +10 --> H{Type Present?}
-    G -- No +0 --> H
-    
-    H -- Yes +10 --> I[Final Score]
-    H -- No +0 --> I
-    
-    I --> J{Score >= 80}
-    I --> K{Score 50-79}
-    I --> L{Score < 50}
-    
-    J --> M[High Quality]
-    K --> N[Medium Quality]
-    L --> O[Low Quality]
-```
+1. **Error Logging**: All data modifications are tracked in the `error_log` table
+2. **Validation Flags**: Records with invalid ZIP codes or coordinates are flagged rather than deleted
+3. **Quality Scoring**: A weighted quality score considers multiple factors with appropriate weights
+4. **Data Filtering**: Analysis views automatically filter out low-quality records
+5. **Transparency**: Quality metrics are reported with detailed percentage breakdowns
 
-This quality management system allows:
-- **Confidence-based filtering**: Only use data you can trust
-- **Transparency in reporting**: Always know the reliability of any insight
-- **Targeted data improvement**: Focus cleaning efforts where they matter most
+This approach ensures data transparency while maximizing the usable dataset for analysis.
 
-## Visualization Examples
+## Key Analytical Findings
 
-The script generates ready-to-use datasets for multiple visualization types. Here's what you can create:
+### Income Distribution Statistics
 
-### Choropleth Map
+The analysis revealed:
+- Average median household income: $85,452.94
+- Significant income dispersion with standard deviation of $87,809.55
+- Evidence of data capping at $300,000 for top 10% of values
+- True national median (50th percentile) of $51,871
 
-![Choropleth Map Example](https://i.imgur.com/example1.png)
+### Regional Economic Disparities
 
-*The above image represents a sample choropleth map showing income distribution by county with color intensity indicating income level and opacity reflecting data quality.*
+Clear regional economic patterns emerged:
+- Northeast region: $102,068.17 (highest median income)
+- West region: Close second highest
+- Southeast region: $71,307.15 (30% below Northeast)
+- Clear prosperity gradient from coastal to interior regions
 
-### Income Bubble Chart
+### Income Inequality Insights
 
-```
-Sample Tableau/Power BI Bubble Chart Output:
+The data reveals significant income inequality:
+- Some communities show mean-to-median ratios exceeding 3.65
+- Three inequality categories identified (Low, Moderate, High)
+- Consistent patterns of higher inequality in certain states
+- Evidence of substantial wealth concentration in specific geographic areas
 
-Each bubble represents a county with:
-- Size proportional to population
-- Color indicating income level (green = high, red = low)
-- Transparency showing data quality score
-- Position based on geographic coordinates
-```
+## Performance Optimization
 
-The visualization export procedure generates data formatted specifically for:
-- **Tableau**: Ready-to-import TDE/CSV with pre-calculated metrics
-- **Power BI**: Optimized structure for direct visualization
-- **Python/R**: Clean, analysis-ready dataframes 
-- **JavaScript libraries**: GeoJSON-compatible outputs for web visualizations
+The script includes several performance enhancements:
 
-## Performance Considerations
+1. **Strategic Indexing**: Creates indexes on frequently queried columns
+2. **Transaction Management**: Uses transactions with savepoints for data safety
+3. **Query Optimization**: Implements efficient join strategies and filtering
+4. **Helper Procedures**: Consolidates repetitive operations into reusable components
+5. **Resource Management**: Limits result sets where appropriate to prevent timeouts
 
-This script is optimized to handle datasets up to 100,000 rows efficiently:
+For best performance, consider:
+- Allocating sufficient memory to MySQL
+- Adjusting `innodb_buffer_pool_size` if working with large datasets
+- Using the `EXPLAIN` command to troubleshoot slow queries
 
-- **Execution Time**: On a modest server (4 cores, 8GB RAM), the complete analysis pipeline processes 100,000 rows in approximately 2-3 minutes
-- **Memory Usage**: Peak memory usage remains under 500MB
-- **Indexing Strategy**: Custom indexes optimize common query patterns
-- **Batch Processing**: Large operations are batched to prevent timeouts
-- **Scalability**: For datasets >100,000 rows, consider partitioning by state or region
+## Conclusion
 
-Performance benchmarks:
-- Data cleaning: ~45 seconds for 100,000 rows
-- Quality assessment: ~30 seconds
-- Analytical procedures: 15-45 seconds each
+This project demonstrates advanced SQL data cleaning and analysis techniques applied to US household income data. The comprehensive approach combines systematic data quality management with sophisticated statistical analysis to extract meaningful economic insights.
 
-## Troubleshooting
+The findings reveal significant regional economic disparities across the United States, with northeastern states showing median incomes approximately 30% higher than southeastern states. The data quality was excellent (9.62/10), requiring minimal modification while enabling robust analysis.
 
-### Common Issues and Solutions
+The combination of SQL techniques used—including window functions, CTEs, dynamic SQL, and parameterized procedures—showcases an enterprise-grade approach to data transformation and analysis.
 
-| Issue | Possible Cause | Solution |
-|-------|---------------|----------|
-| "ERROR 1067 (42000): Invalid default value" | MySQL strict mode active | Set `sql_mode` to exclude `STRICT_TRANS_TABLES` temporarily |
-| Slow performance on data cleaning | Insufficient memory | Increase `sort_buffer_size` and `join_buffer_size` |
-| Missing data in visualization exports | Quality filtering too strict | Lower quality threshold in `export_visualization_data` |
-| "Data truncated" warnings | Field sizes too small for dirty data | Verify field sizes match your data characteristics |
-| "ERROR 1418: This function has none of DETERMINISTIC..." | MySQL security settings | Set `log_bin_trust_function_creators = 1` |
+## Author
 
-### Debugging Tips
+Tobin Zolkowski | Data Analyst | March 2025
 
-- Use `SELECT * FROM data_cleaning_log ORDER BY execution_time DESC LIMIT 10;` to identify recent cleaning operations
-- Check `data_quality_issues` table for specific quality problems
-- Set `sql_mode='ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';` for older MySQL compatibility
-
-## Contributing
-
-Contributions to improve this project are welcome! Here's how to contribute:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Add your improvements
-4. Commit your changes (`git commit -m 'Add some amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
-
-### Areas for Enhancement
-
-- Additional visualization export formats
-- Support for additional MySQL dialects (MariaDB, AWS Aurora)
-- Integration with Python/R for advanced statistical analysis
-- Machine learning extensions for predictive analytics
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-## Course Information
-
-This project was created as part of the MySQL for Data Analytics course on AnalystBuilder, which provides comprehensive training on SQL for data analysis and business intelligence.
+This project was completed as part of a comprehensive data analysis portfolio demonstrating advanced SQL skills in real-world applications.
