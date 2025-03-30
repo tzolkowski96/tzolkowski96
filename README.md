@@ -316,7 +316,7 @@ I'm currently developing several new projects to expand my portfolio:
 
 ### Development Tools
 - **Version Control**: Git, GitHub
-- **Environments**: Jupyter Notebooks, VS Code, PyCharm
+- **Environments**: Jupyter Notebooks, VS Code, DataGrip
 - **Databases**: MySQL Workbench, pgAdmin
 - **Other Tools**: Microsoft Access, REDCap, Excel
 
