@@ -1,5 +1,13 @@
 # US Household Income Analysis
 
+<div align="center">
+
+![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Data Analysis](https://img.shields.io/badge/Data%20Analysis-Advanced-success?style=for-the-badge)
+![Data Quality](https://img.shields.io/badge/Data%20Quality-9.62/10-blue?style=for-the-badge)
+
+</div>
+
 <!-- TOC -->
 ## Table of Contents
 
@@ -38,11 +46,25 @@
 
 ## Executive Summary
 
+<div align="center">
+<img src="https://via.placeholder.com/800x400.png?text=US+Income+Distribution+Visualization" alt="US Income Distribution" width="700"/>
+</div>
+
 This project demonstrates enterprise-grade SQL data cleaning and analysis techniques applied to US household income data. Using MySQL 8.0+, it transforms raw demographic data into actionable business intelligence through systematic data quality management and statistical analysis. Key discoveries include a 30% gap in median income between Northeast ($102,068) and Southeast ($71,307) regions, with a national median household income of $85,453. The analysis achieved an excellent data quality score of 9.62/10 while revealing significant income inequality patterns across geographic regions.
 
-![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Data Analysis](https://img.shields.io/badge/Data%20Analysis-Advanced-success?style=for-the-badge)
-![Data Quality](https://img.shields.io/badge/Data%20Quality-9.62/10-blue?style=for-the-badge)
+<div align="center">
+
+```mermaid
+pie
+    title "Income Distribution by Region"
+    "Northeast" : 102068
+    "West" : 96742
+    "Midwest" : 83405
+    "Southwest" : 77494
+    "Southeast" : 71307
+```
+
+</div>
 
 ## Project Overview
 
@@ -50,12 +72,39 @@ This portfolio project showcases advanced data cleaning techniques and meaningfu
 
 ### Key Findings
 
-- **Regional Disparities**: Northeast region leads with $102,068 median income vs. Southeast at $71,307 (30% gap)
-- **Income Distribution**: Average US median household income of $85,452.94 with significant standard deviation ($87,809.55)
-- **Data Quality**: Achieved 9.62/10 quality score through systematic cleaning procedures
-- **Geographic Patterns**: Clear prosperity gradient from coastal to interior regions
-- **Income Inequality**: Some communities show mean-to-median ratios exceeding 3.65, indicating wealth concentration
-- **Data Ceiling Effect**: Top 10% of values capped at $300,000, affecting income distribution analysis
+<div class="findings-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+
+<div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+  <h4>📊 Regional Disparities</h4>
+  <p>Northeast region leads with $102,068 median income vs. Southeast at $71,307 (30% gap)</p>
+</div>
+
+<div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+  <h4>💰 Income Distribution</h4>
+  <p>Average US median household income of $85,452.94 with significant standard deviation ($87,809.55)</p>
+</div>
+
+<div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+  <h4>📈 Data Quality</h4>
+  <p>Achieved 9.62/10 quality score through systematic cleaning procedures</p>
+</div>
+
+<div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+  <h4>🗺️ Geographic Patterns</h4>
+  <p>Clear prosperity gradient from coastal to interior regions</p>
+</div>
+
+<div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+  <h4>⚖️ Income Inequality</h4>
+  <p>Some communities show mean-to-median ratios exceeding 3.65, indicating wealth concentration</p>
+</div>
+
+<div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+  <h4>🚫 Data Ceiling Effect</h4>
+  <p>Top 10% of values capped at $300,000, affecting income distribution analysis</p>
+</div>
+
+</div>
 
 ### Data Source
 
@@ -68,41 +117,99 @@ This analysis uses US household income data obtained from AnalystBuilder, a plat
 This project demonstrates proficiency with:
 
 ### Advanced SQL Techniques
-- **Window Functions**: Used `DENSE_RANK()`, `ROW_NUMBER()` and aggregates with `OVER()` clauses
-- **Common Table Expressions (CTEs)**: Applied for complex multi-stage analyses
-- **Dynamic SQL**: Implemented with parameterized procedures for flexible execution
-- **Stored Procedures**: Created reusable components for standardized operations
-- **Transaction Management**: Ensured data integrity with proper savepoints and error handling
+
+```mermaid
+graph LR
+    A[SQL Mastery] --> B[Window Functions]
+    A --> C[CTEs]
+    A --> D[Dynamic SQL]
+    A --> E[Stored Procedures]
+    A --> F[Transaction Management]
+    
+    B --> B1[DENSE_RANK()]
+    B --> B2[ROW_NUMBER()]
+    B --> B3[Aggregates with OVER()]
+    
+    C --> C1[Multi-stage Analysis]
+    C --> C2[Recursive Queries]
+    
+    D --> D1[Parameterized Execution]
+    D --> D2[Dynamic WHERE Clauses]
+    
+    E --> E1[Reusable Components]
+    E --> E2[Data Validation]
+    
+    F --> F1[Savepoints]
+    F --> F2[Error Handling]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333
+    style C fill:#bbf,stroke:#333
+    style D fill:#bbf,stroke:#333
+    style E fill:#bbf,stroke:#333
+    style F fill:#bbf,stroke:#333
+```
 
 ### Data Engineering Best Practices
-- **Automated Quality Scoring**: Developed weighted metrics system for data reliability assessment
-- **Systematic Data Cleaning**: Built multi-stage pipeline with targeted validation
-- **Error Logging**: Implemented comprehensive audit trail to track all data modifications
-- **Performance Optimization**: Applied strategic indexing and query optimization techniques
-- **Documentation**: Maintained detailed execution metrics and methodology descriptions
+
+<div class="techniques-list">
+<ul style="list-style-type: none; padding-left: 0;">
+  <li>✅ <strong>Automated Quality Scoring:</strong> Developed weighted metrics system for data reliability assessment</li>
+  <li>✅ <strong>Systematic Data Cleaning:</strong> Built multi-stage pipeline with targeted validation</li>
+  <li>✅ <strong>Error Logging:</strong> Implemented comprehensive audit trail to track all data modifications</li>
+  <li>✅ <strong>Performance Optimization:</strong> Applied strategic indexing and query optimization techniques</li>
+  <li>✅ <strong>Documentation:</strong> Maintained detailed execution metrics and methodology descriptions</li>
+</ul>
+</div>
 
 ### Statistical Analysis Methods
-- **Outlier Detection**: Implemented standard deviation-based identification
-- **Percentile Calculations**: Designed custom percentile derivation using window functions
-- **Geographic Segmentation**: Applied custom regional classification to reveal spatial patterns
-- **Inequality Metrics**: Calculated ratios and distributions to measure economic disparity
+
+```mermaid
+graph TD
+    A[Statistical Analysis] --> B[Outlier Detection]
+    A --> C[Percentile Calculations]
+    A --> D[Geographic Segmentation]
+    A --> E[Inequality Metrics]
+    
+    B --> B1[Standard Deviation Method]
+    B --> B2[Modified Z-Score]
+    
+    C --> C1[Custom Window Functions]
+    C --> C2[Distribution Analysis]
+    
+    D --> D1[Regional Classification]
+    D --> D2[Spatial Pattern Analysis]
+    
+    E --> E1[Mean-to-Median Ratios]
+    E --> E2[Distribution Measurements]
+    
+    style A fill:#ffd,stroke:#333,stroke-width:2px
+    style B fill:#dfd,stroke:#333
+    style C fill:#dfd,stroke:#333
+    style D fill:#dfd,stroke:#333
+    style E fill:#dfd,stroke:#333
+```
 
 ## Project Structure
 
 The SQL script follows a systematic approach to data cleaning and analysis:
 
-1. **Error Handling Setup**: Creates logging infrastructure for operation tracking
-2. **Initial Data Inspection**: Examines data structure and identifies quality issues
-3. **Missing Value Handling**: Resolves incomplete records with appropriate techniques
-4. **Data Standardization**: Normalizes text fields for consistent analysis
-5. **Duplicate Removal**: Identifies and eliminates redundant records
-6. **Geographic Validation**: Verifies coordinate and ZIP code accuracy
-7. **Outlier Detection**: Identifies statistical anomalies in income data
-8. **Analysis Views**: Creates optimized views for various analytical perspectives
-9. **Quality Reporting**: Quantifies data reliability with composite metrics
-10. **Statistical Analysis**: Extracts income distribution patterns and regional insights
-11. **Performance Optimization**: Adds helper procedures and functions for efficiency
-12. **Results Presentation**: Summarizes findings and recommendations
+<div class="project-steps">
+<ol style="list-style-position: inside; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+  <li><strong>Error Handling Setup:</strong> Creates logging infrastructure for operation tracking</li>
+  <li><strong>Initial Data Inspection:</strong> Examines data structure and identifies quality issues</li>
+  <li><strong>Missing Value Handling:</strong> Resolves incomplete records with appropriate techniques</li>
+  <li><strong>Data Standardization:</strong> Normalizes text fields for consistent analysis</li>
+  <li><strong>Duplicate Removal:</strong> Identifies and eliminates redundant records</li>
+  <li><strong>Geographic Validation:</strong> Verifies coordinate and ZIP code accuracy</li>
+  <li><strong>Outlier Detection:</strong> Identifies statistical anomalies in income data</li>
+  <li><strong>Analysis Views:</strong> Creates optimized views for various analytical perspectives</li>
+  <li><strong>Quality Reporting:</strong> Quantifies data reliability with composite metrics</li>
+  <li><strong>Statistical Analysis:</strong> Extracts income distribution patterns and regional insights</li>
+  <li><strong>Performance Optimization:</strong> Adds helper procedures and functions for efficiency</li>
+  <li><strong>Results Presentation:</strong> Summarizes findings and recommendations</li>
+</ol>
+</div>
 
 ## Sample Queries & Results
 
@@ -149,6 +256,18 @@ ORDER BY avg_median_income DESC;
 +------------+---------------+----------------+-------------------+
 ```
 
+<div align="center">
+
+```mermaid
+bar
+    title Regional Median Income Comparison
+    x-axis [Northeast, West, Midwest, Southwest, Southeast, Other]
+    y-axis [Income ($)]
+    bar [102068.17, 96741.82, 83405.26, 77493.61, 71307.15, 78125.92]
+```
+
+</div>
+
 ### Income Distribution Analysis
 
 ```sql
@@ -177,7 +296,18 @@ FROM ordered_incomes;
 +-------------------+------------+------------+------------+------------+
 ```
 
-This analysis reveals the 25th percentile at $36,039, the true national median (50th percentile) at $51,871, the 75th percentile at $80,909, and the 90th percentile at $300,000 (confirming the data ceiling effect).
+<div align="center">
+
+```mermaid
+%%{init: {'theme': 'neutral' }}%%
+xychart-beta
+    title "US Income Distribution Percentiles"
+    x-axis [p25, p50, p75, p90]
+    y-axis "Income ($)" 0 --> 300000
+    bar [36039, 51871, 80909, 300000]
+```
+
+</div>
 
 ### Advanced Text Standardization Procedure
 
@@ -268,6 +398,19 @@ SELECT City FROM USHouseholdIncome_Clean WHERE City LIKE '% %' LIMIT 5;
 
 ## Quality Assurance
 
+<div align="center">
+
+```mermaid
+%%{init: {'theme': 'forest' }}%%
+gauge
+    title Quality Assessment Score
+    arc 100
+    percent 96.2
+    value 9.62 / 10
+```
+
+</div>
+
 The project implements a sophisticated weighted quality scoring system that achieved a final score of 9.62/10:
 
 ```sql
@@ -300,75 +443,177 @@ Key quality metrics:
 
 ## Database Design
 
-The project works with two primary tables and creates several derived tables and views:
+<div align="center">
 
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#5D8AA8', 'fontFamily': 'Arial' }}}%%
+erDiagram
+    USHouseholdIncome {
+        int id PK
+        varchar State_Name
+        varchar State_ab
+        varchar County
+        varchar City
+        varchar Place
+        varchar Type
+        varchar Primary_
+        varchar Zip_Code
+        decimal Lat
+        decimal Lon
+    }
+    
+    ushouseholdincome_statistics {
+        int id PK
+        varchar State_Name FK
+        int Mean
+        int Median
+        int Stdev
+    }
+    
+    USHouseholdIncome_Clean {
+        int clean_id PK
+        int id FK
+        varchar State_Name
+        varchar County
+        varchar City
+        varchar Place
+        boolean invalid_zip_code
+        boolean invalid_coordinates
+    }
+    
+    v_income_by_location {
+        int id
+        varchar State_Name
+        varchar County
+        varchar City
+        varchar Zip_Code
+        decimal Lat
+        decimal Lon
+        int Mean_Income
+        int Median_Income
+        int Income_StdDev
+    }
+    
+    v_income_by_state {
+        varchar State_Name
+        varchar State_ab
+        int Mean_Income
+        int Median_Income
+        int County_Count
+        int City_Count
+    }
+    
+    v_income_inequality_metrics {
+        varchar State_Name
+        int Mean
+        int Median
+        int Stdev
+        decimal income_inequality_ratio
+        varchar income_inequality_category
+        int inequality_rank
+    }
+    
+    error_log {
+        int id PK
+        timestamp error_time
+        varchar error_section
+        text error_message
+        int affected_rows
+    }
+    
+    duplicate_records_log {
+        int log_id PK
+        timestamp detection_time
+        varchar group_id
+        varchar record_ids
+        int occurrence_count
+        varchar resolution_action
+        timestamp resolution_time
+    }
+
+    USHouseholdIncome ||--o{ USHouseholdIncome_Clean : "cleaned into"
+    USHouseholdIncome_Clean ||--o{ v_income_by_location : "exposed as"
+    ushouseholdincome_statistics ||--o{ v_income_by_state : "aggregated in" 
+    ushouseholdincome_statistics ||--o{ v_income_inequality_metrics : "analyzed in"
 ```
-USHouseholdIncome
-├── id (int)
-├── State_Name (varchar)
-├── State_ab (varchar)
-├── County (varchar)
-├── City (varchar)
-├── Place (varchar)
-├── Type (varchar)
-├── Primary_ (varchar)
-├── Zip_Code (varchar)
-├── Lat (decimal)
-└── Lon (decimal)
 
-ushouseholdincome_statistics
-├── id (int)
-├── State_Name (varchar)
-├── Mean (int)
-├── Median (int)
-└── Stdev (int)
-
-USHouseholdIncome_Clean
-├── clean_id (int, PK)
-├── id (int)
-├── State_Name (varchar)
-├── County (varchar, FK)
-├── City (varchar)
-├── Place (varchar)
-├── invalid_zip_code (boolean)
-└── invalid_coordinates (boolean)
-
-v_income_by_location [VIEW]
-v_income_by_state [VIEW]
-v_income_inequality_metrics [VIEW]
-error_log [TABLE]
-duplicate_records_log [TABLE]
-```
+</div>
 
 ## Workflow
 
 The data cleaning and analysis workflow follows a systematic process:
 
-1. **Initial Data Inspection** → **Handle Missing Values**
-2. **Fix Data Inconsistencies** → **Remove Duplicates**
-3. **Standardize Text Data** → **Validate Geographic Data**
-4. **Handle Outliers** → **Create Analysis Views**
-5. **Generate Data Quality Report** → **Extract Statistical Insights**
-6. **Optimize Performance** → **Present Findings**
+<div align="center">
 
-**Data Cleaning Process Details:**
-- Fix missing Place values
-- Standardize State names
-- Standardize County names
-- Standardize City names
-- Validate ZIP codes
-- Validate coordinates
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': { 'edgeLabelBackground': '#f8f9fa', 'primaryColor': '#4080bf' }}}%%
+flowchart TD
+    A[Initial Data Inspection] --> B[Handle Missing Values]
+    B --> C[Fix Data Inconsistencies]
+    C --> D[Remove Duplicates]
+    D --> E[Standardize Text Data]
+    E --> F[Validate Geographic Data]
+    F --> G[Handle Outliers]
+    G --> H[Create Analysis Views]
+    H --> I[Generate Data Quality Report]
+    I --> J[Extract Statistical Insights]
+    J --> K[Optimize Performance]
+    K --> L[Present Findings]
+    
+    subgraph "Data Cleaning Process"
+    direction TB
+    B1[Fix missing Place values] --> B2[Standardize State names]
+    B2 --> B3[Standardize County names]
+    B3 --> B4[Standardize City names]
+    B4 --> B5[Validate ZIP codes]
+    B5 --> B6[Validate coordinates]
+    end
+    
+    B -.-> B1
+    
+    subgraph "Analysis Types"
+    direction LR
+    H1[Income by Location View]
+    H2[State-Level Income View]
+    H3[Income Inequality Metrics]
+    end
+    
+    H -.-> H1
+    H -.-> H2
+    H -.-> H3
+    
+    subgraph "Key Insights"
+    direction TB
+    J1[Regional Income Disparities]
+    J2[Income Distribution Analysis]
+    J3[Geographic Income Patterns]
+    J4[Inequality Measurements]
+    end
+    
+    J -.-> J1
+    J -.-> J2
+    J -.-> J3
+    J -.-> J4
+    
+    style A fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style B fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style C fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style D fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style E fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style F fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style G fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style H fill:#ffe0d0,stroke:#333,stroke-width:1px
+    style I fill:#ffe0d0,stroke:#333,stroke-width:1px
+    style J fill:#ffe0d0,stroke:#333,stroke-width:1px
+    style K fill:#ffe0d0,stroke:#333,stroke-width:1px
+    style L fill:#d0ffd0,stroke:#333,stroke-width:1px
+    
+    style "Data Cleaning Process" fill:#f0f8ff,stroke:#6080b0,stroke-width:1px
+    style "Analysis Types" fill:#fff8f0,stroke:#b08060,stroke-width:1px
+    style "Key Insights" fill:#f0fff0,stroke:#60b080,stroke-width:1px
+```
 
-**Analysis Types:**
-- Income by Location View
-- State-Level Income View
-- Income Inequality Metrics
-
-**Key Insights Generated:**
-- Regional Income Disparities
-- Income Distribution Analysis
-- Geographic Income Patterns
-- Inequality Measurements
+</div>
 
 ## Usage Guide
 
@@ -464,70 +709,95 @@ LIMIT 5;
 
 ### Troubleshooting Common Issues
 
-1. **Error: Table 'XXX' already exists**
-   - **Cause**: Script is re-run without dropping existing objects
-   - **Solution**: Add `DROP TABLE IF EXISTS` statements or manually drop tables before re-running
+<div class="troubleshooting-container" style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
 
-   ```sql
-   -- Add to beginning of script
-   DROP TABLE IF EXISTS USHouseholdIncome_Clean;
-   DROP TABLE IF EXISTS error_log;
-   DROP TABLE IF EXISTS duplicate_records_log;
-   ```
+#### 1. Error: Table 'XXX' already exists
+**Cause**: Script is re-run without dropping existing objects
+**Solution**: Add `DROP TABLE IF EXISTS` statements or manually drop tables before re-running
 
-2. **Error: View 'XXX' references invalid table(s) or column(s)**
-   - **Cause**: Views created before tables or columns they depend on
-   - **Solution**: Ensure view creation happens after all tables are created and populated
+```sql
+-- Add to beginning of script
+DROP TABLE IF EXISTS USHouseholdIncome_Clean;
+DROP TABLE IF EXISTS error_log;
+DROP TABLE IF EXISTS duplicate_records_log;
+```
 
-3. **Performance: Query execution times out**
-   - **Cause**: Large dataset with insufficient indexing or inefficient joins
-   - **Solution**: Add indexes and limit result sets
-   
-   ```sql
-   -- Add indexes to improve performance
-   CREATE INDEX idx_state_name ON USHouseholdIncome_Clean(State_Name);
-   CREATE INDEX idx_income ON ushouseholdincome_statistics(Median);
-   
-   -- Limit result sets in large queries
-   SELECT ... FROM big_table LIMIT 1000;
-   ```
+#### 2. Error: View 'XXX' references invalid table(s) or column(s)
+**Cause**: Views created before tables or columns they depend on
+**Solution**: Ensure view creation happens after all tables are created and populated
 
-4. **Error: Invalid default value for 'error_time'**
-   - **Cause**: SQL mode includes NO_ZERO_DATE
-   - **Solution**: Modify SQL mode or change timestamp default
+#### 3. Performance: Query execution times out
+**Cause**: Large dataset with insufficient indexing or inefficient joins
+**Solution**: Add indexes and limit result sets
    
-   ```sql
-   -- Check SQL mode
-   SELECT @@sql_mode;
+```sql
+-- Add indexes to improve performance
+CREATE INDEX idx_state_name ON USHouseholdIncome_Clean(State_Name);
+CREATE INDEX idx_income ON ushouseholdincome_statistics(Median);
    
-   -- Modify error_log table creation
-   CREATE TABLE IF NOT EXISTS error_log (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       error_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-       -- other columns
-   );
-   ```
+-- Limit result sets in large queries
+SELECT ... FROM big_table LIMIT 1000;
+```
 
-5. **Error: Prepared statement contains too many placeholders**
-   - **Cause**: Complex dynamic SQL exceeding system limits
-   - **Solution**: Break down into multiple simpler statements
+#### 4. Error: Invalid default value for 'error_time'
+**Cause**: SQL mode includes NO_ZERO_DATE
+**Solution**: Modify SQL mode or change timestamp default
    
-   ```sql
-   -- Instead of one complex prepared statement
-   -- Break into multiple simpler statements
-   SET @sql_part1 = '...';
-   SET @sql_part2 = '...';
+```sql
+-- Check SQL mode
+SELECT @@sql_mode;
    
-   PREPARE stmt1 FROM @sql_part1;
-   EXECUTE stmt1;
-   DEALLOCATE PREPARE stmt1;
+-- Modify error_log table creation
+CREATE TABLE IF NOT EXISTS error_log (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    error_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    -- other columns
+);
+```
+
+#### 5. Error: Prepared statement contains too many placeholders
+**Cause**: Complex dynamic SQL exceeding system limits
+**Solution**: Break down into multiple simpler statements
    
-   PREPARE stmt2 FROM @sql_part2;
-   EXECUTE stmt2;
-   DEALLOCATE PREPARE stmt2;
-   ```
+```sql
+-- Instead of one complex prepared statement
+-- Break into multiple simpler statements
+SET @sql_part1 = '...';
+SET @sql_part2 = '...';
+   
+PREPARE stmt1 FROM @sql_part1;
+EXECUTE stmt1;
+DEALLOCATE PREPARE stmt1;
+   
+PREPARE stmt2 FROM @sql_part2;
+EXECUTE stmt2;
+DEALLOCATE PREPARE stmt2;
+```
+</div>
 
 ## Data Quality Management
+
+<div align="center">
+
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': { 'fontSize': '16px' }}}%%
+journey
+    title Data Quality Management Process
+    section Data Inspection
+        Initial assessment: 5: Me
+        Issue identification: 5: Me
+    section Data Cleaning
+        Fix missing values: 5: Me, Team
+        Standardize text: 4: Me, Team
+        Remove duplicates: 5: Me, Team
+        Validate geographic data: 4: Me
+    section Quality Assurance
+        Weighted scoring implementation: 5: Me
+        Quality metrics reporting: 4: Me
+        Final validation: 5: Me, Team
+```
+
+</div>
 
 The script implements a comprehensive quality management approach:
 
@@ -543,6 +813,20 @@ This approach ensures data transparency while maximizing the usable dataset for 
 
 ### Income Distribution Statistics
 
+<div align="center">
+
+```mermaid
+%%{init: {'theme': 'forest' }}%%
+pie
+    title "Income Distribution by Percentile"
+    "0-25th percentile" : 36039
+    "25-50th percentile" : 15832
+    "50-75th percentile" : 29038
+    "75-90th percentile" : 219091
+```
+
+</div>
+
 The analysis revealed:
 - Average median household income: $85,452.94
 - Significant income dispersion with standard deviation of $87,809.55
@@ -550,6 +834,28 @@ The analysis revealed:
 - True national median (50th percentile) of $51,871
 
 ### Regional Economic Disparities
+
+<div align="center">
+
+```mermaid
+%%{init: {'theme': 'neutral' }}%%
+graph LR
+    A[Regional Analysis] --> NE[Northeast<br>$102,068]
+    A --> W[West<br>$96,742]
+    A --> MW[Midwest<br>$83,405]
+    A --> SW[Southwest<br>$77,494]
+    A --> SE[Southeast<br>$71,307]
+    
+    classDef high fill:#a1d6a1,stroke:#333
+    classDef medium fill:#fff4a3,stroke:#333
+    classDef low fill:#ffb3b3,stroke:#333
+    
+    class NE,W high
+    class MW medium
+    class SW,SE low
+```
+
+</div>
 
 Clear regional economic patterns emerged:
 - Northeast region: $102,068.17 (highest median income)
@@ -559,6 +865,27 @@ Clear regional economic patterns emerged:
 
 ### Income Inequality Insights
 
+<div align="center">
+
+```mermaid
+%%{init: {'theme': 'neutral' }}%%
+quadrantChart
+    title Income Inequality by State (Top 5)
+    x-axis Mean Income (Low) --> Mean Income (High) 
+    y-axis Median Income (Low) --> Median Income (High)
+    quadrant-1 "High Mean, High Median"
+    quadrant-2 "Low Mean, High Median"
+    quadrant-3 "Low Mean, Low Median"
+    quadrant-4 "High Mean, Low Median"
+    "Alaska": [0.85, 0.25]
+    "New Mexico": [0.68, 0.32]
+    "California": [1.0, 0.5]
+    "Wyoming": [0.76, 0.39]
+    "Texas": [0.8, 0.43]
+```
+
+</div>
+
 The data reveals significant income inequality:
 - Some communities show mean-to-median ratios exceeding 3.65
 - Three inequality categories identified (Low, Moderate, High)
@@ -566,6 +893,41 @@ The data reveals significant income inequality:
 - Evidence of substantial wealth concentration in specific geographic areas
 
 ## Performance Optimization
+
+<div align="center">
+
+```mermaid
+%%{init: {'theme': 'neutral' }}%%
+mindmap
+  root((Performance<br>Optimization))
+    Strategic Indexing
+      ::icon(fas fa-database)
+      Key columns
+      Composite indexes
+      Selective indexing
+    Transaction Management
+      ::icon(fas fa-exchange-alt)
+      Savepoints
+      Error handling
+      Rollback prevention
+    Query Optimization
+      ::icon(fas fa-bolt)
+      Efficient joins
+      WHERE clause optimization
+      LIMIT clause usage
+    Helper Procedures
+      ::icon(fas fa-tools)
+      Text standardization
+      Index creation
+      Data validation
+    Resource Management
+      ::icon(fas fa-tachometer-alt)
+      Result set limiting
+      Memory allocation
+      Connection pooling
+```
+
+</div>
 
 The script includes several performance enhancements:
 
@@ -582,11 +944,13 @@ For best performance, consider:
 
 ## Conclusion
 
+<div class="conclusion-card" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #4080bf;">
 This project demonstrates advanced SQL data cleaning and analysis techniques applied to US household income data. The comprehensive approach combines systematic data quality management with sophisticated statistical analysis to extract meaningful economic insights.
 
 The findings reveal significant regional economic disparities across the United States, with northeastern states showing median incomes approximately 30% higher than southeastern states. The data quality was excellent (9.62/10), requiring minimal modification while enabling robust analysis.
 
 The combination of SQL techniques used—including window functions, CTEs, dynamic SQL, and parameterized procedures—showcases an enterprise-grade approach to data transformation and analysis.
+</div>
 
 ## License
 
@@ -618,6 +982,25 @@ SOFTWARE.
 
 ## Contributing
 
+<div align="center">
+
+```mermaid
+%%{init: {'theme': 'neutral' }}%%
+graph TD
+    A[Fork Repository] --> B[Create Feature Branch]
+    B --> C[Implement Changes]
+    C --> D[Ensure Tests Pass]
+    D --> E[Submit Pull Request]
+    
+    style A fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style B fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style C fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style D fill:#d0e0ff,stroke:#333,stroke-width:1px
+    style E fill:#d0e0ff,stroke:#333,stroke-width:1px
+```
+
+</div>
+
 Contributions to improve this data analysis project are welcome. Here's how you can contribute:
 
 1. **Fork the repository** and create your branch from `main`
@@ -637,6 +1020,14 @@ For major changes, please open an issue first to discuss proposed changes.
 
 ## Author
 
-Tobin Zolkowski | Data Analyst | March 2025
-
-This project was completed as part of a comprehensive data analysis portfolio demonstrating advanced SQL skills in real-world applications. The techniques used were developed through MySQL courses completed on AnalystBuilder.
+<div class="author-card" style="display: flex; align-items: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 20px;">
+  <div style="margin-right: 20px;">
+    <img src="https://via.placeholder.com/100x100.png?text=TZ" alt="Author Profile" style="border-radius: 50%;">
+  </div>
+  <div>
+    <h3 style="margin: 0;">Tobin Zolkowski</h3>
+    <p style="margin: 5px 0;">Data Analyst</p>
+    <p style="margin: 5px 0; font-style: italic;">March 2025</p>
+    <p style="margin: 5px 0;">This project was completed as part of a comprehensive data analysis portfolio demonstrating advanced SQL skills in real-world applications. The techniques used were developed through MySQL courses completed on AnalystBuilder.</p>
+  </div>
+</div>
