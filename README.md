@@ -1,4 +1,4 @@
-# Portfolio of Tobin Zolkowski
+Portfolio of Tobin Zolkowski
 
 Welcome to my professional portfolio! I am a passionate data professional with a strong background in data analysis, machine learning, and data-driven decision making. I am particularly interested in roles such as data analyst, data engineer, and integration engineer.
 
@@ -25,13 +25,13 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
 
 ### Data Analysis and Machine Learning
 
-#### 1. [Employee Churn Prediction](Employee-Churn-Prediction/README.md)
+#### 1. Employee Churn Prediction
 - **Objective**: Develop predictive models to assess employee churn and provide actionable insights for improving employee retention.
 - **Technologies Used**: Python, Pandas, Scikit-Learn, Matplotlib, Seaborn, XGBoost
 - **Highlights**: Achieved up to 98% accuracy, identified key churn predictors, and presented actionable recommendations in the report.
 - **Role & Responsibilities**: Data cleaning, feature engineering, model development, and evaluation. Conducted an independent project and included actionable recommendations in the report.
 
-#### 2. [Movie Genre Analysis](Movie_Genre_Analysis/README.md)
+#### 2. Movie Genre Analysis
 - **Objective**: Analyze movie genres using the IMDb movies dataset to understand genre popularity, financial performance, and audience preferences.
 - **Technologies Used**: Python, Pandas, Matplotlib, Seaborn, Scikit-learn
 - **Highlights**: 
@@ -40,7 +40,7 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
   - Created visualizations to illustrate key findings about genre characteristics
 - **Role & Responsibilities**: Data cleaning, exploratory data analysis, statistical testing, data visualization, and interpretation of results.
 
-#### 3. [Portuguese Students Higher Education Analysis](portuguese-students-higher-education-analysis/README.md)
+#### 3. Portuguese Students Higher Education Analysis
 - **Objective**: Analyze factors influencing higher education outcomes among Portuguese students using machine learning techniques.
 - **Technologies Used**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn
 - **Highlights**: 
@@ -49,7 +49,7 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
   - Provided actionable insights for improving educational strategies
 - **Role & Responsibilities**: Data preparation, exploratory data analysis, feature engineering, model development and evaluation, and formulation of recommendations.
 
-#### 4. [UFood Customer Analysis](ufood_analysis/README.md)
+#### 4. UFood Customer Analysis
 - **Objective**: Analyze UFood's customer data and marketing campaign performance to improve marketing strategies and customer engagement.
 - **Technologies Used**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn, SciPy
 - **Highlights**: 
@@ -59,7 +59,7 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
   - Provided data-driven recommendations for marketing strategy optimization
 - **Role & Responsibilities**: Comprehensive data analysis, including exploratory data analysis, customer segmentation, time-series analysis, statistical testing, and strategic recommendation formulation.
 
-#### 5. [Crypto Market Insights](crypto_market_insights/README.md)
+#### 5. Crypto Market Insights
 - **Objective**: Develop a comprehensive cryptocurrency data pipeline for real-time market analysis.
 - **Technologies Used**: Python, Selenium, Pandas, Matplotlib, Seaborn, SciPy
 - **Highlights**: 
@@ -69,7 +69,7 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
   - Automated Excel report generation with raw data and analysis results
 - **Role & Responsibilities**: Designed and implemented the entire data pipeline, including web scraping, data processing, analysis, and visualization components.
 
-#### 6. [Traffic Accident Analytics Engine: Geospatial-Temporal Analysis System](us_accidents_analysis/README.md)
+#### 6. Traffic Accident Analytics Engine: Geospatial-Temporal Analysis System
 - **Objective**: Comprehensive data analysis platform analyzing 7.7 million US traffic accidents (2016-2023). Utilizes advanced statistical modeling and machine learning to generate actionable insights for traffic management and public safety through interactive visualizations and predictive analytics.
 - **Technologies Used**: Python, NumPy, pandas, scikit-learn, SciPy, Matplotlib, Seaborn, Folium
 - **Highlights**: 
@@ -82,19 +82,19 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
 
 ### Web Development and Applications
 
-#### 7. [Length Unit Converter](measurement_converter/README.md)
+#### 7. Length Unit Converter
 - **Objective**: Build a length unit converter application using Python and Shiny for Python.
 - **Technologies Used**: Python, Shiny for Python
 - **Highlights**: Converts values between various length units, ensures non-negative input values, and provides a user-friendly interface.
 - **Role & Responsibilities**: Developed the conversion logic, designed the user interface, and implemented real-time result display.
 
-#### 8. [Streamlit Calculator](streamlit_calculator/README.md)
+#### 8. Streamlit Calculator
 - **Objective**: Create a web-based calculator application using Streamlit.
 - **Technologies Used**: Python, Streamlit
 - **Highlights**: Supports basic arithmetic operations, displays calculation history, and includes reset functionality.
 - **Role & Responsibilities**: Designed and implemented the calculator logic, developed the Streamlit interface, and ensured error handling.
 
-#### 9. [Web Data Insights Explorer](advanced_web_scraping_toolkit/README.md)
+#### 9. Web Data Insights Explorer
 - **Objective**: Develop a comprehensive web scraping and data analysis tool with a user-friendly interface.
 - **Technologies Used**: Python, Flask, BeautifulSoup, Pandas, NLTK, Matplotlib, Seaborn, WordCloud
 - **Highlights**: 
@@ -108,13 +108,13 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
 
 ### Python Programming and Utilities
 
-#### 10. [Python Exercises](python_exercises/README.md)
+#### 10. Python Exercises
 - **Objective**: Solve various Python programming exercises to improve coding skills.
 - **Technologies Used**: Python
 - **Highlights**: Covered topics such as functions, modules, file I/O, and inheritance.
 - **Role & Responsibilities**: Independently solved exercises, documented solutions, and shared learnings with peers.
 
-#### 11. [File Organizer](file_organizer/README.md)
+#### 11. File Organizer
 - **Objective**: Automatically sort files in a specified folder by file type using a graphical user interface (GUI).
 - **Technologies Used**: Python, Tkinter, Pathlib, Shutil, Logging
 - **Highlights**: 
@@ -127,7 +127,7 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
 
 ### SQL Projects
 
-#### 1. [World Life Expectancy Analysis](world_life_expectancy/README.md)
+#### 1. World Life Expectancy Analysis
 - **Objective**: Comprehensive data cleaning and analysis of global life expectancy statistics (2007-2022)
 - **Technologies**: MySQL 8.0, MySQL Workbench, Git
 - **Dataset**: 2,938 records across 183 countries
@@ -168,6 +168,43 @@ Welcome to my project showcase. Below, you'll find a diverse collection of proje
   - Developed robust data pipeline with 98% high-quality output
   - Uncovered strong correlations between life expectancy and socioeconomic factors
 
+#### 2. US Household Income Analysis
+- **Objective**: Transform messy demographic data into clear economic insights through careful cleaning and statistical analysis
+- **Technologies**: MySQL 8.0+, MySQL Workbench, Git
+- **Dataset**: 32,533 location records and 32,526 statistics records across all 50 US states
+- **Key Achievements**:
+  - Achieved exceptional 9.62/10 data quality score through systematic validation
+  - Uncovered 30% income gap between Northeast ($102,068) and Southeast ($71,307) regions
+  - Identified patterns of income inequality through mean-to-median ratio analysis
+  - Developed advanced SQL techniques including weighted quality scoring system
+- **Technical Highlights**:
+  ```sql
+  -- Calculate quality score based on weighted factors
+  WITH quality_metrics AS (
+      SELECT
+          -- Calculate quality percentage for Place values (25% weight)
+          (1 - (SUM(CASE WHEN Place IS NULL OR TRIM(Place) = '' THEN 1 ELSE 0 END) / COUNT(*))) * 25 AS place_quality,
+          -- Calculate quality percentage for ZIP codes (35% weight)
+          (1 - (SUM(CASE WHEN invalid_zip_code = TRUE THEN 1 ELSE 0 END) / COUNT(*))) * 35 AS zip_quality,
+          -- Calculate quality percentage for coordinates (40% weight) - highest importance
+          (1 - (SUM(CASE WHEN invalid_coordinates = TRUE THEN 1 ELSE 0 END) / COUNT(*))) * 40 AS coord_quality
+      FROM USHouseholdIncome_Clean
+  )
+  SELECT
+      'Enhanced Data Quality Score' AS metric,
+      ROUND((place_quality + zip_quality + coord_quality) / 10, 2) AS score_out_of_10
+  FROM quality_metrics;
+  ```
+- **Skills Demonstrated**:
+  - Advanced SQL: Window Functions, CTEs, Dynamic SQL, Stored Procedures, Transaction Management
+  - Data Engineering: Quality Scoring, Systematic Data Cleaning, Error Logging
+  - Statistical Analysis: Outlier Detection, Percentile Calculations, Geographic Segmentation
+  - Performance Optimization: Strategic Indexing, Query Tuning, Resource Management
+- **Impact**:
+  - Revealed clear prosperity gradient from coastal to interior regions
+  - Identified communities with high income inequality (mean-to-median ratios exceeding 3.65)
+  - Provided data-driven insights for economic development strategies
+
 ### Excel Projects
 
 [Coming Soon]
@@ -206,5 +243,9 @@ Thank you for visiting my portfolio!
 If you are still interested in learning more about my skills and experience, please feel free to check out my portfolio website for additional details on projects, education, and more. I look forward to connecting further if we find a good opportunity to collaborate. Visit [my portfolio website](https://tzolkowski96.github.io/portfolio/) to learn more.
 
 ## Projects Quick Links
-1. 📊 [World Life Expectancy Analysis](world_life_expectancy/README.md) - Advanced SQL
-2. 🤖 [Employee Churn Prediction](Employee-Churn-Prediction/README.md) - Machine Learning
+1. 📊 World Life Expectancy Analysis - Advanced SQL
+2. 🤖 Employee Churn Prediction - Machine Learning
+3. 💰 US Household Income Analysis - Data Quality & Economic Insights
+4. 🚗 Traffic Accident Analytics - Geospatial Analysis
+5. 🎬 Movie Genre Analysis - Entertainment Data
+6. 🧮 Streamlit Calculator - Web Application
