@@ -47,16 +47,16 @@
 ## Executive Summary
 
 <div align="center">
-<img src="https://via.placeholder.com/800x400.png?text=US+Income+Distribution+Visualization" alt="US Income Distribution" width="700"/>
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="US Income Distribution" width="700"/>
 </div>
 
-This project demonstrates enterprise-grade SQL data cleaning and analysis techniques applied to US household income data. Using MySQL 8.0+, it transforms raw demographic data into actionable business intelligence through systematic data quality management and statistical analysis. Key discoveries include a 30% gap in median income between Northeast ($102,068) and Southeast ($71,307) regions, with a national median household income of $85,453. The analysis achieved an excellent data quality score of 9.62/10 while revealing significant income inequality patterns across geographic regions.
+Ever wondered why some regions in the US seem to thrive while others struggle? I tackled this question by diving deep into household income data across the United States. Using MySQL 8.0+, I transformed messy demographic data into a clear economic story through careful cleaning and statistical analysis. My investigation uncovered a striking 30% income gap between Northeast ($102,068) and Southeast ($71,307) regions, painting a vivid picture of America's economic divide. After improving data quality to an exceptional 9.62/10 score, I revealed patterns of income inequality that could inform regional development strategies for years to come.
 
 <div align="center">
 
 ```mermaid
 pie
-    title "Income Distribution by Region"
+    title "Income Distribution by Region ($)"
     "Northeast" : 102068
     "West" : 96742
     "Midwest" : 83405
@@ -68,7 +68,7 @@ pie
 
 ## Project Overview
 
-This portfolio project showcases advanced data cleaning techniques and meaningful insight extraction using sophisticated SQL. The analysis reveals significant regional economic disparities across the United States, with northeastern states showing median incomes approximately 30% higher than southeastern states.
+This portfolio project showcases how I tackled a real-world dataset and extracted meaningful insights using advanced SQL. I've always been fascinated by economic disparities, and this project let me get my hands dirty with actual income data. The analysis reveals a stark economic divide across America that goes beyond simple statistics – northeastern states enjoy median incomes about 30% higher than their southeastern counterparts.
 
 ### Key Findings
 
@@ -108,13 +108,13 @@ This portfolio project showcases advanced data cleaning techniques and meaningfu
 
 ### Data Source
 
-This analysis uses US household income data obtained from AnalystBuilder, a platform providing real-world datasets for analytics training. The project applies techniques learned through two comprehensive MySQL courses:
+I obtained this US household income dataset from AnalystBuilder, a platform that provides real-world datasets for analytics training. My approach draws on techniques I learned through two comprehensive MySQL courses:
 - [MySQL for Data Analytics](https://www.analystbuilder.com/courses/mysql-for-data-analytics)
 - [Advanced MySQL for Data Analysis](https://www.analystbuilder.com/courses/advanced-mysql-for-data-analysis)
 
 ## Technical Highlights
 
-This project demonstrates proficiency with:
+This project pushed my SQL skills to their limits. Here's how I tackled the challenges:
 
 ### Advanced SQL Techniques
 
@@ -192,28 +192,30 @@ graph TD
 
 ## Project Structure
 
-The SQL script follows a systematic approach to data cleaning and analysis:
+I designed my SQL script with a methodical, step-by-step approach to ensure thorough analysis:
 
 <div class="project-steps">
 <ol style="list-style-position: inside; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
-  <li><strong>Error Handling Setup:</strong> Creates logging infrastructure for operation tracking</li>
-  <li><strong>Initial Data Inspection:</strong> Examines data structure and identifies quality issues</li>
-  <li><strong>Missing Value Handling:</strong> Resolves incomplete records with appropriate techniques</li>
-  <li><strong>Data Standardization:</strong> Normalizes text fields for consistent analysis</li>
-  <li><strong>Duplicate Removal:</strong> Identifies and eliminates redundant records</li>
-  <li><strong>Geographic Validation:</strong> Verifies coordinate and ZIP code accuracy</li>
-  <li><strong>Outlier Detection:</strong> Identifies statistical anomalies in income data</li>
-  <li><strong>Analysis Views:</strong> Creates optimized views for various analytical perspectives</li>
-  <li><strong>Quality Reporting:</strong> Quantifies data reliability with composite metrics</li>
-  <li><strong>Statistical Analysis:</strong> Extracts income distribution patterns and regional insights</li>
-  <li><strong>Performance Optimization:</strong> Adds helper procedures and functions for efficiency</li>
-  <li><strong>Results Presentation:</strong> Summarizes findings and recommendations</li>
+  <li><strong>Error Handling Setup:</strong> Created logging infrastructure to track every operation</li>
+  <li><strong>Initial Data Inspection:</strong> Examined data structure and spotted potential quality issues</li>
+  <li><strong>Missing Value Handling:</strong> Fixed incomplete records (found only 1 missing value!)</li>
+  <li><strong>Data Standardization:</strong> Normalized text fields for consistent analysis</li>
+  <li><strong>Duplicate Removal:</strong> Identified and eliminated redundant records</li>
+  <li><strong>Geographic Validation:</strong> Verified coordinate and ZIP code accuracy</li>
+  <li><strong>Outlier Detection:</strong> Identified statistical anomalies in income data</li>
+  <li><strong>Analysis Views:</strong> Created optimized views for different analytical perspectives</li>
+  <li><strong>Quality Reporting:</strong> Quantified data reliability with composite metrics</li>
+  <li><strong>Statistical Analysis:</strong> Extracted income distribution patterns and regional insights</li>
+  <li><strong>Performance Optimization:</strong> Added helper procedures and functions for efficiency</li>
+  <li><strong>Results Presentation:</strong> Summarized findings and recommendations</li>
 </ol>
 </div>
 
 ## Sample Queries & Results
 
 ### Regional Income Analysis
+
+This query was my first big "aha!" moment – I grouped states into regions and immediately saw the economic divide:
 
 ```sql
 SELECT
@@ -270,6 +272,8 @@ bar
 
 ### Income Distribution Analysis
 
+After seeing regional differences, I wanted to understand the true income distribution across percentiles:
+
 ```sql
 WITH ordered_incomes AS (
     SELECT 
@@ -299,7 +303,6 @@ FROM ordered_incomes;
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'neutral' }}%%
 xychart-beta
     title "US Income Distribution Percentiles"
     x-axis [p25, p50, p75, p90]
@@ -310,6 +313,8 @@ xychart-beta
 </div>
 
 ### Advanced Text Standardization Procedure
+
+One of my proudest technical achievements was this procedure that handles text standardization with elegant parameterization:
 
 ```sql
 DROP PROCEDURE IF EXISTS standardize_text_field;
@@ -401,7 +406,6 @@ SELECT City FROM USHouseholdIncome_Clean WHERE City LIKE '% %' LIMIT 5;
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'forest' }}%%
 gauge
     title Quality Assessment Score
     arc 100
@@ -411,7 +415,7 @@ gauge
 
 </div>
 
-The project implements a sophisticated weighted quality scoring system that achieved a final score of 9.62/10:
+I'm particularly proud of my weighted quality scoring system – not all data quality issues have equal impact, so I developed a nuanced scoring method:
 
 ```sql
 SELECT
@@ -446,7 +450,6 @@ Key quality metrics:
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#5D8AA8', 'fontFamily': 'Arial' }}}%%
 erDiagram
     USHouseholdIncome {
         int id PK
@@ -541,12 +544,11 @@ erDiagram
 
 ## Workflow
 
-The data cleaning and analysis workflow follows a systematic process:
+Transforming raw data into insights followed this systematic process:
 
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'edgeLabelBackground': '#f8f9fa', 'primaryColor': '#4080bf' }}}%%
 flowchart TD
     A[Initial Data Inspection] --> B[Handle Missing Values]
     B --> C[Fix Data Inconsistencies]
@@ -640,7 +642,7 @@ flowchart TD
 
 ### Working with the Results
 
-The script creates three analytical views that are ready for immediate use:
+I've created three ready-to-use analytical views that make exploring the data a breeze:
 
 ```sql
 -- Get location-specific income data
@@ -712,8 +714,8 @@ LIMIT 5;
 <div class="troubleshooting-container" style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
 
 #### 1. Error: Table 'XXX' already exists
-**Cause**: Script is re-run without dropping existing objects
-**Solution**: Add `DROP TABLE IF EXISTS` statements or manually drop tables before re-running
+**Cause**: Script is re-run without dropping existing objects  
+**Solution**: Add these lines to the beginning of your script to clean up previous runs
 
 ```sql
 -- Add to beginning of script
@@ -723,12 +725,12 @@ DROP TABLE IF EXISTS duplicate_records_log;
 ```
 
 #### 2. Error: View 'XXX' references invalid table(s) or column(s)
-**Cause**: Views created before tables or columns they depend on
-**Solution**: Ensure view creation happens after all tables are created and populated
+**Cause**: Views created before tables or columns they depend on  
+**Solution**: Make sure view creation happens after all tables are created and populated
 
 #### 3. Performance: Query execution times out
-**Cause**: Large dataset with insufficient indexing or inefficient joins
-**Solution**: Add indexes and limit result sets
+**Cause**: Large dataset with insufficient indexing or inefficient joins  
+**Solution**: Add these indexes to dramatically improve performance
    
 ```sql
 -- Add indexes to improve performance
@@ -740,8 +742,8 @@ SELECT ... FROM big_table LIMIT 1000;
 ```
 
 #### 4. Error: Invalid default value for 'error_time'
-**Cause**: SQL mode includes NO_ZERO_DATE
-**Solution**: Modify SQL mode or change timestamp default
+**Cause**: SQL mode includes NO_ZERO_DATE  
+**Solution**: Check your SQL mode and modify the timestamp default
    
 ```sql
 -- Check SQL mode
@@ -756,8 +758,8 @@ CREATE TABLE IF NOT EXISTS error_log (
 ```
 
 #### 5. Error: Prepared statement contains too many placeholders
-**Cause**: Complex dynamic SQL exceeding system limits
-**Solution**: Break down into multiple simpler statements
+**Cause**: Complex dynamic SQL exceeding system limits  
+**Solution**: Break complex statements into simpler chunks
    
 ```sql
 -- Instead of one complex prepared statement
@@ -780,7 +782,6 @@ DEALLOCATE PREPARE stmt2;
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'fontSize': '16px' }}}%%
 journey
     title Data Quality Management Process
     section Data Inspection
@@ -799,15 +800,15 @@ journey
 
 </div>
 
-The script implements a comprehensive quality management approach:
+I built a comprehensive quality management system to ensure reliable analysis:
 
-1. **Error Logging**: All data modifications are tracked in the `error_log` table
-2. **Validation Flags**: Records with invalid ZIP codes or coordinates are flagged rather than deleted
-3. **Quality Scoring**: A weighted quality score considers multiple factors with appropriate weights
-4. **Data Filtering**: Analysis views automatically filter out low-quality records
-5. **Transparency**: Quality metrics are reported with detailed percentage breakdowns
+1. **Error Logging**: Every data modification is tracked in the `error_log` table so I know exactly what changed and when
+2. **Validation Flags**: Instead of deleting records with invalid ZIP codes or coordinates, I flag them so they can be filtered out when needed
+3. **Quality Scoring**: My weighted quality score gives appropriate importance to different data elements
+4. **Data Filtering**: Analysis views automatically filter out low-quality records for clean results
+5. **Transparency**: Quality metrics include detailed percentage breakdowns so you know exactly what's happening
 
-This approach ensures data transparency while maximizing the usable dataset for analysis.
+This approach maximizes the usable dataset while maintaining transparency about data limitations.
 
 ## Key Analytical Findings
 
@@ -816,9 +817,8 @@ This approach ensures data transparency while maximizing the usable dataset for 
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'forest' }}%%
 pie
-    title "Income Distribution by Percentile"
+    title "Income Distribution by Percentile ($)"
     "0-25th percentile" : 36039
     "25-50th percentile" : 15832
     "50-75th percentile" : 29038
@@ -827,7 +827,7 @@ pie
 
 </div>
 
-The analysis revealed:
+My analysis of income distribution revealed:
 - Average median household income: $85,452.94
 - Significant income dispersion with standard deviation of $87,809.55
 - Evidence of data capping at $300,000 for top 10% of values
@@ -838,7 +838,6 @@ The analysis revealed:
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'neutral' }}%%
 graph LR
     A[Regional Analysis] --> NE[Northeast<br>$102,068]
     A --> W[West<br>$96,742]
@@ -857,18 +856,17 @@ graph LR
 
 </div>
 
-Clear regional economic patterns emerged:
-- Northeast region: $102,068.17 (highest median income)
-- West region: Close second highest
-- Southeast region: $71,307.15 (30% below Northeast)
-- Clear prosperity gradient from coastal to interior regions
+The regional analysis was eye-opening:
+- Northeast region leads with $102,068.17 median income
+- West region follows closely behind
+- Southeast region trails at $71,307.15 (30% below Northeast)
+- There's a clear prosperity gradient from coastal to interior regions
 
 ### Income Inequality Insights
 
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'neutral' }}%%
 quadrantChart
     title Income Inequality by State (Top 5)
     x-axis Mean Income (Low) --> Mean Income (High) 
@@ -886,42 +884,36 @@ quadrantChart
 
 </div>
 
-The data reveals significant income inequality:
-- Some communities show mean-to-median ratios exceeding 3.65
-- Three inequality categories identified (Low, Moderate, High)
-- Consistent patterns of higher inequality in certain states
-- Evidence of substantial wealth concentration in specific geographic areas
+I was particularly intrigued by the inequality metrics:
+- Some communities show mean-to-median ratios exceeding 3.65 (indicating extreme inequality)
+- Three inequality categories emerged naturally from the data (Low, Moderate, High)
+- Certain states consistently show higher inequality patterns
+- The data suggests substantial wealth concentration in specific geographic areas
 
 ## Performance Optimization
 
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'neutral' }}%%
 mindmap
   root((Performance<br>Optimization))
     Strategic Indexing
-      ::icon(fas fa-database)
       Key columns
       Composite indexes
       Selective indexing
     Transaction Management
-      ::icon(fas fa-exchange-alt)
       Savepoints
       Error handling
       Rollback prevention
     Query Optimization
-      ::icon(fas fa-bolt)
       Efficient joins
       WHERE clause optimization
       LIMIT clause usage
     Helper Procedures
-      ::icon(fas fa-tools)
       Text standardization
       Index creation
       Data validation
     Resource Management
-      ::icon(fas fa-tachometer-alt)
       Result set limiting
       Memory allocation
       Connection pooling
@@ -929,15 +921,15 @@ mindmap
 
 </div>
 
-The script includes several performance enhancements:
+I implemented several performance optimizations to make the script run efficiently:
 
-1. **Strategic Indexing**: Creates indexes on frequently queried columns
-2. **Transaction Management**: Uses transactions with savepoints for data safety
-3. **Query Optimization**: Implements efficient join strategies and filtering
-4. **Helper Procedures**: Consolidates repetitive operations into reusable components
-5. **Resource Management**: Limits result sets where appropriate to prevent timeouts
+1. **Strategic Indexing**: Created indexes on frequently queried columns to speed up joins
+2. **Transaction Management**: Used transactions with savepoints to ensure data integrity
+3. **Query Optimization**: Designed efficient join strategies and filtering
+4. **Helper Procedures**: Built reusable components for common operations
+5. **Resource Management**: Limited result sets where needed to prevent timeouts
 
-For best performance, consider:
+For best performance, I recommend:
 - Allocating sufficient memory to MySQL
 - Adjusting `innodb_buffer_pool_size` if working with large datasets
 - Using the `EXPLAIN` command to troubleshoot slow queries
@@ -945,11 +937,11 @@ For best performance, consider:
 ## Conclusion
 
 <div class="conclusion-card" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid #4080bf;">
-This project demonstrates advanced SQL data cleaning and analysis techniques applied to US household income data. The comprehensive approach combines systematic data quality management with sophisticated statistical analysis to extract meaningful economic insights.
+This project challenged me to apply advanced SQL techniques to real-world economic data. What began as a technical exercise became a fascinating exploration of America's economic landscape, revealing stark regional divides that mirror many ongoing policy discussions.
 
-The findings reveal significant regional economic disparities across the United States, with northeastern states showing median incomes approximately 30% higher than southeastern states. The data quality was excellent (9.62/10), requiring minimal modification while enabling robust analysis.
+The 30% income gap between Northeast and Southeast regions is more than just a statistic – it represents different economic realities for millions of Americans. The exceptional data quality (9.62/10) gives me confidence in these findings, despite the ceiling effect I discovered in the high-income data.
 
-The combination of SQL techniques used—including window functions, CTEs, dynamic SQL, and parameterized procedures—showcases an enterprise-grade approach to data transformation and analysis.
+This analysis demonstrates how powerful SQL can be for extracting meaningful insights from complex datasets. By combining window functions, CTEs, dynamic SQL, and parameterized procedures, I've created an enterprise-grade approach that transforms raw data into an economic story worth telling.
 </div>
 
 ## License
@@ -985,7 +977,6 @@ SOFTWARE.
 <div align="center">
 
 ```mermaid
-%%{init: {'theme': 'neutral' }}%%
 graph TD
     A[Fork Repository] --> B[Create Feature Branch]
     B --> C[Implement Changes]
@@ -1001,7 +992,7 @@ graph TD
 
 </div>
 
-Contributions to improve this data analysis project are welcome. Here's how you can contribute:
+I welcome contributions! Here's how you can help improve this project:
 
 1. **Fork the repository** and create your branch from `main`
 2. **Enhance the SQL script** by:
@@ -1016,18 +1007,18 @@ Contributions to improve this data analysis project are welcome. Here's how you 
    - Document any new views or procedures
    - Include execution time analysis for new queries
 
-For major changes, please open an issue first to discuss proposed changes.
+For major changes, please open an issue first to discuss your ideas.
 
 ## Author
 
 <div class="author-card" style="display: flex; align-items: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 20px;">
   <div style="margin-right: 20px;">
-    <img src="https://via.placeholder.com/100x100.png?text=TZ" alt="Author Profile" style="border-radius: 50%;">
+    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="Tobin Zolkowski" style="border-radius: 50%;">
   </div>
   <div>
     <h3 style="margin: 0;">Tobin Zolkowski</h3>
     <p style="margin: 5px 0;">Data Analyst</p>
     <p style="margin: 5px 0; font-style: italic;">March 2025</p>
-    <p style="margin: 5px 0;">This project was completed as part of a comprehensive data analysis portfolio demonstrating advanced SQL skills in real-world applications. The techniques used were developed through MySQL courses completed on AnalystBuilder.</p>
+    <p style="margin: 5px 0;">I completed this project as part of my data analysis portfolio to demonstrate advanced SQL skills in real-world applications. The techniques used were developed through MySQL courses completed on AnalystBuilder.</p>
   </div>
 </div>
