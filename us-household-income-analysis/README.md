@@ -1080,14 +1080,14 @@ For major changes, please open an issue first to discuss your ideas.
   <img src="pic/1741090918274.jpeg" width="80" height="80" style="border-radius: 50%; margin-right: 20px;" alt="Author avatar">
   <div>
     <h3 style="margin: 0;">Tobin Zolkowski</h3>
-    <p style="margin: 5px 0;">Data Analyst | SQL Specialist | Economic Researcher</p>
+    <p style="margin: 5px 0;">Data Analyst</p>
     <p style="margin: 5px 0; font-style: italic;">March 2025</p>
     <p style="margin: 5px 0;">I completed this project as part of my data analysis portfolio to demonstrate advanced SQL skills in real-world applications. This analysis combines my interests in economic geography, data quality management, and SQL optimization techniques to reveal meaningful patterns in US household income distribution.</p>
     <div style="margin-top: 10px;">
-      <a href="https://github.com/tzolkowski" style="text-decoration: none; margin-right: 15px;">
+      <a href="https://github.com/tzolkowski96" style="text-decoration: none; margin-right: 15px;">
         <img src="https://img.shields.io/badge/GitHub-Profile-lightgrey?style=flat&logo=github" alt="GitHub Profile">
       </a>
-      <a href="https://www.linkedin.com/in/tobinzolkowski" style="text-decoration: none;">
+      <a href="https://www.linkedin.com/in/tobin-zolkowski-844873200/" style="text-decoration: none;">
         <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn Profile">
       </a>
     </div>
