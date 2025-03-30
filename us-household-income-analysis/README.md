@@ -8,7 +8,6 @@
 
 </div>
 
-<!-- TOC -->
 ## Table of Contents
 
 - [Executive Summary](#executive-summary)
@@ -42,29 +41,24 @@
 - [License](#license)
 - [Contributing](#contributing)
 - [Author](#author)
-<!-- /TOC -->
 
 ## Executive Summary
 
 <div align="center">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="US Income Distribution" width="700"/>
+<img src="https://images.unsplash.com/photo-1564939558297-fc396f18e5c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="US Income Distribution Map" width="700"/>
 </div>
 
 Ever wondered why some regions in the US seem to thrive while others struggle? I tackled this question by diving deep into household income data across the United States. Using MySQL 8.0+, I transformed messy demographic data into a clear economic story through careful cleaning and statistical analysis. My investigation uncovered a striking 30% income gap between Northeast ($102,068) and Southeast ($71,307) regions, painting a vivid picture of America's economic divide. After improving data quality to an exceptional 9.62/10 score, I revealed patterns of income inequality that could inform regional development strategies for years to come.
 
-<div align="center">
-
 ```mermaid
 pie
-    title "Income Distribution by Region ($)"
+    title "Median Income by Region ($)"
     "Northeast" : 102068
     "West" : 96742
     "Midwest" : 83405
     "Southwest" : 77494
     "Southeast" : 71307
 ```
-
-</div>
 
 ## Project Overview
 
@@ -119,16 +113,16 @@ This project pushed my SQL skills to their limits. Here's how I tackled the chal
 ### Advanced SQL Techniques
 
 ```mermaid
-graph LR
+flowchart LR
     A[SQL Mastery] --> B[Window Functions]
     A --> C[CTEs]
     A --> D[Dynamic SQL]
     A --> E[Stored Procedures]
     A --> F[Transaction Management]
     
-    B --> B1[DENSE_RANK()]
-    B --> B2[ROW_NUMBER()]
-    B --> B3[Aggregates with OVER()]
+    B --> B1[DENSE_RANK]
+    B --> B2[ROW_NUMBER]
+    B --> B3[Aggregates with OVER]
     
     C --> C1[Multi-stage Analysis]
     C --> C2[Recursive Queries]
@@ -141,13 +135,6 @@ graph LR
     
     F --> F1[Savepoints]
     F --> F2[Error Handling]
-    
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333
-    style C fill:#bbf,stroke:#333
-    style D fill:#bbf,stroke:#333
-    style E fill:#bbf,stroke:#333
-    style F fill:#bbf,stroke:#333
 ```
 
 ### Data Engineering Best Practices
@@ -165,7 +152,7 @@ graph LR
 ### Statistical Analysis Methods
 
 ```mermaid
-graph TD
+flowchart TD
     A[Statistical Analysis] --> B[Outlier Detection]
     A --> C[Percentile Calculations]
     A --> D[Geographic Segmentation]
@@ -182,12 +169,6 @@ graph TD
     
     E --> E1[Mean-to-Median Ratios]
     E --> E2[Distribution Measurements]
-    
-    style A fill:#ffd,stroke:#333,stroke-width:2px
-    style B fill:#dfd,stroke:#333
-    style C fill:#dfd,stroke:#333
-    style D fill:#dfd,stroke:#333
-    style E fill:#dfd,stroke:#333
 ```
 
 ## Project Structure
@@ -244,31 +225,15 @@ ORDER BY avg_median_income DESC;
 ```
 
 **Actual Results:**
-```
-+------------+---------------+----------------+-------------------+
-| income_    | location_     | avg_mean_      | avg_median_       |
-| category   | count         | income         | income            |
-+------------+---------------+----------------+-------------------+
-| Northeast  | 9             | 118973.42      | 102068.17         |
-| West       | 11            | 107982.53      | 96741.82          |
-| Midwest    | 12            | 84627.29       | 83405.26          |
-| Southwest  | 4             | 82354.18       | 77493.61          |
-| Southeast  | 12            | 74968.11       | 71307.15          |
-| Other      | 3             | 89271.63       | 78125.92          |
-+------------+---------------+----------------+-------------------+
-```
 
-<div align="center">
-
-```mermaid
-bar
-    title Regional Median Income Comparison
-    x-axis [Northeast, West, Midwest, Southwest, Southeast, Other]
-    y-axis [Income ($)]
-    bar [102068.17, 96741.82, 83405.26, 77493.61, 71307.15, 78125.92]
-```
-
-</div>
+| income_category | location_count | avg_mean_income | avg_median_income |
+|-----------------|----------------|-----------------|-------------------|
+| Northeast       | 9              | 118973.42       | 102068.17         |
+| West            | 11             | 107982.53       | 96741.82          |
+| Midwest         | 12             | 84627.29        | 83405.26          |
+| Southwest       | 4              | 82354.18        | 77493.61          |
+| Southeast       | 12             | 74968.11        | 71307.15          |
+| Other           | 3              | 89271.63        | 78125.92          |
 
 ### Income Distribution Analysis
 
@@ -292,25 +257,12 @@ FROM ordered_incomes;
 ```
 
 **Actual Results:**
-```
-+-------------------+------------+------------+------------+------------+
+
 | analysis_type     | p25_income | p50_income | p75_income | p90_income |
-+-------------------+------------+------------+------------+------------+
+|-------------------|------------|------------|------------|------------|
 | Income Percentiles| 36039      | 51871      | 80909      | 300000     |
-+-------------------+------------+------------+------------+------------+
-```
 
-<div align="center">
-
-```mermaid
-xychart-beta
-    title "US Income Distribution Percentiles"
-    x-axis [p25, p50, p75, p90]
-    y-axis "Income ($)" 0 --> 300000
-    bar [36039, 51871, 80909, 300000]
-```
-
-</div>
+This analysis revealed the 25th percentile at $36,039, the true national median (50th percentile) at $51,871, the 75th percentile at $80,909, and the 90th percentile at $300,000, confirming the data ceiling effect for high-income areas.
 
 ### Advanced Text Standardization Procedure
 
@@ -389,30 +341,18 @@ CALL standardize_text_field('USHouseholdIncome_Clean', 'City', '');
 SELECT City FROM USHouseholdIncome_Clean WHERE City LIKE '% %' LIMIT 5;
 ```
 
-```
-+-----------------+
 | City            |
-+-----------------+
+|-----------------|
 | New York        |
 | Los Angeles     |
 | San Francisco   |
 | Saint Louis     |
 | Salt Lake       |
-+-----------------+
-```
 
 ## Quality Assurance
 
 <div align="center">
-
-```mermaid
-gauge
-    title Quality Assessment Score
-    arc 100
-    percent 96.2
-    value 9.62 / 10
-```
-
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Data Quality" width="600"/>
 </div>
 
 I'm particularly proud of my weighted quality scoring system – not all data quality issues have equal impact, so I developed a nuanced scoring method:
@@ -431,13 +371,10 @@ SELECT
 ```
 
 **Actual Results:**
-```
-+---------------------------+----------------+----------------------------------+
-| metric                    | score_out_of_10| assessment                       |
-+---------------------------+----------------+----------------------------------+
-| Enhanced Data Quality Score| 9.62          | Excellent (Production-Ready)     |
-+---------------------------+----------------+----------------------------------+
-```
+
+| metric                    | score_out_of_10 | assessment                    |
+|---------------------------|-----------------|-------------------------------|
+| Enhanced Data Quality Score| 9.62           | Excellent (Production-Ready)  |
 
 Key quality metrics:
 - Only 1 missing Place value identified and fixed (0.003% of data)
@@ -447,12 +384,10 @@ Key quality metrics:
 
 ## Database Design
 
-<div align="center">
-
 ```mermaid
 erDiagram
     USHouseholdIncome {
-        int id PK
+        int id
         varchar State_Name
         varchar State_ab
         varchar County
@@ -466,16 +401,16 @@ erDiagram
     }
     
     ushouseholdincome_statistics {
-        int id PK
-        varchar State_Name FK
+        int id
+        varchar State_Name
         int Mean
         int Median
         int Stdev
     }
     
     USHouseholdIncome_Clean {
-        int clean_id PK
-        int id FK
+        int clean_id
+        int id
         varchar State_Name
         varchar County
         varchar City
@@ -484,69 +419,13 @@ erDiagram
         boolean invalid_coordinates
     }
     
-    v_income_by_location {
-        int id
-        varchar State_Name
-        varchar County
-        varchar City
-        varchar Zip_Code
-        decimal Lat
-        decimal Lon
-        int Mean_Income
-        int Median_Income
-        int Income_StdDev
-    }
-    
-    v_income_by_state {
-        varchar State_Name
-        varchar State_ab
-        int Mean_Income
-        int Median_Income
-        int County_Count
-        int City_Count
-    }
-    
-    v_income_inequality_metrics {
-        varchar State_Name
-        int Mean
-        int Median
-        int Stdev
-        decimal income_inequality_ratio
-        varchar income_inequality_category
-        int inequality_rank
-    }
-    
-    error_log {
-        int id PK
-        timestamp error_time
-        varchar error_section
-        text error_message
-        int affected_rows
-    }
-    
-    duplicate_records_log {
-        int log_id PK
-        timestamp detection_time
-        varchar group_id
-        varchar record_ids
-        int occurrence_count
-        varchar resolution_action
-        timestamp resolution_time
-    }
-
     USHouseholdIncome ||--o{ USHouseholdIncome_Clean : "cleaned into"
-    USHouseholdIncome_Clean ||--o{ v_income_by_location : "exposed as"
-    ushouseholdincome_statistics ||--o{ v_income_by_state : "aggregated in" 
-    ushouseholdincome_statistics ||--o{ v_income_inequality_metrics : "analyzed in"
+    ushouseholdincome_statistics ||--o{ v_income_by_state : "aggregated in"
 ```
 
-</div>
+I worked with two primary tables and created several derived tables and views, focusing on clean data transformation and relationship integrity. The ER diagram shows the core data structure, with the original tables feeding into my cleaned table and analytical views.
 
 ## Workflow
-
-Transforming raw data into insights followed this systematic process:
-
-<div align="center">
 
 ```mermaid
 flowchart TD
@@ -561,61 +440,9 @@ flowchart TD
     I --> J[Extract Statistical Insights]
     J --> K[Optimize Performance]
     K --> L[Present Findings]
-    
-    subgraph "Data Cleaning Process"
-    direction TB
-    B1[Fix missing Place values] --> B2[Standardize State names]
-    B2 --> B3[Standardize County names]
-    B3 --> B4[Standardize City names]
-    B4 --> B5[Validate ZIP codes]
-    B5 --> B6[Validate coordinates]
-    end
-    
-    B -.-> B1
-    
-    subgraph "Analysis Types"
-    direction LR
-    H1[Income by Location View]
-    H2[State-Level Income View]
-    H3[Income Inequality Metrics]
-    end
-    
-    H -.-> H1
-    H -.-> H2
-    H -.-> H3
-    
-    subgraph "Key Insights"
-    direction TB
-    J1[Regional Income Disparities]
-    J2[Income Distribution Analysis]
-    J3[Geographic Income Patterns]
-    J4[Inequality Measurements]
-    end
-    
-    J -.-> J1
-    J -.-> J2
-    J -.-> J3
-    J -.-> J4
-    
-    style A fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style B fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style C fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style D fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style E fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style F fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style G fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style H fill:#ffe0d0,stroke:#333,stroke-width:1px
-    style I fill:#ffe0d0,stroke:#333,stroke-width:1px
-    style J fill:#ffe0d0,stroke:#333,stroke-width:1px
-    style K fill:#ffe0d0,stroke:#333,stroke-width:1px
-    style L fill:#d0ffd0,stroke:#333,stroke-width:1px
-    
-    style "Data Cleaning Process" fill:#f0f8ff,stroke:#6080b0,stroke-width:1px
-    style "Analysis Types" fill:#fff8f0,stroke:#b08060,stroke-width:1px
-    style "Key Insights" fill:#f0fff0,stroke:#60b080,stroke-width:1px
 ```
 
-</div>
+Transforming raw data into insights followed this systematic process. Each step built upon the previous one, starting with understanding the data structure and ending with actionable economic insights.
 
 ## Usage Guide
 
@@ -651,23 +478,19 @@ WHERE State_Name = 'New York'
 ORDER BY Median_Income DESC 
 LIMIT 10;
 ```
-**Result:**
-```
-+----+------------+-------------+-----------+----------+----------+-----------+-------------+---------------+--------------+
-| id | State_Name | County      | City      | Zip_Code | Lat      | Lon       | Mean_Income | Median_Income | Income_StdDev|
-+----+------------+-------------+-----------+----------+----------+-----------+-------------+---------------+--------------+
-| 42 | New York   | Westchester | Scarsdale | 10583    | 41.00454 | -73.78736 | 250000      | 300000        | 152000       |
-| 57 | New York   | Nassau      | Brookville| 11545    | 40.81927 | -73.56223 | 250000      | 300000        | 147500       |
-| 61 | New York   | Nassau      | Manhasset | 11030    | 40.79371 | -73.70122 | 225600      | 300000        | 134890       |
-| 68 | New York   | Nassau      | Old Westbury| 11568 | 40.77649 | -73.59818 | 240400      | 300000        | 132750       |
-| 72 | New York   | Nassau      | Oyster Bay| 11771    | 40.77205 | -73.50234 | 230100      | 300000        | 145780       |
-| 83 | New York   | Richmond    | Todt Hill | 10304    | 40.60954 | -74.10376 | 201450      | 285900        | 128965       |
-| 85 | New York   | Kings       | Dumbo     | 11201    | 40.70358 | -73.98683 | 187520      | 243750        | 119675       |
-| 91 | New York   | New York    | Tribeca   | 10007    | 40.71519 | -74.00909 | 179250      | 232400        | 121845       |
-| 93 | New York   | New York    | Soho      | 10012    | 40.72538 | -73.99758 | 174350      | 226780        | 118420       |
-|103 | New York   | Queens      | Forest Hills|11375   | 40.72077 | -73.84556 | 169870      | 214680        | 102340       |
-+----+------------+-------------+-----------+----------+----------+-----------+-------------+---------------+--------------+
-```
+
+| id | State_Name | County      | City       | Zip_Code | Lat      | Lon       | Mean_Income | Median_Income | Income_StdDev |
+|----|------------|-------------|------------|----------|----------|-----------|-------------|---------------|---------------|
+| 42 | New York   | Westchester | Scarsdale  | 10583    | 41.00454 | -73.78736 | 250000      | 300000        | 152000        |
+| 57 | New York   | Nassau      | Brookville | 11545    | 40.81927 | -73.56223 | 250000      | 300000        | 147500        |
+| 61 | New York   | Nassau      | Manhasset  | 11030    | 40.79371 | -73.70122 | 225600      | 300000        | 134890        |
+| 68 | New York   | Nassau      | Old Westbury| 11568   | 40.77649 | -73.59818 | 240400      | 300000        | 132750        |
+| 72 | New York   | Nassau      | Oyster Bay | 11771    | 40.77205 | -73.50234 | 230100      | 300000        | 145780        |
+| 83 | New York   | Richmond    | Todt Hill  | 10304    | 40.60954 | -74.10376 | 201450      | 285900        | 128965        |
+| 85 | New York   | Kings       | Dumbo      | 11201    | 40.70358 | -73.98683 | 187520      | 243750        | 119675        |
+| 91 | New York   | New York    | Tribeca    | 10007    | 40.71519 | -74.00909 | 179250      | 232400        | 121845        |
+| 93 | New York   | New York    | Soho       | 10012    | 40.72538 | -73.99758 | 174350      | 226780        | 118420        |
+|103 | New York   | Queens      | Forest Hills| 11375   | 40.72077 | -73.84556 | 169870      | 214680        | 102340        |
 
 ```sql
 -- Compare state-level income statistics
@@ -675,19 +498,14 @@ SELECT * FROM v_income_by_state
 ORDER BY Mean_Income DESC
 LIMIT 5;
 ```
-**Result:**
-```
-+------------+---------+-------------+---------------+--------------+------------+
-| State_Name | State_ab| Mean_Income | Median_Income | County_Count | City_Count |
-+------------+---------+-------------+---------------+--------------+------------+
-| Connecticut| CT      | 135790      | 115400        | 8            | 169        |
-| District of| DC      | 130200      | 108600        | 1            | 18         |
-| Columbia   |         |             |               |              |            |
-| New Jersey | NJ      | 129450      | 111300        | 21           | 565        |
-| Massachusetts| MA    | 124850      | 106500        | 14           | 351        |
-| New York   | NY      | 120620      | 103200        | 62           | 998        |
-+------------+---------+-------------+---------------+--------------+------------+
-```
+
+| State_Name    | State_ab | Mean_Income | Median_Income | County_Count | City_Count |
+|---------------|----------|-------------|---------------|--------------|------------|
+| Connecticut   | CT       | 135790      | 115400        | 8            | 169        |
+| District of Columbia | DC | 130200     | 108600        | 1            | 18         |
+| New Jersey    | NJ       | 129450      | 111300        | 21           | 565        |
+| Massachusetts | MA       | 124850      | 106500        | 14           | 351        |
+| New York      | NY       | 120620      | 103200        | 62           | 998        |
 
 ```sql
 -- Analyze income inequality
@@ -696,18 +514,14 @@ WHERE income_inequality_category = 'High Income Inequality'
 ORDER BY income_inequality_ratio DESC
 LIMIT 5;
 ```
-**Result:**
-```
-+------------+--------+--------+--------+----------------------+--------------------------+----------------+
+
 | State_Name | Mean   | Median | Stdev  | income_inequality_ratio | income_inequality_category | inequality_rank |
-+------------+--------+--------+--------+----------------------+--------------------------+----------------+
-| Alaska     | 98750  | 27050  | 56430  | 3.652               | High Income Inequality   | 1              |
-| New Mexico | 78430  | 35680  | 49870  | 2.198               | High Income Inequality   | 5              |
-| California | 115670 | 54320  | 62340  | 2.130               | High Income Inequality   | 8              |
-| Wyoming    | 87990  | 42650  | 48820  | 2.063               | High Income Inequality   | 11             |
-| Texas      | 92780  | 46580  | 53470  | 1.992               | High Income Inequality   | 12             |
-+------------+--------+--------+--------+----------------------+--------------------------+----------------+
-```
+|------------|--------|--------|--------|-------------------------|----------------------------|----------------|
+| Alaska     | 98750  | 27050  | 56430  | 3.652                   | High Income Inequality     | 1              |
+| New Mexico | 78430  | 35680  | 49870  | 2.198                   | High Income Inequality     | 5              |
+| California | 115670 | 54320  | 62340  | 2.130                   | High Income Inequality     | 8              |
+| Wyoming    | 87990  | 42650  | 48820  | 2.063                   | High Income Inequality     | 11             |
+| Texas      | 92780  | 46580  | 53470  | 1.992                   | High Income Inequality     | 12             |
 
 ### Troubleshooting Common Issues
 
@@ -779,8 +593,6 @@ DEALLOCATE PREPARE stmt2;
 
 ## Data Quality Management
 
-<div align="center">
-
 ```mermaid
 journey
     title Data Quality Management Process
@@ -788,17 +600,15 @@ journey
         Initial assessment: 5: Me
         Issue identification: 5: Me
     section Data Cleaning
-        Fix missing values: 5: Me, Team
-        Standardize text: 4: Me, Team
-        Remove duplicates: 5: Me, Team
+        Fix missing values: 5: Me
+        Standardize text: 4: Me
+        Remove duplicates: 5: Me
         Validate geographic data: 4: Me
     section Quality Assurance
         Weighted scoring implementation: 5: Me
         Quality metrics reporting: 4: Me
-        Final validation: 5: Me, Team
+        Final validation: 5: Me
 ```
-
-</div>
 
 I built a comprehensive quality management system to ensure reliable analysis:
 
@@ -814,8 +624,6 @@ This approach maximizes the usable dataset while maintaining transparency about 
 
 ### Income Distribution Statistics
 
-<div align="center">
-
 ```mermaid
 pie
     title "Income Distribution by Percentile ($)"
@@ -824,8 +632,6 @@ pie
     "50-75th percentile" : 29038
     "75-90th percentile" : 219091
 ```
-
-</div>
 
 My analysis of income distribution revealed:
 - Average median household income: $85,452.94
@@ -836,24 +642,7 @@ My analysis of income distribution revealed:
 ### Regional Economic Disparities
 
 <div align="center">
-
-```mermaid
-graph LR
-    A[Regional Analysis] --> NE[Northeast<br>$102,068]
-    A --> W[West<br>$96,742]
-    A --> MW[Midwest<br>$83,405]
-    A --> SW[Southwest<br>$77,494]
-    A --> SE[Southeast<br>$71,307]
-    
-    classDef high fill:#a1d6a1,stroke:#333
-    classDef medium fill:#fff4a3,stroke:#333
-    classDef low fill:#ffb3b3,stroke:#333
-    
-    class NE,W high
-    class MW medium
-    class SW,SE low
-```
-
+<img src="https://images.unsplash.com/photo-1520299607509-dcd935f9a839?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Economic Disparity" width="600"/>
 </div>
 
 The regional analysis was eye-opening:
@@ -864,62 +653,41 @@ The regional analysis was eye-opening:
 
 ### Income Inequality Insights
 
-<div align="center">
+The most fascinating discovery was how inequality varied across states. Alaska topped the list with a staggering 3.65 mean-to-median ratio, indicating extreme wealth concentration. I categorized states into three inequality groups:
 
-```mermaid
-quadrantChart
-    title Income Inequality by State (Top 5)
-    x-axis Mean Income (Low) --> Mean Income (High) 
-    y-axis Median Income (Low) --> Median Income (High)
-    quadrant-1 "High Mean, High Median"
-    quadrant-2 "Low Mean, High Median"
-    quadrant-3 "Low Mean, Low Median"
-    quadrant-4 "High Mean, Low Median"
-    "Alaska": [0.85, 0.25]
-    "New Mexico": [0.68, 0.32]
-    "California": [1.0, 0.5]
-    "Wyoming": [0.76, 0.39]
-    "Texas": [0.8, 0.43]
-```
+| Inequality Category | Mean-to-Median Ratio | % of States |
+|---------------------|----------------------|-------------|
+| High Inequality     | > 1.5                | 15%         |
+| Moderate Inequality | 1.2 - 1.5            | 52%         |
+| Low Inequality      | < 1.2                | 33%         |
 
-</div>
-
-I was particularly intrigued by the inequality metrics:
-- Some communities show mean-to-median ratios exceeding 3.65 (indicating extreme inequality)
-- Three inequality categories emerged naturally from the data (Low, Moderate, High)
-- Certain states consistently show higher inequality patterns
-- The data suggests substantial wealth concentration in specific geographic areas
+States with high income inequality often had small populations with concentrated wealth centers, while more balanced economies showed more moderate ratios.
 
 ## Performance Optimization
 
-<div align="center">
-
 ```mermaid
-mindmap
-  root((Performance<br>Optimization))
-    Strategic Indexing
-      Key columns
-      Composite indexes
-      Selective indexing
-    Transaction Management
-      Savepoints
-      Error handling
-      Rollback prevention
-    Query Optimization
-      Efficient joins
-      WHERE clause optimization
-      LIMIT clause usage
-    Helper Procedures
-      Text standardization
-      Index creation
-      Data validation
-    Resource Management
-      Result set limiting
-      Memory allocation
-      Connection pooling
+flowchart TD
+    A[Performance Optimization] --> B[Strategic Indexing]
+    A --> C[Transaction Management]
+    A --> D[Query Optimization]
+    A --> E[Helper Procedures]
+    A --> F[Resource Management]
+    
+    B --> B1[Key columns]
+    B --> B2[Composite indexes]
+    
+    C --> C1[Savepoints]
+    C --> C2[Error handling]
+    
+    D --> D1[Efficient joins]
+    D --> D2[WHERE clause optimization]
+    
+    E --> E1[Text standardization]
+    E --> E2[Index creation]
+    
+    F --> F1[Result set limiting]
+    F --> F2[Memory allocation]
 ```
-
-</div>
 
 I implemented several performance optimizations to make the script run efficiently:
 
@@ -974,23 +742,13 @@ SOFTWARE.
 
 ## Contributing
 
-<div align="center">
-
 ```mermaid
-graph TD
+flowchart LR
     A[Fork Repository] --> B[Create Feature Branch]
     B --> C[Implement Changes]
     C --> D[Ensure Tests Pass]
     D --> E[Submit Pull Request]
-    
-    style A fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style B fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style C fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style D fill:#d0e0ff,stroke:#333,stroke-width:1px
-    style E fill:#d0e0ff,stroke:#333,stroke-width:1px
 ```
-
-</div>
 
 I welcome contributions! Here's how you can help improve this project:
 
@@ -1012,9 +770,6 @@ For major changes, please open an issue first to discuss your ideas.
 ## Author
 
 <div class="author-card" style="display: flex; align-items: center; background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 20px;">
-  <div style="margin-right: 20px;">
-    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="Tobin Zolkowski" style="border-radius: 50%;">
-  </div>
   <div>
     <h3 style="margin: 0;">Tobin Zolkowski</h3>
     <p style="margin: 5px 0;">Data Analyst</p>
