@@ -131,21 +131,21 @@ flowchart TD
     A --> E[Stored Procedures]
     A --> F[Transaction Management]
     
-    B --> B1[DENSE_RANK for<br>inequality rankings]
-    B --> B2[ROW_NUMBER for<br>percentile calculations]
-    B --> B3[Aggregates with OVER<br>for regional summaries]
+    B --> B1[DENSE_RANK for inequality rankings]
+    B --> B2[ROW_NUMBER for percentile calculations]
+    B --> B3[Aggregates with OVER for regional summaries]
     
-    C --> C1[Multi-stage<br>analysis pipeline]
-    C --> C2[Recursive income<br>distribution calculations]
+    C --> C1[Multi-stage analysis pipeline]
+    C --> C2[Recursive distribution calculations]
     
-    D --> D1[Parameterized execution<br>for text standardization]
-    D --> D2[Dynamic indexing based<br>on schema analysis]
+    D --> D1[Parameterized text standardization]
+    D --> D2[Dynamic indexing creation]
     
-    E --> E1[Reusable standardization<br>procedures]
-    E --> E2[Validation with<br>error handling]
+    E --> E1[Reusable cleaning procedures]
+    E --> E2[Validation with error handling]
     
-    F --> F1[Savepoints for<br>granular error recovery]
-    F --> F2[Comprehensive<br>logging for debugging]
+    F --> F1[Savepoints for recovery]
+    F --> F2[Comprehensive logging]
     
     classDef main fill:#3498db,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
     classDef sub fill:#2ecc71,stroke:#333,stroke-width:1px,color:#fff,font-weight:bold
@@ -171,31 +171,27 @@ flowchart TD
 ### Statistical Analysis Methods
 
 ```mermaid
-graph TD
-    A[Statistical Analysis] --> B[Outlier Detection]
-    A --> C[Percentile Calculations]
-    A --> D[Geographic Segmentation]
-    A --> E[Inequality Metrics]
+flowchart TD
+    A[Statistical Analysis]:::main --> B[Outlier Detection]:::sub
+    A --> C[Percentile Calculations]:::sub
+    A --> D[Geographic Segmentation]:::sub
+    A --> E[Inequality Metrics]:::sub
     
-    B --> B1[Standard Deviation<br>Method]
-    B --> B2[Modified Z-Score<br>Analysis]
+    B --> B1[Standard Deviation Method]:::leaf
+    B --> B2[Modified Z-Score Analysis]:::leaf
     
-    C --> C1[Window Functions<br>for Percentiles]
-    C --> C2[Distribution<br>Visualization]
+    C --> C1[Window Functions for Percentiles]:::leaf
+    C --> C2[Distribution Visualization]:::leaf
     
-    D --> D1[Regional Classification<br>Taxonomy]
-    D --> D2[Spatial Pattern<br>Recognition]
+    D --> D1[Regional Classification Taxonomy]:::leaf
+    D --> D2[Spatial Pattern Recognition]:::leaf
     
-    E --> E1[Mean-to-Median<br>Ratio Analysis]
-    E --> E2[Income Distribution<br>Stratification]
+    E --> E1[Mean-to-Median Ratio Analysis]:::leaf
+    E --> E2[Income Distribution Stratification]:::leaf
     
     classDef main fill:#3498db,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
     classDef sub fill:#e74c3c,stroke:#333,stroke-width:1px,color:#fff,font-weight:bold
     classDef leaf fill:#f1c40f,stroke:#333,stroke-width:1px,color:#333
-    
-    class A main
-    class B,C,D,E sub
-    class B1,B2,C1,C2,D1,D2,E1,E2 leaf
 ```
 
 ## Project Structure
@@ -534,50 +530,40 @@ This design balances data integrity, query efficiency, and analytical flexibilit
 ## Workflow
 
 ```mermaid
-flowchart LR
-    %% Define style classes
-    classDef inspection fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff,font-weight:bold
-    classDef cleaning fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff,font-weight:bold
-    classDef analysis fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff,font-weight:bold
-    classDef optimization fill:#2ecc71,stroke:#27ae60,stroke-width:2px,color:#fff,font-weight:bold
-    classDef step fill:#ecf0f1,stroke:#333,stroke-width:1px,color:#333
-    classDef highlight fill:#9b59b6,stroke:#8e44ad,stroke-width:2px,color:#fff,font-weight:bold
-    
-    %% Inspection Phase - simplified for clarity
+flowchart TD
     subgraph Inspect["1. Data Inspection"]
         A[Raw Data Examination] --> B[Schema Analysis] --> C[Quality Assessment]
     end
     
-    %% Cleaning Phase - simplified for clarity
     subgraph Clean["2. Data Cleaning"]
-        D[Fix Missing Values] --> E[Standardize Text] --> F[Handle Duplicates] --> 
-        G[Validate Geographic Data] --> H[Flag Outliers]
+        D[Fix Missing Values] --> E[Standardize Text] --> F[Handle Duplicates]
+        F --> G[Validate Geographic Data] --> H[Flag Outliers]
     end
     
-    %% Analysis Phase - simplified for clarity  
     subgraph Analyze["3. Data Analysis"]
-        I[Create Analysis Views] --> J[Calculate Quality Score] --> K[Regional Analysis] -->
-        L[Distribution Stats] --> M[Inequality Metrics]
+        I[Create Analysis Views] --> J[Calculate Quality Score] --> K[Regional Analysis]
+        K --> L[Distribution Stats] --> M[Inequality Metrics]
     end
     
-    %% Optimization Phase - simplified for clarity
     subgraph Optimize["4. Optimization"]
         N[Indexing Strategy] --> O[Query Tuning] --> P[Helper Procedures]
     end
     
-    %% Flow between subgraphs
     C --> D
     H --> I
     M --> N
     
-    %% Apply subgraph styling
-    Inspect:::inspection
-    Clean:::cleaning
-    Analyze:::analysis
-    Optimize:::optimization
+    classDef inspection fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff,font-weight:bold
+    classDef cleaning fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff,font-weight:bold
+    classDef analysis fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff,font-weight:bold
+    classDef optimization fill:#2ecc71,stroke:#27ae60,stroke-width:2px,color:#fff,font-weight:bold
+    classDef highlight fill:#9b59b6,stroke:#8e44ad,stroke-width:2px,color:#fff,font-weight:bold
     
-    %% Style key steps
-    A & H & M & P:::highlight
+    class Inspect inspection
+    class Clean cleaning
+    class Analyze analysis
+    class Optimize optimization
+    class A,H,M,P highlight
 ```
 
 My data transformation pipeline followed this systematic workflow, with each stage building on previous steps:
@@ -840,7 +826,7 @@ This integrated approach achieved a final data quality score of 9.62/10 while ma
 
 ```mermaid
 xychart-beta
-    title "US Household Income Distribution Across Percentiles"
+    title "Income Distribution Across Percentiles"
     x-axis [0, 25, 50, 75, 90, 100]
     y-axis "Household Income ($)" 0 --> 350000
     bar [0, 36039, 51871, 80909, 300000, 300000]
@@ -878,7 +864,7 @@ These geographic disparities raise important questions about resource allocation
 My income inequality analysis used the mean-to-median ratio as a key metric, where higher values indicate greater wealth concentration among a small percentage of households:
 
 ```mermaid
-graph TD
+flowchart TD
     A[Income Inequality Analysis]:::root --> B{Mean-to-Median Ratio}:::decision
     
     B -->|Ratio > 1.5| C[High Inequality]:::high
@@ -889,11 +875,11 @@ graph TD
     D --> G[52% of States]:::pct
     E --> H[33% of States]:::pct
     
-    F --> I[Alaska: 3.65]:::example
-    F --> J[New Mexico: 2.20]:::example
-    F --> K[California: 2.13]:::example
-    F --> L[Wyoming: 2.06]:::example
-    F --> M[Texas: 1.99]:::example
+    C --> I[Alaska: 3.65]:::example
+    C --> J[New Mexico: 2.20]:::example
+    C --> K[California: 2.13]:::example
+    C --> L[Wyoming: 2.06]:::example
+    C --> M[Texas: 1.99]:::example
     
     classDef root fill:#8e44ad,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
     classDef decision fill:#3498db,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
@@ -918,47 +904,33 @@ Most concerning was the state-level correlation between high inequality and lowe
 
 ```mermaid
 flowchart TD
-    %% Main sections with clear color coding
-    subgraph "Performance Strategy"
-        A[Performance Optimization]:::main --> B[Strategic Indexing]:::strategy
-        A --> C[Transaction Management]:::strategy
-        A --> D[Query Optimization]:::strategy
-        A --> E[Resource Management]:::strategy
-    end
+    A[Performance Optimization]:::main --> B[Strategic Indexing]:::strategy
+    A --> C[Transaction Management]:::strategy
+    A --> D[Query Optimization]:::strategy
+    A --> E[Resource Management]:::strategy
     
-    %% Implementation techniques with consistent styling
-    subgraph "Implementation Techniques"
-        %% Indexing techniques
-        B --> B1[Table-specific indexes<br>on key join columns]:::technique
-        B --> B2[Composite indexes for<br>multi-column joins]:::technique
-        B --> B3[Conditional index creation<br>to prevent duplicates]:::technique
-        
-        %% Transaction techniques
-        C --> C1[Explicit transactions<br>with BEGIN/COMMIT]:::technique
-        C --> C2[Strategic savepoints<br>for error recovery]:::technique
-        C --> C3[Comprehensive error<br>handling logic]:::technique
-        
-        %% Query optimization
-        D --> D1[JOIN optimization<br>over subqueries]:::technique
-        D --> D2[WHERE clause<br>efficiency improvements]:::technique
-        D --> D3[Materialized views<br>for complex calculations]:::technique
-        
-        %% Resource management
-        E --> E1[Result set limiting<br>with LIMIT clause]:::technique
-        E --> E2[Memory usage<br>optimization]:::technique
-        E --> E3[Connection pooling<br>and resource allocation]:::technique
-    end
+    B --> B1[Table-specific indexes<br>on key join columns]:::technique
+    B --> B2[Composite indexes for<br>multi-column joins]:::technique
+    B --> B3[Conditional index creation<br>to prevent duplicates]:::technique
     
-    %% Results with standout styling
-    subgraph "Achieved Improvements"
-        B1 --> F1[Faster<br>state-based queries]:::result
-        B2 --> F2[Improved<br>join operations]:::result
-        C2 --> F3[Reduced<br>lock contention]:::result
-        D1 --> F4[21.9s execution time<br>for complex queries]:::result
-        E1 --> F5[Reliable execution<br>of all queries]:::result
-    end
+    C --> C1[Explicit transactions<br>with BEGIN/COMMIT]:::technique
+    C --> C2[Strategic savepoints<br>for error recovery]:::technique
+    C --> C3[Comprehensive error<br>handling logic]:::technique
     
-    %% Style definitions
+    D --> D1[JOIN optimization<br>over subqueries]:::technique
+    D --> D2[WHERE clause<br>efficiency improvements]:::technique
+    D --> D3[Materialized views<br>for complex calculations]:::technique
+    
+    E --> E1[Result set limiting<br>with LIMIT clause]:::technique
+    E --> E2[Memory usage<br>optimization]:::technique
+    E --> E3[Connection pooling<br>and resource allocation]:::technique
+    
+    B1 --> F1[Faster<br>state-based queries]:::result
+    B2 --> F2[Improved<br>join operations]:::result
+    C2 --> F3[Reduced<br>lock contention]:::result
+    D1 --> F4[21.9s execution time<br>for complex queries]:::result
+    E1 --> F5[Reliable execution<br>of all queries]:::result
+    
     classDef main fill:#3498db,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
     classDef strategy fill:#9b59b6,stroke:#333,stroke-width:1px,color:#fff,font-weight:bold
     classDef technique fill:#f1c40f,stroke:#333,stroke-width:1px,color:#333,font-weight:normal
