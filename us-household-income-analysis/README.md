@@ -52,13 +52,14 @@
 Ever wondered why some regions in the US seem to thrive while others struggle? I tackled this question by diving deep into household income data across the United States. Using MySQL 8.0+, I transformed messy demographic data into a clear economic story through careful cleaning and statistical analysis. My investigation uncovered a striking 30% income gap between Northeast ($102,068) and Southeast ($71,307) regions, painting a vivid picture of America's economic divide. After improving data quality to an exceptional 9.62/10 score, I revealed patterns of income inequality that could inform regional development strategies for years to come.
 
 ```mermaid
-pie
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#5D8AA8', 'secondaryColor': '#006400', 'tertiaryColor': '#FFD700', 'primaryTextColor': '#fff', 'secondaryTextColor': '#fff', 'tertiaryTextColor': '#000', 'lineColor': '#333', 'fontSize': '16px'}}}%%
+pie showData
     title "Median Income by Region ($)"
-    "Northeast" : 102068
-    "West" : 96742
-    "Midwest" : 83405
-    "Southwest" : 77494
-    "Southeast" : 71307
+    "Northeast ($102,068)" : 102068
+    "West ($96,742)" : 96742
+    "Midwest ($83,405)" : 83405
+    "Southwest ($77,494)" : 77494
+    "Southeast ($71,307)" : 71307
 ```
 
 ## Project Overview
@@ -70,17 +71,17 @@ This portfolio project showcases how I tackled a real-world dataset and extracte
 <div class="findings-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
 
 <div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-  <h4>🌍 Regional Disparities</h4>
+  <h4>🌎 Regional Disparities</h4>
   <p>Northeast region leads with $102,068 median income vs. Southeast at $71,307 (30% gap)</p>
 </div>
 
 <div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-  <h4>📊 Income Distribution</h4>
+  <h4>💰 Income Distribution</h4>
   <p>Average US median household income of $85,452.94 with significant standard deviation ($87,809.55)</p>
 </div>
 
 <div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-  <h4>🔍 Data Quality</h4>
+  <h4>🧹 Data Quality</h4>
   <p>Achieved 9.62/10 quality score through systematic cleaning procedures</p>
 </div>
 
@@ -95,7 +96,7 @@ This portfolio project showcases how I tackled a real-world dataset and extracte
 </div>
 
 <div class="finding-card" style="padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-  <h4>📈 Data Ceiling Effect</h4>
+  <h4>🚫 Data Ceiling Effect</h4>
   <p>Top 10% of values capped at $300,000, affecting income distribution analysis</p>
 </div>
 
@@ -124,35 +125,36 @@ This project pushed my SQL skills to their limits. Here's how I tackled the chal
 ### Advanced SQL Techniques
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f96', 'primaryTextColor': '#fff', 'primaryBorderColor': '#333', 'lineColor': '#333', 'secondaryColor': '#bbf', 'tertiaryColor': '#fff'}}}%%
+
 flowchart TD
-    A[SQL Mastery] --> B[Window Functions]
-    A --> C[CTEs]
+    classDef main fill:#f96,stroke:#333,stroke-width:3px,color:#fff,font-weight:bold
+    classDef sub fill:#bbf,stroke:#333,stroke-width:2px,color:#333,font-weight:bold
+    classDef leaf fill:#e7f5fe,stroke:#333,stroke-width:1px,color:#333
+
+    A[SQL Mastery]:::main --> B[Window Functions]
+    A --> C[Common Table<br>Expressions]
     A --> D[Dynamic SQL]
-    A --> E[Stored Procedures]
-    A --> F[Transaction Management]
+    A --> E[Stored<br>Procedures]
+    A --> F[Transaction<br>Management]
     
-    B --> B1[DENSE_RANK for income inequality rankings]
-    B --> B2[ROW_NUMBER for percentile calculations]
-    B --> B3[Aggregates with OVER for regional summaries]
+    B --> B1[DENSE_RANK for<br>inequality rankings]:::leaf
+    B --> B2[ROW_NUMBER for<br>percentile calculations]:::leaf
+    B --> B3[Aggregates with OVER<br>for regional summaries]:::leaf
     
-    C --> C1[Multi-stage analysis pipeline]
-    C --> C2[Recursive income distribution calculations]
+    C --> C1[Multi-stage<br>analysis pipeline]:::leaf
+    C --> C2[Recursive income<br>distribution calculations]:::leaf
     
-    D --> D1[Parameterized execution for text standardization]
-    D --> D2[Dynamic indexing based on schema analysis]
+    D --> D1[Parameterized execution<br>for text standardization]:::leaf
+    D --> D2[Dynamic indexing based<br>on schema analysis]:::leaf
     
-    E --> E1[Reusable standardization procedures]
-    E --> E2[Validation with error handling]
+    E --> E1[Reusable standardization<br>procedures]:::leaf
+    E --> E2[Validation with<br>error handling]:::leaf
     
-    F --> F1[Savepoints for granular error recovery]
-    F --> F2[Comprehensive logging for debugging]
+    F --> F1[Savepoints for<br>granular error recovery]:::leaf
+    F --> F2[Comprehensive<br>logging for debugging]:::leaf
     
-    style A fill:#f96,stroke:#333,stroke-width:2px
-    style B1 fill:#bbf,stroke:#333
-    style C1 fill:#bbf,stroke:#333
-    style D1 fill:#bbf,stroke:#333
-    style E1 fill:#bbf,stroke:#333
-    style F1 fill:#bbf,stroke:#333
+    B & C & D & E & F:::sub
 ```
 
 ### Data Engineering Best Practices
@@ -170,32 +172,30 @@ flowchart TD
 ### Statistical Analysis Methods
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#4285F4', 'primaryTextColor': '#fff', 'primaryBorderColor': '#333', 'lineColor': '#333', 'secondaryColor': '#EA4335', 'secondaryTextColor': '#fff', 'secondaryBorderColor': '#333', 'tertiaryColor': '#FBBC05', 'tertiaryTextColor': '#000', 'tertiaryBorderColor': '#333', 'quaternaryColor': '#34A853', 'quaternaryTextColor': '#fff', 'quaternaryBorderColor': '#333', 'edgeLabelBackground': '#fff'}}}%%
+
 graph TD
-    A[Statistical Analysis] --> B[Outlier Detection]
-    A --> C[Percentile Calculations]
-    A --> D[Geographic Segmentation]
-    A --> E[Inequality Metrics]
+    A[Statistical Analysis]:::primary --> B[Outlier Detection]:::secondary
+    A --> C[Percentile Calculations]:::secondary
+    A --> D[Geographic Segmentation]:::secondary
+    A --> E[Inequality Metrics]:::secondary
     
-    B --> B1[Standard Deviation Method]
-    B --> B2[Modified Z-Score Analysis]
+    B --> B1[Standard Deviation<br>Method]:::tertiary
+    B --> B2[Modified Z-Score<br>Analysis]:::tertiary
     
-    C --> C1[Window Functions for Percentiles]
-    C --> C2[Distribution Visualization]
+    C --> C1[Window Functions<br>for Percentiles]:::tertiary
+    C --> C2[Distribution<br>Visualization]:::tertiary
     
-    D --> D1[Regional Classification Taxonomy]
-    D --> D2[Spatial Pattern Recognition]
+    D --> D1[Regional Classification<br>Taxonomy]:::tertiary
+    D --> D2[Spatial Pattern<br>Recognition]:::tertiary
     
-    E --> E1[Mean-to-Median Ratio Analysis]
-    E --> E2[Income Distribution Stratification]
+    E --> E1[Mean-to-Median<br>Ratio Analysis]:::tertiary
+    E --> E2[Income Distribution<br>Stratification]:::tertiary
     
-    classDef primary fill:#4285F4,stroke:#333,stroke-width:1px,color:#fff;
-    classDef secondary fill:#EA4335,stroke:#333,stroke-width:1px,color:#fff;
-    classDef tertiary fill:#FBBC05,stroke:#333,stroke-width:1px,color:#fff;
-    classDef quaternary fill:#34A853,stroke:#333,stroke-width:1px,color:#fff;
-    
-    class A primary;
-    class B,C,D,E secondary;
-    class B1,B2,C1,C2,D1,D2,E1,E2 tertiary;
+    classDef primary fill:#4285F4,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
+    classDef secondary fill:#EA4335,stroke:#333,stroke-width:1px,color:#fff
+    classDef tertiary fill:#FBBC05,stroke:#333,stroke-width:1px,color:#000
+    classDef quaternary fill:#34A853,stroke:#333,stroke-width:1px,color:#fff
 ```
 
 ## Project Structure
@@ -453,56 +453,58 @@ Key quality metrics:
 ## Database Design
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#5D8AA8', 'primaryTextColor': '#fff', 'primaryBorderColor': '#003366', 'lineColor': '#003366', 'secondaryColor': '#00979D', 'tertiaryColor': '#F9F9F9' }}}%%
+
 erDiagram
     USHouseholdIncome {
-        int id PK
-        varchar State_Name
-        varchar State_ab
-        varchar County
-        varchar City
-        varchar Place
-        varchar Type
-        varchar Primary_
-        varchar Zip_Code
-        decimal Lat
-        decimal Lon
+        int id PK "Primary Key"
+        varchar State_Name "State name"
+        varchar State_ab "State abbreviation"
+        varchar County "County name"
+        varchar City "City name"
+        varchar Place "Location name"
+        varchar Type "Location type"
+        varchar Primary_ "Primary designation"
+        varchar Zip_Code "5-digit ZIP code"
+        decimal Lat "Latitude coordinate"
+        decimal Lon "Longitude coordinate"
     }
     
     ushouseholdincome_statistics {
-        int id PK
-        varchar State_Name FK
-        int Mean
-        int Median
-        int Stdev
+        int id PK "Primary Key"
+        varchar State_Name FK "Foreign Key to USHouseholdIncome"
+        int Mean "Mean household income"
+        int Median "Median household income"
+        int Stdev "Standard deviation of income"
     }
     
     USHouseholdIncome_Clean {
-        int clean_id PK
-        int id FK
-        varchar State_Name
-        varchar County
-        varchar City
-        varchar Place
-        boolean invalid_zip_code
-        boolean invalid_coordinates
+        int clean_id PK "Primary Key (auto-increment)"
+        int id FK "Foreign Key to original table"
+        varchar State_Name "Standardized state name"
+        varchar County "Standardized county name"
+        varchar City "Standardized city name"
+        varchar Place "Standardized place name"
+        boolean invalid_zip_code "Flag for invalid ZIP codes"
+        boolean invalid_coordinates "Flag for invalid coordinates"
     }
     
     error_log {
-        int id PK
-        timestamp error_time
-        varchar error_section
-        text error_message
-        int affected_rows
+        int id PK "Primary Key"
+        timestamp error_time "When operation occurred"
+        varchar error_section "Script section identifier"
+        text error_message "Operation description"
+        int affected_rows "Number of rows modified"
     }
     
     duplicate_records_log {
-        int log_id PK
-        timestamp detection_time
-        varchar group_id
-        varchar record_ids
-        int occurrence_count
-        varchar resolution_action
-        timestamp resolution_time
+        int log_id PK "Primary Key"
+        timestamp detection_time "When duplicates were found"
+        varchar group_id "Identifier for duplicate group"
+        varchar record_ids "IDs of duplicate records"
+        int occurrence_count "How many duplicates found"
+        varchar resolution_action "How duplicates were handled"
+        timestamp resolution_time "When duplicates were resolved"
     }
     
     USHouseholdIncome ||--o{ USHouseholdIncome_Clean : "cleaned into"
@@ -534,39 +536,61 @@ This design balances data integrity, query efficiency, and analytical flexibilit
 ## Workflow
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#5D8AA8', 'primaryTextColor': '#fff', 'primaryBorderColor': '#003366', 'lineColor': '#003366', 'secondaryColor': '#00979D', 'secondaryTextColor': '#fff', 'secondaryBorderColor': '#005F60', 'tertiaryColor': '#FFA500', 'tertiaryTextColor': '#fff', 'tertiaryBorderColor': '#A66000', 'quaternaryColor': '#4CAF50', 'quaternaryTextColor': '#fff', 'quaternaryBorderColor': '#2E7D32' }}}%%
+
 flowchart LR
-    subgraph Data Inspection
-        A[Raw Data Examination] --> B[Schema Analysis]
-        B --> C[Quality Assessment]
+    %% Define style classes
+    classDef inspection fill:#5D8AA8,stroke:#003366,stroke-width:2px,color:#fff,font-weight:bold
+    classDef cleaning fill:#00979D,stroke:#005F60,stroke-width:2px,color:#fff,font-weight:bold
+    classDef analysis fill:#FFA500,stroke:#A66000,stroke-width:2px,color:#fff,font-weight:bold
+    classDef optimization fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff,font-weight:bold
+    classDef step fill:#f8f9fa,stroke:#333,stroke-width:1px,color:#333
+    classDef highlight fill:#bbf,stroke:#333,stroke-width:2px,color:#333,font-weight:bold
+    
+    %% Inspection Phase
+    subgraph Inspection ["Data Inspection Phase"]
+        A[Raw Data<br>Examination]:::step --> B[Schema<br>Analysis]:::step
+        B --> C[Quality<br>Assessment]:::step
     end
     
-    subgraph Data Cleaning
-        D[Fix Missing Values] --> E[Standardize Text]
-        E --> F[Handle Duplicates]
-        F --> G[Validate Geographic Data]
-        G --> H[Flag Outliers]
+    %% Cleaning Phase
+    subgraph Cleaning ["Data Cleaning Phase"]
+        D[Fix Missing<br>Values]:::step --> E[Standardize<br>Text]:::step
+        E --> F[Handle<br>Duplicates]:::step
+        F --> G[Validate<br>Geographic Data]:::step
+        G --> H[Flag<br>Outliers]:::step
     end
     
-    subgraph Data Analysis
-        I[Create Analysis Views] --> J[Calculate Quality Score]
-        J --> K[Regional Analysis]
-        K --> L[Income Distribution Stats]
-        L --> M[Inequality Metrics]
+    %% Analysis Phase
+    subgraph Analysis ["Data Analysis Phase"]
+        I[Create Analysis<br>Views]:::step --> J[Calculate<br>Quality Score]:::step
+        J --> K[Regional<br>Analysis]:::step
+        K --> L[Income Distribution<br>Statistics]:::step
+        L --> M[Inequality<br>Metrics]:::step
     end
     
-    subgraph Optimization
-        N[Indexing Strategy] --> O[Query Tuning]
-        O --> P[Helper Procedures]
+    %% Optimization Phase
+    subgraph Optimization ["Optimization Phase"]
+        N[Indexing<br>Strategy]:::step --> O[Query<br>Tuning]:::step
+        O --> P[Helper<br>Procedures]:::step
     end
     
+    %% Flow between subgraphs
     C --> D
     H --> I
     M --> N
     
-    style A fill:#bbf,stroke:#333,stroke-width:1px
-    style H fill:#bbf,stroke:#333,stroke-width:1px
-    style M fill:#bbf,stroke:#333,stroke-width:1px
-    style P fill:#bbf,stroke:#333,stroke-width:1px
+    %% Apply subgraph styling
+    Inspection:::inspection
+    Cleaning:::cleaning
+    Analysis:::analysis
+    Optimization:::optimization
+    
+    %% Highlight key milestones
+    A:::highlight
+    H:::highlight
+    M:::highlight
+    P:::highlight
 ```
 
 My data transformation pipeline followed this systematic workflow, with each stage building on previous steps:
@@ -690,7 +714,7 @@ LIMIT 5;
 
 <div class="troubleshooting-container" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #dc3545;">
 
-<h4 style="color: #dc3545; margin-top: 0;">🔧 Common Installation Issues</h4>
+<h4 style="color: #dc3545; margin-top: 0;">🔍 Common Installation Issues</h4>
 
 #### 1. Error: Table 'XXX' already exists
 **Cause**: Script is re-run without dropping existing objects  
@@ -750,7 +774,7 @@ JOIN ushouseholdincome_statistics s ON r.State_Name = s.State_Name
 GROUP BY r.Region;
 ```
 
-<h4 style="color: #dc3545; margin-top: 15px;">🚧 MySQL Compatibility Issues</h4>
+<h4 style="color: #dc3545; margin-top: 15px;">⚙️ MySQL Compatibility Issues</h4>
 
 #### 5. Error: Invalid default value for 'error_time'
 **Cause**: SQL mode includes NO_ZERO_DATE  
@@ -788,23 +812,25 @@ DEALLOCATE PREPARE stmt;
 ## Data Quality Management
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#4CAF50', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2E7D32', 'lineColor': '#2E7D32', 'secondaryColor': '#FFC107', 'secondaryTextColor': '#000', 'secondaryBorderColor': '#FFA000', 'tertiaryColor': '#F44336', 'tertiaryTextColor': '#fff', 'tertiaryBorderColor': '#D32F2F', 'journeyFontSize': '16px' }}}%%
+
 journey
     title Data Quality Management Journey
     section Initial Assessment
-        Data inspection: 5: Team
-        Issue identification: 5: Team
-        Quality metrics design: 4: Team
+        Data inspection: 5: Me
+        Issue identification: 5: Me
+        Quality metrics design: 4: Me
     section Cleaning Process 
-        Fix missing values: 5: Team
-        Standardize text fields: 4: Team
-        Remove duplicates: 5: Team
-        Validate geographic data: 4: Team
-        Handle outliers: 3: Team
+        Fix missing values: 5: Me
+        Standardize text fields: 4: Me
+        Remove duplicates: 5: Me
+        Validate geographic data: 4: Me
+        Handle outliers: 3: Me
     section Quality Validation
-        Weighted scoring implementation: 5: Team
-        Quality metrics reporting: 4: Team
-        Data limitation documentation: 5: Team
-        Final validation: 5: Team
+        Weighted scoring implementation: 5: Me
+        Quality metrics reporting: 4: Me
+        Data limitation documentation: 5: Me
+        Final validation: 5: Me
 ```
 
 I built a comprehensive quality management system based on data quality best practices, enabling reliable analysis even with imperfect data:
@@ -828,12 +854,19 @@ This integrated approach achieved a final data quality score of 9.62/10 while ma
 ### Income Distribution Statistics
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#4285F4', 'primaryTextColor': '#fff', 'primaryBorderColor': '#3367D6', 'lineColor': '#333', 'secondaryColor': '#EA4335', 'secondaryTextColor': '#fff', 'secondaryBorderColor': '#B31412', 'tertiaryColor': '#FBBC05', 'tertiaryTextColor': '#000', 'tertiaryBorderColor': '#F09300', 'quaternaryColor': '#34A853', 'quaternaryTextColor': '#fff', 'quaternaryBorderColor': '#0D652D', 'fontFamily': 'Arial, sans-serif', 'fontSize': '14px', 'labelFontSize': '14px', 'labelBackground': '#f8f9fa' }}}%%
+
 xychart-beta
-    title "Income Distribution across Percentiles"
-    x-axis [0, 25, 50, 75, 90, 100]
-    y-axis "Household Income ($)" 0 --> 300000
+    title "US Household Income Distribution Across Percentiles"
+    x-axis [0, 25, 50, 75, 90, 100] "Percentile"
+    y-axis "Household Income ($)" 0 --> 350000
     bar [0, 36039, 51871, 80909, 300000, 300000]
     line [0, 36039, 51871, 80909, 300000, 300000]
+    
+    annotate "25th Percentile: $36,039" 25, 36039
+    annotate "True National Median: $51,871" 50, 51871
+    annotate "75th Percentile: $80,909" 75, 80909
+    annotate "Data Ceiling Effect: $300,000" 90, 300000
 ```
 
 My analysis of income distribution revealed:
@@ -867,28 +900,37 @@ These geographic disparities raise important questions about resource allocation
 My income inequality analysis used the mean-to-median ratio as a key metric, where higher values indicate greater wealth concentration among a small percentage of households:
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f9f', 'primaryTextColor': '#fff', 'primaryBorderColor': '#c6c', 'lineColor': '#333', 'edgeLabelBackground': '#fff', 'nodeTextColor': '#333', 'tertiaryColor': '#fff' }}}%%
+
 graph TD
-    A[Income Inequality Analysis] --> B{Mean-to-Median Ratio}
-    B -->|Ratio > 1.5| C[High Inequality]
-    B -->|1.2 < Ratio < 1.5| D[Moderate Inequality]
-    B -->|Ratio < 1.2| E[Low Inequality]
+    %% Main nodes
+    A[Income Inequality Analysis]:::root --> B{Mean-to-Median Ratio}:::decision
     
-    C --> F[15% of States]
-    D --> G[52% of States]
-    E --> H[33% of States]
+    %% Decision branches
+    B -->|Ratio > 1.5| C[High Inequality]:::high
+    B -->|1.2 < Ratio < 1.5| D[Moderate Inequality]:::moderate
+    B -->|Ratio < 1.2| E[Low Inequality]:::low
     
-    F --> I[Alaska: 3.65]
-    F --> J[New Mexico: 2.20]
-    F --> K[California: 2.13]
-    F --> L[Wyoming: 2.06]
-    F --> M[Texas: 1.99]
+    %% Percentage distributions
+    C --> F[15% of States]:::pct
+    D --> G[52% of States]:::pct
+    E --> H[33% of States]:::pct
     
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style I fill:#f66,stroke:#333,stroke-width:1px
-    style J fill:#f88,stroke:#333,stroke-width:1px
-    style K fill:#f99,stroke:#333,stroke-width:1px
-    style L fill:#faa,stroke:#333,stroke-width:1px
-    style M fill:#fcc,stroke:#333,stroke-width:1px
+    %% Examples of high inequality states
+    F --> I[Alaska: 3.65]:::example
+    F --> J[New Mexico: 2.20]:::example
+    F --> K[California: 2.13]:::example
+    F --> L[Wyoming: 2.06]:::example
+    F --> M[Texas: 1.99]:::example
+    
+    %% Define styles
+    classDef root fill:#f9f,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
+    classDef decision fill:#9cf,stroke:#333,stroke-width:2px,color:#000,font-weight:bold
+    classDef high fill:#f66,stroke:#333,stroke-width:1px,color:#fff,font-weight:bold
+    classDef moderate fill:#fc6,stroke:#333,stroke-width:1px,color:#000,font-weight:bold
+    classDef low fill:#6d6,stroke:#333,stroke-width:1px,color:#000,font-weight:bold
+    classDef pct fill:#eee,stroke:#333,stroke-width:1px,color:#000
+    classDef example fill:#fff,stroke:#333,stroke-width:1px,color:#000
 ```
 
 The inequality analysis revealed several critical insights:
@@ -904,42 +946,53 @@ Most concerning was the state-level correlation between high inequality and lowe
 ## Performance Optimization
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f96', 'primaryTextColor': '#fff', 'primaryBorderColor': '#e74', 'lineColor': '#333', 'secondaryColor': '#9cf', 'secondaryTextColor': '#000', 'secondaryBorderColor': '#7ab', 'tertiaryColor': '#fff', 'tertiaryTextColor': '#333', 'tertiaryBorderColor': '#ddd', 'quaternaryColor': '#6f9', 'quaternaryTextColor': '#000', 'quaternaryBorderColor': '#4d7', 'fontFamily': 'Arial, sans-serif' }}}%%
+
 flowchart TD
+    %% Main sections
     subgraph "Performance Strategy"
-        A[Performance Optimization] --> B[Strategic Indexing]
-        A --> C[Transaction Management]
-        A --> D[Query Optimization]
-        A --> E[Resource Management]
+        A[Performance Optimization]:::strategy --> B[Strategic Indexing]:::strategy
+        A --> C[Transaction Management]:::strategy
+        A --> D[Query Optimization]:::strategy
+        A --> E[Resource Management]:::strategy
     end
     
+    %% Implementation details
     subgraph "Implementation Techniques"
-        B --> B1[Table-specific indexes]
-        B --> B2[Composite indexes for joins]
-        B --> B3[Conditional index creation]
+        %% Indexing techniques
+        B --> B1[Table-specific indexes<br>on key join columns]:::technique
+        B --> B2[Composite indexes for<br>multi-column joins]:::technique
+        B --> B3[Conditional index creation<br>to prevent duplicates]:::technique
         
-        C --> C1[Explicit transactions]
-        C --> C2[Strategic savepoints]
-        C --> C3[Error handling logic]
+        %% Transaction techniques
+        C --> C1[Explicit transactions<br>with BEGIN/COMMIT]:::technique
+        C --> C2[Strategic savepoints<br>for error recovery]:::technique
+        C --> C3[Comprehensive error<br>handling logic]:::technique
         
-        D --> D1[Join optimization]
-        D --> D2[WHERE clause efficiency]
-        D --> D3[View materialization]
+        %% Query optimization
+        D --> D1[JOIN optimization<br>over subqueries]:::technique
+        D --> D2[WHERE clause<br>efficiency improvements]:::technique
+        D --> D3[Materialized views<br>for complex calculations]:::technique
         
-        E --> E1[Result set limiting]
-        E --> E2[Memory usage control]
-        E --> E3[Connection pooling]
+        %% Resource management
+        E --> E1[Result set limiting<br>with LIMIT clause]:::technique
+        E --> E2[Memory usage<br>optimization]:::technique
+        E --> E3[Connection pooling<br>and resource allocation]:::technique
     end
     
+    %% Measurable improvements
     subgraph "Achieved Improvements"
-        B1 --> F1[67% faster State queries]
-        B2 --> F2[83% faster join operations]
-        C2 --> F3[12% reduction in lock time]
-        D1 --> F4[21.9s --> 8.2s for complex queries]
-        E1 --> F5[Reliable execution of all queries]
+        B1 --> F1[67% faster<br>State-based queries]:::result
+        B2 --> F2[83% faster<br>join operations]:::result
+        C2 --> F3[12% reduction<br>in lock contention]:::result
+        D1 --> F4[21.9s → 8.2s<br>for complex queries]:::result
+        E1 --> F5[Reliable execution<br>of all queries]:::result
     end
     
-    style A fill:#f96,stroke:#333,stroke-width:2px
-    style F1,F2,F3,F4,F5 fill:#6f9,stroke:#333,stroke-width:1px
+    %% Style definitions
+    classDef strategy fill:#f96,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
+    classDef technique fill:#9cf,stroke:#333,stroke-width:1px,color:#000
+    classDef result fill:#6f9,stroke:#333,stroke-width:1px,color:#000,font-weight:bold
 ```
 
 I implemented several performance optimizations guided by MySQL query execution plans and resource monitoring:
@@ -1026,26 +1079,28 @@ SOFTWARE.
 ## Contributing
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'git0': '#007bff', 'git1': '#28a745', 'git2': '#6610f2', 'git3': '#fd7e14', 'git4': '#dc3545', 'git5': '#17a2b8', 'git6': '#f8f9fa', 'git7': '#343a40', 'gitBranchLabel0': '#ffffff', 'gitBranchLabel1': '#ffffff', 'gitBranchLabel2': '#ffffff', 'gitBranchLabel3': '#ffffff', 'gitBranchLabel4': '#ffffff', 'gitBranchLabel5': '#ffffff', 'gitBranchLabel6': '#212529', 'gitBranchLabel7': '#ffffff', 'gitInv0': '#ffffff', 'gitInv1': '#ffffff', 'gitInv2': '#ffffff', 'gitInv3': '#ffffff', 'gitInv4': '#ffffff', 'gitInv5': '#ffffff', 'gitInv6': '#212529', 'gitInv7': '#ffffff', 'gitBorder0': '#005dc5', 'gitBorder1': '#1f8234', 'gitBorder2': '#4b0bc9', 'gitBorder3': '#d95e00', 'gitBorder4': '#bd2130', 'gitBorder5': '#138496', 'gitBorder6': '#d3d3d3', 'gitBorder7': '#23272b', 'labelTextColor': '#000000', 'nodeBkg': '#f8f9fa', 'nodeTextColor': '#333333', 'commitLabelColor': '#000000', 'commitLabelBackground': '#f8f9fa' }}}%%
+
 gitGraph
-    commit id: "Initial dataset"
+    commit id: "Initial dataset" tag: "v0.1.0"
     branch data-cleaning
     checkout data-cleaning
     commit id: "Improved text standardization"
     commit id: "Enhanced validation logic"
     checkout main
-    merge data-cleaning
+    merge data-cleaning tag: "v0.2.0"
     branch analysis
     checkout analysis
     commit id: "Regional classification"
     commit id: "Inequality metrics"
     checkout main
-    merge analysis
+    merge analysis tag: "v0.3.0"
     branch documentation
     checkout documentation
-    commit id: "README updates"
+    commit id: "README enhancements"
     commit id: "Example queries"
     checkout main
-    merge documentation
+    merge documentation tag: "v1.0.0"
 ```
 
 I welcome contributions! Here's how you can help improve this project:
@@ -1077,7 +1132,7 @@ For major changes, please open an issue first to discuss your ideas.
 ## Author
 
 <div class="author-card" style="display: flex; align-items: center; background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #dee2e6;">
-  <img src="pic/1741090918274.jpeg" width="80" height="80" style="border-radius: 50%; margin-right: 20px;" alt="Author avatar">
+  <img src="https://github.com/identicons/tzolkowski96.png" width="80" height="80" style="border-radius: 50%; margin-right: 20px;" alt="Author avatar">
   <div>
     <h3 style="margin: 0;">Tobin Zolkowski</h3>
     <p style="margin: 5px 0;">Data Analyst</p>
