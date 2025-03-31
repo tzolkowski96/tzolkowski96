@@ -1100,7 +1100,7 @@ For major changes, please open an issue first to discuss your ideas.
 ## Author
 
 <div class="author-card" style="display: flex; align-items: center; background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; border: 1px solid #dee2e6;">
-  <img src="https://github.com/identicons/tzolkowski96.png" width="80" height="80" style="border-radius: 50%; margin-right: 20px;" alt="Author avatar">
+  <img src="pic/1741090918274.jpeg" width="80" height="80" style="border-radius: 50%; margin-right: 20px;" alt="Author avatar">
   <div>
     <h3 style="margin: 0;">Tobin Zolkowski</h3>
     <p style="margin: 5px 0;">Data Analyst</p>
