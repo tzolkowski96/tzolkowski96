@@ -858,7 +858,7 @@ This integrated approach achieved a final data quality score of 9.62/10 while ma
 
 xychart-beta
     title "US Household Income Distribution Across Percentiles"
-    x-axis [0, 25, 50, 75, 90, 100] Percentile
+    x-axis [0, 25, 50, 75, 90, 100] "Percentile"
     y-axis "Household Income ($)" 0 --> 350000
     bar [0, 36039, 51871, 80909, 300000, 300000]
     line [0, 36039, 51871, 80909, 300000, 300000]
