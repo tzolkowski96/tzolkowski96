@@ -163,7 +163,7 @@ flowchart TD
   <li>✅ <strong>Automated Quality Scoring:</strong> Developed weighted metrics system for data reliability assessment with domain-specific weighting factors</li>
   <li>✅ <strong>Systematic Data Cleaning:</strong> Built multi-stage pipeline with targeted validation for ZIP codes, coordinates, and place names</li>
   <li>✅ <strong>Error Logging:</strong> Implemented comprehensive audit trail to track all data modifications including affected record counts</li>
-  <li>✅ <strong>Performance Optimization:</strong> Applied strategic indexing and query optimization techniques reducing execution time by 68%</li>
+  <li>✅ <strong>Performance Optimization:</strong> Applied strategic indexing and query optimization techniques reducing execution time by approximately 68%</li>
   <li>✅ <strong>Documentation:</strong> Maintained detailed execution metrics and methodology descriptions throughout the cleaning process</li>
 </ul>
 </div>
@@ -951,10 +951,10 @@ flowchart TD
     
     %% Results with standout styling
     subgraph "Achieved Improvements"
-        B1 --> F1[67% faster<br>State-based queries]:::result
-        B2 --> F2[83% faster<br>join operations]:::result
-        C2 --> F3[12% reduction<br>in lock contention]:::result
-        D1 --> F4[21.9s → 8.2s<br>for complex queries]:::result
+        B1 --> F1[Faster<br>state-based queries]:::result
+        B2 --> F2[Improved<br>join operations]:::result
+        C2 --> F3[Reduced<br>lock contention]:::result
+        D1 --> F4[21.9s execution time<br>for complex queries]:::result
         E1 --> F5[Reliable execution<br>of all queries]:::result
     end
     
@@ -971,7 +971,7 @@ I implemented several performance optimizations guided by MySQL query execution 
    - Created indexes on frequently joined columns (`State_Name`, `City`, `County`)
    - Added composite indexes for common multi-column patterns
    - Implemented conditional index creation to prevent duplicate indexes
-   - **Result**: Join operations now complete 83% faster than initial implementation
+   - **Result**: Significantly improved performance for state-based and join queries
 
 2. **Query Structure Optimization**:
    - Rewrote subqueries as JOINs where beneficial for the query planner
@@ -983,13 +983,13 @@ I implemented several performance optimizations guided by MySQL query execution 
    - Implemented transaction boundaries with explicit COMMIT/ROLLBACK
    - Added savepoints for granular error recovery
    - Created targeted indexes based on query planner analysis
-   - **Result**: Memory utilization reduced by approximately 35%
+   - **Result**: Improved memory utilization and more reliable query execution
 
 4. **Helper Procedures and Functions**:
    - Created reusable components for common operations like text standardization
    - Implemented parameterized validation functions
    - Built efficient materialization procedure for complex query results
-   - **Result**: Code duplication reduced by 43%, improving maintainability
+   - **Result**: Improved code maintainability and query consistency
 
 For best performance in production environments, I recommend:
 - Allocating at least 4GB to MySQL's `innodb_buffer_pool_size`
