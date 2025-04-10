@@ -413,14 +413,14 @@ I'm particularly interested in:
   
 | Skill | Proficiency |
 |-------|------------|
-| Python | ![70%](https://progress-bar.dev/70) |
-| SQL | ![70%](https://progress-bar.dev/70) |
-| Data Analysis | ![65%](https://progress-bar.dev/65) |
-| Data Visualization | ![65%](https://progress-bar.dev/65) |
-| HTML/CSS | ![60%](https://progress-bar.dev/60) |
-| JavaScript | ![40%](https://progress-bar.dev/40) |
-| Machine Learning | ![40%](https://progress-bar.dev/40) |
-| ETL Processes | ![50%](https://progress-bar.dev/50) |
+| Python | `▰▰▰▰▰▰▰▱▱▱` 70% |
+| SQL | `▰▰▰▰▰▰▰▱▱▱` 70% |
+| Data Analysis | `▰▰▰▰▰▰▱▱▱▱` 65% |
+| Data Visualization | `▰▰▰▰▰▰▱▱▱▱` 65% |
+| HTML/CSS | `▰▰▰▰▰▰▱▱▱▱` 60% |
+| JavaScript | `▰▰▰▰▱▱▱▱▱▱` 40% |
+| Machine Learning | `▰▰▰▰▱▱▱▱▱▱` 40% |
+| ETL Processes | `▰▰▰▰▰▱▱▱▱▱` 50% |
 
 </div>
 
