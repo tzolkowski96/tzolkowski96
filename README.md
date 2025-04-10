@@ -64,91 +64,12 @@ This repository serves as a comprehensive collection of my personal projects, sh
 
 ## 📂 Project Directory
 
-<div align="center">
-
-```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#f4f4f4', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#fff0f0'}}}%%
-flowchart TD
-    subgraph "Data Analysis & ML"
-        ChurnAnalysis["Employee Churn Prediction"]
-        MovieAnalysis["Movie Genre Analysis"]
-        PortugueseStudents["Portuguese Students Analysis"]
-        UFood["UFood Customer Analysis"] 
-        TrafficSafety["Traffic Accident Analytics"]
-    end
-    
-    subgraph "Web Development"
-        Population["Global Population Insights"]
-        Converter["Length Unit Converter"]
-        Calculator["Streamlit Calculator"]
-        WebScraping["Web Data Insights Explorer"]
-    end
-    
-    subgraph "Python Utilities"
-        Exercises["Python Exercises"]
-        FileOrg["File Organizer"]
-        CryptoInsights["Crypto Market Insights"]
-    end
-    
-    subgraph "SQL Projects"
-        LifeExpectancy["World Life Expectancy"]
-        HouseholdIncome["US Household Income Analysis"]
-    end
-    
-    ChurnAnalysis -.-> TrafficSafety
-    MovieAnalysis -.-> Population
-    UFood -.-> CryptoInsights
-    WebScraping -.-> CryptoInsights
-    WebScraping -.-> Population
-    LifeExpectancy -.-> HouseholdIncome
-    
-    classDef analysis fill:#d4f1f9,stroke:#333,stroke-width:1px
-    classDef webdev fill:#d5f5e3,stroke:#333,stroke-width:1px
-    classDef utils fill:#fcf3cf,stroke:#333,stroke-width:1px
-    classDef sql fill:#f5cba7,stroke:#333,stroke-width:1px
-    
-    class ChurnAnalysis,MovieAnalysis,PortugueseStudents,UFood,TrafficSafety analysis
-    class Population,Converter,Calculator,WebScraping webdev
-    class Exercises,FileOrg,CryptoInsights utils
-    class LifeExpectancy,HouseholdIncome sql
-```
-
-</div>
-
 *Navigate through my projects organized by technical domain:*
 
 - [Data Analysis & Machine Learning Projects](#data-analysis-and-machine-learning)
 - [Web Development Applications](#web-development-and-applications)
 - [Python Utility Tools](#python-programming-and-utilities)
 - [SQL Database Projects](#sql-projects)
-
-## 📊 Project Evolution & Growth
-
-<div align="center">
-
-```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#f4f4f4', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#fff0f0'}}}%%
-timeline
-    title My Portfolio Evolution
-    section Data Analysis
-        Python Exercises : Basic data manipulation
-        Movie Genre Analysis : Statistical analysis
-        UFood Customer Analysis : Advanced analytics
-        Traffic Accident Analytics : Geospatial ML modeling
-    section Database Work
-        World Life Expectancy : SQL data cleaning
-        US Household Income Analysis : Advanced SQL analytics
-    section Web Development
-        Streamlit Calculator : Basic web app
-        Length Unit Converter : Interactive conversion tool
-        Web Data Insights Explorer : Full analytics platform
-    section Specialized Tools
-        File Organizer : Python GUI application
-        Crypto Market Insights : Automated data pipeline
-        Global Population Insights : Interactive data visualization
-```
-
-</div>
 
 ## 💼 Project Showcase
 
@@ -449,31 +370,6 @@ I'm currently developing several new projects to expand my portfolio:
 
 <div align="center">
 
-```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#f4f4f4', 'edgeLabelBackground':'#ffffff'}}}%%
-gantt
-    title Learning Path Timeline
-    dateFormat  YYYY-MM
-    axisFormat %Y
-    section Core Skills
-    Python fundamentals      :done, 2022-01, 2022-06
-    SQL mastery              :done, 2022-03, 2022-12
-    Data visualization       :done, 2022-06, 2023-03
-    Tableau & Looker         :done, 2022-09, 2023-06
-    Machine Learning basics  :active, 2023-01, 2024-12
-    Statistics improvement   :active, 2023-06, 2025-12
-    
-    section Web Development
-    HTML & CSS               :done, 2022-09, 2023-06
-    JavaScript               :active, 2023-09, 2025-06
-    TypeScript               :2024-09, 2026-06
-    React                    :2025-01, 2026-12
-    
-    section Mobile Development
-    Swift                    :2025-06, 2027-06
-    iOS Apps                 :2026-01, 2027-12
-```
-
 ### Technical Growth Trajectory
 
 | Timeline | Focus Areas | Technologies |
@@ -512,30 +408,6 @@ I'm particularly interested in:
 ## 🛠 Technical Skills
 
 <div align="center">
-
-```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#f4f4f4', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#fff0f0'}}}%%
-graph TD
-    Skills[<b>Technical Skills</b>]
-    Skills --> ProgrammingA[Python 70%]
-    Skills --> DataA[Data Analysis 65%]
-    Skills --> SQL[SQL 70%]
-    Skills --> Viz[Data Visualization 65%]
-    Skills --> Web[HTML/CSS 60%]
-    Skills --> JS[JavaScript 40%]
-    Skills --> ML[Machine Learning 40%]
-    Skills --> ETL[ETL Processes 50%]
-    
-    classDef primary fill:#f9f9f9,stroke:#333,stroke-width:1px;
-    classDef advanced fill:#c2e0c2,stroke:#333,stroke-width:1px;
-    classDef intermediate fill:#d6eaf8,stroke:#333,stroke-width:1px;
-    classDef beginner fill:#fae5d3,stroke:#333,stroke-width:1px;
-    
-    class Skills primary;
-    class ProgrammingA,SQL,DataA,Viz intermediate;
-    class Web,ETL intermediate;
-    class JS,ML beginner;
-```
 
 ### Core Technical Competencies
   
