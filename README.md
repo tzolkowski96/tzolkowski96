@@ -122,7 +122,22 @@ This repository serves as a comprehensive collection of my personal projects, sh
 
 ### Web Development and Applications
 
-#### 7. [Length Unit Converter](./measurement_converter)
+#### 7. [Global Population Insights](https://github.com/tzolkowski96/global-population-insights)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat-square&logo=javascript)
+![Plotly](https://img.shields.io/badge/Visualization-Plotly.js-blue?style=flat-square)
+
+- **Challenge**: Create an interactive visualization platform for understanding global population trends and projections
+- **Technologies**: HTML, CSS, JavaScript, Plotly.js
+- **Key Features**: 
+  - Developed interactive data visualizations showcasing population growth patterns across regions
+  - Implemented comparative analysis tools for different income groups and geographic regions
+  - Created forward-looking projections with multiple scenario modeling capabilities
+  - Compiled evidence-based policy recommendations supported by data analysis
+  - Documented case studies of successful population control measures and their impacts
+- **Live Demo**: [Global Population Insights](https://tzolkowski96.github.io/global-population-insights/)
+- **Personal Contribution**: Designed and built the complete interactive platform, including data processing logic, visualization components, and analytical frameworks
+
+#### 8. [Length Unit Converter](./measurement_converter)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
 ![Shiny](https://img.shields.io/badge/Framework-Shiny-darkblue?style=flat-square)
 
@@ -135,7 +150,7 @@ This repository serves as a comprehensive collection of my personal projects, sh
   - Created responsive design for consistent user experience across devices
 - **Personal Contribution**: Developed the complete application including mathematical conversion logic, UI/UX design, and input validation
 
-#### 8. [Streamlit Calculator](./streamlit_calculator)
+#### 9. [Streamlit Calculator](./streamlit_calculator)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
 ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red?style=flat-square)
 
@@ -149,7 +164,7 @@ This repository serves as a comprehensive collection of my personal projects, sh
   - Implemented complete error handling for edge cases (division by zero, invalid operations)
 - **Personal Contribution**: Built the complete application including calculator logic, Streamlit interface development, session state management, and error handling system
 
-#### 9. [Web Data Insights Explorer](./advanced_web_scraping_toolkit)
+#### 10. [Web Data Insights Explorer](./advanced_web_scraping_toolkit)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
 ![Flask](https://img.shields.io/badge/Framework-Flask-black?style=flat-square)
 
@@ -165,7 +180,7 @@ This repository serves as a comprehensive collection of my personal projects, sh
 
 ### Python Programming and Utilities
 
-#### 10. [Python Exercises](./python_exercises)
+#### 11. [Python Exercises](./python_exercises)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
 ![Learning](https://img.shields.io/badge/Focus-Skill%20Building-yellow?style=flat-square)
 
@@ -179,7 +194,7 @@ This repository serves as a comprehensive collection of my personal projects, sh
   - Developed algorithmic solutions to complex programming challenges
 - **Personal Growth**: Systematically improved coding proficiency through incremental challenges, thoroughly documented solutions, and actively shared learning outcomes with peer developers
 
-#### 11. [File Organizer](./file_organizer)
+#### 12. [File Organizer](./file_organizer)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
 ![GUI](https://img.shields.io/badge/Interface-Tkinter-purple?style=flat-square)
 
