@@ -128,6 +128,7 @@ This repository showcases my technical skills through personal projects. Each in
 -   **Goal**: Identify factors influencing student academic performance.
 -   **Tech**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn.
 -   **Insights**: Predicted **at-risk students** accurately; found **parental education** strongest predictor; identified optimal study patterns; provided intervention recommendations.
+-   **Live Demo**: [Student Education Analysis](https://tzolkowski96.github.io/student-education-analysis/)
 -   **Role**: Analysis design, data prep, feature engineering, modeling, recommendations.
 
 #### 4. 🛒 [UFood Customer Analysis](./ufood_analysis)
@@ -135,6 +136,7 @@ This repository showcases my technical skills through personal projects. Each in
 -   **Goal**: Optimize marketing for a food delivery app via customer data analysis.
 -   **Tech**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn, SciPy.
 -   **Deliverables**: Customer segmentation (**K-means**); campaign effectiveness analysis (**A/B testing**); customer journey mapping; recommendations to increase **CLV**.
+-   **Live Demo**: [Food Marketing Project](https://tzolkowski96.github.io/analyst-builder-food-marketing-project/)
 -   **Role**: Comprehensive analysis (segmentation, campaign measurement, product preferences, strategy).
 
 #### 5. ₿ [Crypto Market Insights](./crypto_market_insights)
