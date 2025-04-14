@@ -383,7 +383,7 @@ I'm particularly interested in:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Tobin_Zolkowski-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tobin-zolkowski-844873200/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Website-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://tzolkowski96.github.io/portfolio/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tzolkowski96)
-[![Contact Me](https://img.shields.io/badge/📧_Contact_Me-Send_a_Message-2ea44f?style=for-the-badge)](https://formspree.io/f/myzggjel)
+[![Contact Me](https://img.shields.io/badge/📧_Contact_Me-Send_a_Message-2ea44f?style=for-the-badge)](https://formspree.io/f/myzggjel) <!-- This is the correct way to link. Ensure the form 'myzggjel' is active on Formspree. -->
 
 </div>
 
