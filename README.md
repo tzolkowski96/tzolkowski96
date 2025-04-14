@@ -41,7 +41,7 @@ My technical skills are primarily built through **self-directed learning** and *
 ## 💼 My Professional Journey
 
 ### Data Analyst
-**Medical and Molecular Genetics** | July 2023 - Present | Madison, WI
+**Indiana University School of Medicine Department of Medical and Molecular Genetics** | July 2023 - Present | Madison, WI
 *Working with researchers to transform complex biomedical datasets into meaningful insights. Focused on ETL processes, bridging technical/clinical gaps, handling sensitive data, and collaboration.*
 
 ### Business Data Analyst Intern
