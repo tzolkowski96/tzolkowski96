@@ -386,9 +386,13 @@ I'm particularly interested in:
 
 </div>
 
-I'm passionate about data-driven problem solving and always eager to collaborate on interesting projects. Please feel free to reach out through LinkedIn or use the contact form linked below:
+I'm passionate about data-driven problem solving and always eager to collaborate on interesting projects. Please feel free to reach out through LinkedIn or send a message using my contact form:
 
-**[📧 Send me a message via Contact Form](https://formspree.io/f/myzggjel)**
+<div align="center">
+  
+[![Contact Me](https://img.shields.io/badge/📧_Contact_Me-Send_a_Message-2ea44f?style=for-the-badge)](https://formspree.io/f/myzggjel/forms/new)
+
+</div>
 
 ### 📅 Available For
 -   Data analysis and visualization projects
