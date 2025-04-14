@@ -259,6 +259,73 @@ I'm continuously working to expand my skills in data analysis, visualization, an
 
 ---
 
+## 🛠 Technical Skills
+
+<div align="center">
+
+### Core Technical Competencies
+
+| Category           | Skills                                                                       | Proficiency Level   |
+| :----------------- | :--------------------------------------------------------------------------- | :------------------ |
+| **Programming**    | Python (Pandas, NumPy, Scikit-Learn, Flask, Streamlit), SQL (MySQL, PostgreSQL) | **Intermediate**    |
+|                    | JavaScript, HTML, CSS                                                        | **Foundational**    |
+| **Data Analysis**  | EDA, Statistical Testing, Hypothesis Validation, Interpretation              | **Intermediate**    |
+| **Visualization**  | Tableau, Looker, Matplotlib, Seaborn, Plotly.js, Dashboard Design            | **Intermediate**    |
+| **Machine Learning**| Classification, Regression, Clustering, Model Evaluation, Feature Engineering | **Foundational**    |
+| **Databases**      | Querying, Optimization, Stored Procedures, Window Functions, Data Modeling   | **Intermediate**    |
+| **ETL/Pipelines**  | Data Cleaning, Transformation, Basic Pipeline Concepts                       | **Foundational**    |
+| **Tools & Platforms**| Git/GitHub, Jupyter, VS Code, DataGrip, MySQL Workbench, pgAdmin, Excel (Adv) | **Proficient**      |
+| **Healthcare Systems** | HIPAA Compliance, REDCap, Clinical Data Management                       | **Proficient**      |
+| **Cloud Services** | AWS, Azure, Cloud Databases                                                 | **Growing**         |
+| **Enterprise Tools** | SSMS, Power Automate, SharePoint                                           | **Intermediate**    |
+
+*Self-assessment based on project experience and continuous learning.*
+
+</div>
+
+### Key Technologies & Libraries
+-   **Python**: Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Flask, Streamlit, Selenium, Tkinter
+-   **SQL**: MySQL, PostgreSQL (Learning: MSSQL)
+-   **Web**: HTML, CSS, JavaScript (Learning: TypeScript, React)
+-   **Visualization**: Tableau, Looker, Plotly.js
+-   **Version Control**: Git, GitHub
+-   **Databases/Tools**: MySQL Workbench, pgAdmin, DataGrip, VS Code, Jupyter, Excel (Advanced), REDCap
+
+### Specialized Skills & Proficiencies
+
+<div align="center">
+
+#### Data Engineering & Analysis
+| Skill Area | Level | Description |
+| :--------- | :---- | :---------- |
+| **Python & Data Processing** | **Proficient (85%)** | Strong foundation in data manipulation using Pandas, NumPy, SciPy |
+| **SQL & Databases** | **Proficient (80%)** | Skilled in writing complex queries and database optimization (PostgreSQL, MySQL, MSSQL) |
+| **ETL Development** | **Intermediate (75%)** | Experience in building and maintaining data pipelines with focus on data quality and automation |
+
+#### Machine Learning & Analytics
+| Skill Area | Level | Description |
+| :--------- | :---- | :---------- |
+| **Machine Learning** | **Growing (65%)** | Actively developing skills in ML model implementation using Scikit-learn, XGBoost |
+| **Business Intelligence** | **Proficient (80%)** | Creation of interactive dashboards in Tableau, Looker, Power BI |
+| **Statistical Analysis** | **Intermediate** | Solid understanding of hypothesis testing, A/B testing, and regression analysis |
+
+#### Enterprise Solutions
+| Skill Area | Level | Description |
+| :--------- | :---- | :---------- |
+| **Healthcare Systems** | **Proficient** | Strong knowledge of healthcare data management and HIPAA compliance |
+| **Cloud Services** | **Growing** | Developing experience with AWS, Azure, and cloud databases |
+| **Enterprise Tools** | **Intermediate** | Working knowledge of SSMS, Power Automate, and SharePoint |
+
+</div>
+
+### Focus Areas & Specializations
+- **Data Pipeline Development**: Building and optimizing ETL pipelines for efficient data processing
+- **Healthcare Analytics**: Conducting HIPAA-compliant data analysis for medical research
+- **Performance Optimization**: Improving database and query performance for large datasets
+- **Automated Reporting**: Creating streamlined data processing workflows and automated reporting systems
+
+---
+
 ## 🚀 Professional Development Roadmap
 
 <div align="center">
@@ -299,37 +366,6 @@ I'm particularly interested in:
 
 ---
 
-## 🛠 Technical Skills
-
-<div align="center">
-
-### Core Technical Competencies
-
-| Category           | Skills                                                                       | Proficiency Level   |
-| :----------------- | :--------------------------------------------------------------------------- | :------------------ |
-| **Programming**    | Python (Pandas, NumPy, Scikit-Learn, Flask, Streamlit), SQL (MySQL, PostgreSQL) | **Intermediate**    |
-|                    | JavaScript, HTML, CSS                                                        | **Foundational**    |
-| **Data Analysis**  | EDA, Statistical Testing, Hypothesis Validation, Interpretation              | **Intermediate**    |
-| **Visualization**  | Tableau, Looker, Matplotlib, Seaborn, Plotly.js, Dashboard Design            | **Intermediate**    |
-| **Machine Learning**| Classification, Regression, Clustering, Model Evaluation, Feature Engineering | **Foundational**    |
-| **Databases**      | Querying, Optimization, Stored Procedures, Window Functions, Data Modeling   | **Intermediate**    |
-| **ETL/Pipelines**  | Data Cleaning, Transformation, Basic Pipeline Concepts                       | **Foundational**    |
-| **Tools & Platforms**| Git/GitHub, Jupyter, VS Code, DataGrip, MySQL Workbench, pgAdmin, Excel (Adv) | **Proficient**      |
-
-*Self-assessment based on project experience and continuous learning.*
-
-</div>
-
-### Key Technologies & Libraries
--   **Python**: Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Flask, Streamlit, Selenium, Tkinter
--   **SQL**: MySQL, PostgreSQL (Learning: MSSQL)
--   **Web**: HTML, CSS, JavaScript (Learning: TypeScript, React)
--   **Visualization**: Tableau, Looker, Plotly.js
--   **Version Control**: Git, GitHub
--   **Databases/Tools**: MySQL Workbench, pgAdmin, DataGrip, VS Code, Jupyter, Excel (Advanced), REDCap
-
----
-
 ## 🤝 Soft Skills & Professional Attributes
 
 -   🗣️ **Communication**: Translating technical findings into clear, actionable insights for diverse audiences.
@@ -350,7 +386,9 @@ I'm particularly interested in:
 
 </div>
 
-I'm passionate about data-driven problem solving and always eager to collaborate on interesting projects. Please feel free to reach out through any of the channels above!
+I'm passionate about data-driven problem solving and always eager to collaborate on interesting projects. Please feel free to reach out through LinkedIn or use the contact form linked below:
+
+**[📧 Send me a message via Contact Form](https://formspree.io/f/myzggjel)**
 
 ### 📅 Available For
 -   Data analysis and visualization projects
