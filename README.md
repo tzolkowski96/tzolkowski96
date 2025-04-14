@@ -276,7 +276,7 @@ I'm continuously working to expand my skills in data analysis, visualization, an
 | **ETL/Pipelines**  | Data Cleaning, Transformation, Basic Pipeline Concepts                       | **Foundational**    |
 | **Tools & Platforms**| Git/GitHub, Jupyter, VS Code, DataGrip, MySQL Workbench, pgAdmin, Excel (Adv) | **Proficient**      |
 | **Healthcare Systems** | HIPAA Compliance, REDCap, Clinical Data Management                       | **Proficient**      |
-| **Cloud Services** | AWS, Azure, Cloud Databases                                                 | **Growing**         |
+| **Cloud Services** | AWS, Azure, Cloud Databases                                                 | **Foundational**    |
 | **Enterprise Tools** | SSMS, Power Automate, SharePoint                                           | **Intermediate**    |
 
 *Self-assessment based on project experience and continuous learning.*
@@ -298,22 +298,22 @@ I'm continuously working to expand my skills in data analysis, visualization, an
 #### Data Engineering & Analysis
 | Skill Area | Level | Description |
 | :--------- | :---- | :---------- |
-| **Python & Data Processing** | **Proficient (85%)** | Strong foundation in data manipulation using Pandas, NumPy, SciPy |
-| **SQL & Databases** | **Proficient (80%)** | Skilled in writing complex queries and database optimization (PostgreSQL, MySQL, MSSQL) |
-| **ETL Development** | **Intermediate (75%)** | Experience in building and maintaining data pipelines with focus on data quality and automation |
+| **Python & Data Processing** | **Proficient** | Strong foundation in data manipulation using Pandas, NumPy, SciPy |
+| **SQL & Databases** | **Proficient** | Skilled in writing complex queries and database optimization (PostgreSQL, MySQL, MSSQL) |
+| **ETL Development** | **Intermediate** | Experience in building and maintaining data pipelines with focus on data quality and automation |
 
 #### Machine Learning & Analytics
 | Skill Area | Level | Description |
 | :--------- | :---- | :---------- |
-| **Machine Learning** | **Growing (65%)** | Actively developing skills in ML model implementation using Scikit-learn, XGBoost |
-| **Business Intelligence** | **Proficient (80%)** | Creation of interactive dashboards in Tableau, Looker, Power BI |
+| **Machine Learning** | **Foundational** | Actively developing skills in ML model implementation using Scikit-learn, XGBoost |
+| **Business Intelligence** | **Proficient** | Creation of interactive dashboards in Tableau, Looker, Power BI |
 | **Statistical Analysis** | **Intermediate** | Solid understanding of hypothesis testing, A/B testing, and regression analysis |
 
 #### Enterprise Solutions
 | Skill Area | Level | Description |
 | :--------- | :---- | :---------- |
 | **Healthcare Systems** | **Proficient** | Strong knowledge of healthcare data management and HIPAA compliance |
-| **Cloud Services** | **Growing** | Developing experience with AWS, Azure, and cloud databases |
+| **Cloud Services** | **Foundational** | Developing experience with AWS, Azure, and cloud databases |
 | **Enterprise Tools** | **Intermediate** | Working knowledge of SSMS, Power Automate, and SharePoint |
 
 </div>
