@@ -386,11 +386,11 @@ I'm particularly interested in:
 
 </div>
 
-I'm passionate about data-driven problem solving and always eager to collaborate on interesting projects. Please feel free to reach out through LinkedIn or send a message using my contact form:
+I'm passionate about data-driven problem solving and always eager to collaborate on interesting projects. Please feel free to reach out through LinkedIn or send me a message:
 
 <div align="center">
   
-[![Contact Me](https://img.shields.io/badge/📧_Contact_Me-Send_a_Message-2ea44f?style=for-the-badge)](https://formspree.io/f/myzggjel/forms/new)
+[![Contact Me](https://img.shields.io/badge/📧_Contact_Me-Send_a_Message-2ea44f?style=for-the-badge)](https://formspree.io/f/myzggjel)
 
 </div>
 
