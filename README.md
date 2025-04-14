@@ -1,42 +1,30 @@
 # Tobin Zolkowski | Data Professional Portfolio
 
 <div align="center">
-  
+
   ![Data Professional Banner](https://img.shields.io/badge/🔍%20Data%20Professional-Portfolio-2ea44f?style=for-the-badge)
-  
-  ![GitHub last commit](https://img.shields.io/github/last-commit/tzolkowski96/tzolkowski96?style=flat-square)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/tobin-zolkowski-844873200/)
   [![Portfolio Website](https://img.shields.io/badge/Portfolio-Visit-brightgreen?style=flat-square)](https://tzolkowski96.github.io/portfolio/)
-  ![Python](https://img.shields.io/badge/Python-Intermediate-yellow?style=flat-square&logo=python)
-  ![SQL](https://img.shields.io/badge/SQL-Intermediate-orange?style=flat-square&logo=mysql)
-  
+  ![Skills](https://img.shields.io/badge/Skills-Python%20%7C%20SQL%20%7C%20Tableau-yellowgreen?style=flat-square)
+
 </div>
 
 <div align="center">
   <i>"Continuously learning and growing as a data professional, turning data into actionable insights."</i>
 </div>
 
-Welcome to my professional portfolio! I am a passionate data enthusiast with a growing foundation in **data analysis** and **SQL**. With a growth mindset and continuous learning approach, I am focused on developing my career in roles such as data analyst and data professional.
-
-<div align="center">
-  
-  | 📊 Projects | 🧩 Skills | 📁 Categories |
-  |:-----------:|:--------:|:------------:|
-  | 12+ Projects | Python, SQL, Tableau, Looker | Data Analysis |
-  | 4 Data Domains | Data Visualization, Web Development | Machine Learning |
-  
-</div>
+Welcome! I am a data enthusiast focused on **data analysis**, **SQL**, and **machine learning**. With a growth mindset and a commitment to continuous learning, I leverage data to drive insights and solve problems. This portfolio showcases my skills and project work.
 
 ---
 
 ## 🌟 Key Strengths & Focus Areas
 
--   📊 **Data Analysis & Visualization**: Strong capability in transforming raw data into meaningful insights using **Python**, **SQL**, and visualization tools (**Tableau**, **Looker**).
--   🧠 **Machine Learning Applications**: Practical experience implementing ML models (**Classification**, **Clustering**) to solve real business problems.
--   🔄 **Data Engineering Fundamentals**: Growing knowledge of data pipelines, **ETL processes**, and database optimization.
--   🐍 **Python Programming**: Proficient in creating data-driven applications and automation tools using libraries like **Pandas**, **NumPy**, **Scikit-Learn**.
--   📈 **SQL Development**: Skilled in database querying, optimization, **stored procedures**, and **window functions**.
--   🎓 **Continuous Learning**: Actively expanding skills through self-directed projects across diverse domains.
+-   📊 **Data Analysis & Visualization**: Transforming raw data into insights using **Python**, **SQL**, **Tableau**, and **Looker**.
+-   🧠 **Machine Learning Applications**: Implementing ML models (**Classification**, **Clustering**) for business problems.
+-   🔄 **Data Engineering Fundamentals**: Understanding data pipelines, **ETL processes**, and database optimization.
+-   🐍 **Python Programming**: Creating data-driven applications and automation tools (**Pandas**, **NumPy**, **Scikit-Learn**).
+-   📈 **SQL Development**: Skilled in querying, optimization, **stored procedures**, and **window functions**.
+-   🎓 **Continuous Learning**: Actively expanding skills through diverse, self-directed projects.
 
 ---
 
@@ -44,15 +32,49 @@ Welcome to my professional portfolio! I am a passionate data enthusiast with a g
 
 -   **Master's in Information Science** - University of Wisconsin-Madison
 -   **Bachelor's in International Studies** - University of Wisconsin-Madison
--   **Partial Studies in Communication Science** - Rochester Institute of Technology (2 years)
+-   *Communication Science Studies* - Rochester Institute of Technology (2 years)
 
-While my formal education didn't specifically focus on computer science, I've cultivated strong technical skills through **self-directed learning** and **practical project work**. I strategically leverage AI tools to enhance my development process, enabling me to tackle complex data challenges effectively.
+My technical skills are primarily built through **self-directed learning** and **hands-on project work**, augmented by strategic use of AI tools for efficient development.
+
+---
+
+## 💼 My Professional Journey
+
+### Data Analyst
+**Medical and Molecular Genetics** | July 2023 - Present | Madison, WI
+*Working with researchers to transform complex biomedical datasets into meaningful insights. Focused on ETL processes, bridging technical/clinical gaps, handling sensitive data, and collaboration.*
+
+### Business Data Analyst Intern
+**Telkomsel** | July 2022 - Sept 2022 | Jakarta, Indonesia
+*Applied data analysis in a large-scale business environment. Gained experience with big data, marketing analytics, cross-functional teams, and presenting technical findings.*
+
+### Data Manager Intern
+**University of Wisconsin-Madison** | June 2021 - Aug 2021 | Madison, WI
+*Focused on structured data governance in an academic setting. Developed skills in data quality, documentation, standardization, and understanding user needs.*
+
+### IT Support Assistant
+**University of Wisconsin-Madison** | Sept 2019 - April 2021 | Madison, WI
+*Gateway into the technical world, focusing on user support and assistive technologies. Developed troubleshooting skills and foundational database/automation concepts.*
+
+---
+
+## 🌱 My Journey in Tech
+
+My path into data science wasn't traditional. Starting with Communication Science at RIT, I later transferred to UW-Madison for International Studies. It was during my undergraduate years I discovered a passion for data analysis, initially through class projects and self-exploration with Excel.
+
+This interest grew, leading me to teach myself SQL and eventually pursue a Master's in Information Science at UW-Madison, which formalized my skills. Real growth came from hands-on projects: predicting employee churn (achieving 98% accuracy), analyzing student performance data, and building a complex crypto market data pipeline with web scraping and automated reporting.
+
+My focus shifted towards data engineering as I found building efficient data processing systems deeply satisfying, especially when handling large datasets like the 7.7 million records in the Traffic Accident Analytics project. SQL, particularly CTEs and window functions, became a favorite tool.
+
+My diverse background offers a unique perspective, helping translate technical results into actionable business strategies, as seen in the UFood customer analysis. I embrace AI tools to accelerate learning and tackle complex challenges faster. This unconventional journey has shaped my problem-solving approach, blending technical expertise with a strong understanding of context and communication.
+
+> *"The journey continues. I'm currently deepening my skills in Tableau, Excel, and PostgreSQL. The constant learning and problem-solving are what I love about this field."*
 
 ---
 
 ## 🔍 About This Portfolio
 
-This repository serves as a comprehensive collection of my personal projects, showcasing my technical skills and problem-solving approach. Each project includes detailed documentation, well-commented code, and thorough results analysis to demonstrate my capabilities in data science, analytics, and application development.
+This repository showcases my technical skills through personal projects. Each includes documentation, commented code, and results analysis, demonstrating capabilities in data science, analytics, and development.
 
 ---
 
@@ -62,11 +84,11 @@ This repository serves as a comprehensive collection of my personal projects, sh
 
 ### Verified Certifications
 
-| Certification                      | Provider   | Date        | Verification                                                                                                                            |
+| Certification                      | Provider   | Date        | Verification Link                                                                                                                       |
 | :--------------------------------- | :--------- | :---------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| **Google Advanced Data Analytics** | Coursera   | 2023        | [View Certificate](https://www.coursera.org/account/accomplishments/specialization/certificate/A8Z4GGXNDYQY)                             |
-| **Data Analyst in Tableau Track**  | DataCamp   | 2022-2023   | [View Certificate](https://www.datacamp.com/completed/statement-of-accomplishment/track/91a2d7ba601b5a8fe3cfe1d0b59fb1ac0b78afa8)         |
-| **Data Analyst in SQL Track**      | DataCamp   | 2022-2023   | [View Certificate](https://www.datacamp.com/completed/statement-of-accomplishment/track/d33a33e25d3aca10ae9433080651ae16f35cb32d)         |
+| **Google Advanced Data Analytics** | Coursera   | 2023        | [Certificate](https://www.coursera.org/account/accomplishments/specialization/certificate/A8Z4GGXNDYQY)                                  |
+| **Data Analyst in Tableau Track**  | DataCamp   | 2022-2023   | [Certificate](https://www.datacamp.com/completed/statement-of-accomplishment/track/91a2d7ba601b5a8fe3cfe1d0b59fb1ac0b78afa8)             |
+| **Data Analyst in SQL Track**      | DataCamp   | 2022-2023   | [Certificate](https://www.datacamp.com/completed/statement-of-accomplishment/track/d33a33e25d3aca10ae9433080651ae16f35cb32d)             |
 
 </div>
 
@@ -74,11 +96,11 @@ This repository serves as a comprehensive collection of my personal projects, sh
 
 ## 📂 Project Directory
 
-*Navigate through my projects organized by technical domain:*
+*Navigate projects by domain:*
 
--   [📊 Data Analysis & Machine Learning Projects](#data-analysis-and-machine-learning)
--   [💻 Web Development Applications](#web-development-and-applications)
--   [🐍 Python Utility Tools](#python-programming-and-utilities)
+-   [📊 Data Analysis & Machine Learning](#data-analysis-and-machine-learning)
+-   [💻 Web Development & Applications](#web-development-and-applications)
+-   [🐍 Python Utilities](#python-programming-and-utilities)
 -   [💾 SQL Database Projects](#sql-projects)
 
 ---
@@ -88,288 +110,150 @@ This repository serves as a comprehensive collection of my personal projects, sh
 ### Data Analysis and Machine Learning
 
 #### 1. 🤖 [Employee Churn Prediction](./Employee-Churn-Prediction)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![ML](https://img.shields.io/badge/Machine%20Learning-Classification-green?style=flat-square)
-
--   **Challenge**: Identify factors leading to employee turnover and build predictive models to help HR teams proactively address retention issues.
--   **Technologies**: **Python**, **Pandas**, **Scikit-Learn**, **Matplotlib**, **Seaborn**, **XGBoost**.
--   **Key Achievements**:
-    -   Developed models with up to **98% accuracy** in predicting employee churn.
-    -   Identified critical turnover risk factors including **overtime hours**, **project count**, and **satisfaction levels**.
-    -   Created actionable recommendations for HR departments to improve retention strategies.
--   **Personal Contribution**: Independently handled the entire project lifecycle from data cleaning and feature engineering to model evaluation and recommendations.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![ML](https://img.shields.io/badge/ML-Classification-green?style=flat-square)
+-   **Goal**: Predict employee turnover using ML models.
+-   **Tech**: Python, Pandas, Scikit-Learn, XGBoost, Matplotlib, Seaborn.
+-   **Achievements**: Developed models with **98% accuracy**; identified key churn drivers (overtime, project count, satisfaction); provided actionable HR recommendations.
+-   **Role**: End-to-end project execution (data cleaning, feature engineering, modeling, evaluation).
 
 #### 2. 🎬 [Movie Genre Analysis](./Movie_Genre_Analysis)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![EDA](https://img.shields.io/badge/EDA-Statistical%20Analysis-orange?style=flat-square)
-
--   **Challenge**: Extract meaningful patterns from film industry data to understand genre influences on financial performance and audience reception.
--   **Technologies**: **Python**, **Pandas**, **Matplotlib**, **Seaborn**, **Scikit-learn**.
--   **Key Findings**:
-    -   Discovered significant correlation between **genre selection** and **financial performance**.
-    -   Identified unexpected viewing pattern trends across demographic segments.
-    -   Validated statistical hypotheses about movie success factors through rigorous testing.
-    -   Created comprehensive visualization suite to communicate key industry insights.
--   **Personal Contribution**: Conducted thorough data preparation, exploratory analysis, statistical validation, and results interpretation.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![EDA](https://img.shields.io/badge/EDA-Statistical%20Analysis-orange?style=flat-square)
+-   **Goal**: Analyze film industry data for genre impact on performance.
+-   **Tech**: Python, Pandas, Matplotlib, Seaborn, Scikit-learn.
+-   **Findings**: Significant correlation between genre and financial success; identified demographic viewing patterns; validated success factors via statistical tests; created visualizations.
+-   **Role**: Data prep, EDA, statistical validation, interpretation.
 
 #### 3. 🎓 [Portuguese Students Higher Education Analysis](./portuguese-students-higher-education-analysis)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![ML](https://img.shields.io/badge/ML-Educational%20Analytics-purple?style=flat-square)
-
--   **Challenge**: Understand complex factors influencing academic performance in higher education to improve educational outcomes.
--   **Technologies**: **Python**, **Pandas**, **Scikit-learn**, **Matplotlib**, **Seaborn**.
--   **Key Insights**:
-    -   Developed predictive models identifying **at-risk students** with high accuracy.
-    -   Discovered **parental education level** as the strongest single predictor of student success.
-    -   Identified optimal study time patterns that maximize academic performance.
-    -   Provided data-backed recommendations for educational intervention strategies.
--   **Personal Contribution**: Designed the analytical approach, prepared data, engineered meaningful features, developed predictive models, and formulated actionable recommendations.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![ML](https://img.shields.io/badge/ML-Educational%20Analytics-purple?style=flat-square)
+-   **Goal**: Identify factors influencing student academic performance.
+-   **Tech**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn.
+-   **Insights**: Predicted **at-risk students** accurately; found **parental education** strongest predictor; identified optimal study patterns; provided intervention recommendations.
+-   **Role**: Analysis design, data prep, feature engineering, modeling, recommendations.
 
 #### 4. 🛒 [UFood Customer Analysis](./ufood_analysis)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![Marketing](https://img.shields.io/badge/Marketing-Analytics-red?style=flat-square)
-
--   **Challenge**: Optimize marketing strategy and customer engagement for a leading food delivery application using customer behavior data.
--   **Technologies**: **Python**, **Pandas**, **Scikit-learn**, **Matplotlib**, **Seaborn**, **SciPy**.
--   **Key Deliverables**:
-    -   Segmented customer base into actionable groups using **K-means clustering**.
-    -   Quantified campaign effectiveness through rigorous **A/B testing** methodologies.
-    -   Analyzed customer journey patterns to identify critical engagement opportunities.
-    -   Developed targeted recommendations increasing projected **customer lifetime value**.
--   **Personal Contribution**: Executed comprehensive analysis including customer segmentation, campaign effectiveness measurement, product preference mapping, and strategic recommendation development.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Marketing](https://img.shields.io/badge/Marketing-Analytics-red?style=flat-square)
+-   **Goal**: Optimize marketing for a food delivery app via customer data analysis.
+-   **Tech**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn, SciPy.
+-   **Deliverables**: Customer segmentation (**K-means**); campaign effectiveness analysis (**A/B testing**); customer journey mapping; recommendations to increase **CLV**.
+-   **Role**: Comprehensive analysis (segmentation, campaign measurement, product preferences, strategy).
 
 #### 5. ₿ [Crypto Market Insights](./crypto_market_insights)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![Web Scraping](https://img.shields.io/badge/Web%20Scraping-Selenium-lightgrey?style=flat-square)
-
--   **Challenge**: Create an automated system for real-time cryptocurrency market analysis and reporting.
--   **Technologies**: **Python**, **Selenium**, **Pandas**, **Matplotlib**, **Seaborn**, **SciPy**.
--   **Key Features**:
-    -   Developed robust **web scraping system** for real-time data collection from CoinMarketCap.
-    -   Implemented comprehensive **technical analysis metrics** for major cryptocurrencies.
-    -   Created dynamic visualization system for price comparisons and correlation patterns.
-    -   Built automated **Excel report generation** system with raw data and processed insights.
--   **Personal Contribution**: Designed and built the complete data pipeline, including scraping architecture, processing logic, analytical methods, and visualization components.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Web Scraping](https://img.shields.io/badge/Web%20Scraping-Selenium-lightgrey?style=flat-square)
+-   **Goal**: Automate real-time crypto market analysis and reporting.
+-   **Tech**: Python, Selenium, Pandas, Matplotlib, Seaborn, SciPy.
+-   **Features**: Robust **web scraping** (CoinMarketCap); **technical analysis** metrics; dynamic visualizations; automated **Excel report generation**.
+-   **Role**: Designed and built the full data pipeline (scraping, processing, analysis, visualization).
 
 #### 6. 🚗 [Traffic Accident Analytics Engine](./us_accidents_analysis)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![Geospatial](https://img.shields.io/badge/Analysis-Geospatial-darkgreen?style=flat-square)
-
--   **Challenge**: Process and analyze **7.7 million** US traffic accident records to generate actionable public safety insights.
--   **Technologies**: **Python**, **NumPy**, **pandas**, **scikit-learn**, **SciPy**, **Matplotlib**, **Seaborn**, **Folium**.
--   **Technical Highlights**:
-    -   Implemented statistical validation of weather impact through **chi-square testing** and **ANOVA**.
-    -   Developed optimized **Random Forest classifier** achieving **78% accuracy** in severity prediction.
-    -   Created scalable processing pipeline handling nationwide data across 49 states.
-    -   Built interactive visualization dashboard integrating multiple analytical perspectives.
-    -   Reduced memory footprint by **3.25%** through optimization techniques.
--   **Personal Contribution**: Led complete project development including data processing, statistical analysis, machine learning implementation, feature engineering, validation testing, and visualization creation.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Geospatial](https://img.shields.io/badge/Analysis-Geospatial-darkgreen?style=flat-square)
+-   **Goal**: Analyze **7.7M** US traffic accident records for public safety insights.
+-   **Tech**: Python, NumPy, Pandas, Scikit-learn, SciPy, Matplotlib, Seaborn, Folium.
+-   **Highlights**: Statistical validation (chi-square, ANOVA); **Random Forest** for severity prediction (**78% accuracy**); scalable pipeline (49 states); interactive dashboard; memory optimization (**-3.25%**).
+-   **Role**: Led full project development (processing, stats, ML, feature engineering, validation, viz).
 
 ### Web Development and Applications
 
 #### 7. 🌍 [Global Population Insights](https://github.com/tzolkowski96/global-population-insights)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat-square&logo=javascript)
-![Plotly](https://img.shields.io/badge/Visualization-Plotly.js-blue?style=flat-square)
-
--   **Challenge**: Create an interactive visualization platform for understanding global population trends and projections.
--   **Technologies**: **HTML**, **CSS**, **JavaScript**, **Plotly.js**.
--   **Key Features**:
-    -   Developed **interactive data visualizations** showcasing population growth patterns.
-    -   Implemented comparative analysis tools for different income groups and regions.
-    -   Created forward-looking projections with multiple scenario modeling capabilities.
-    -   Compiled evidence-based policy recommendations supported by data analysis.
-    -   Documented case studies of successful population control measures.
+![JavaScript](https://img.shields.io/badge/JavaScript-Foundational-yellow?style=flat-square&logo=javascript) ![Plotly](https://img.shields.io/badge/Visualization-Plotly.js-blue?style=flat-square)
+-   **Goal**: Interactive platform for global population trend visualization.
+-   **Tech**: HTML, CSS, JavaScript, Plotly.js.
+-   **Features**: Interactive visualizations; comparative analysis tools; projections; policy recommendations; case studies.
 -   **Live Demo**: [Global Population Insights](https://tzolkowski96.github.io/global-population-insights/)
--   **Personal Contribution**: Designed and built the complete interactive platform, including data processing logic, visualization components, and analytical frameworks.
+-   **Role**: Designed and built the complete platform.
 
 #### 8. 📏 [Length Unit Converter](./measurement_converter)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![Shiny](https://img.shields.io/badge/Framework-Shiny-darkblue?style=flat-square)
-
--   **Challenge**: Create an intuitive web application for quickly converting between different units of measurement.
--   **Technologies**: **Python**, **Shiny for Python**.
--   **Application Features**:
-    -   Implemented comprehensive unit conversion logic supporting various length measurements.
-    -   Designed intuitive UI with **real-time validation** and conversion.
-    -   Added input validation ensuring non-negative values with error handling.
-    -   Created responsive design for consistent user experience.
--   **Personal Contribution**: Developed the complete application including mathematical conversion logic, UI/UX design, and input validation.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Shiny](https://img.shields.io/badge/Framework-Shiny-darkblue?style=flat-square)
+-   **Goal**: Intuitive web app for unit conversion.
+-   **Tech**: Python, Shiny for Python.
+-   **Features**: Comprehensive length conversions; intuitive UI; real-time validation; error handling; responsive design.
+-   **Role**: Developed full application (logic, UI/UX, validation).
 
 #### 9. 🧮 [Streamlit Calculator](./streamlit_calculator)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red?style=flat-square)
-
--   **Challenge**: Build a web-based calculator with intuitive interface and comprehensive operation history.
--   **Technologies**: **Python**, **Streamlit**.
--   **Application Features**:
-    -   Implemented core arithmetic operations with proper error handling.
-    -   Created **session-based calculation history** tracking system.
-    -   Designed clear user interface with intuitive operation selection.
-    -   Added state management for maintaining history across interactions.
-    -   Implemented complete error handling for edge cases (e.g., division by zero).
--   **Personal Contribution**: Built the complete application including calculator logic, Streamlit interface development, session state management, and error handling system.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red?style=flat-square)
+-   **Goal**: Web-based calculator with operation history.
+-   **Tech**: Python, Streamlit.
+-   **Features**: Core arithmetic operations; session-based history tracking; clear UI; state management; error handling (e.g., division by zero).
+-   **Role**: Built complete application (logic, interface, state management, error handling).
 
 #### 10. 🌐 [Web Data Insights Explorer](./advanced_web_scraping_toolkit)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![Flask](https://img.shields.io/badge/Framework-Flask-black?style=flat-square)
-
--   **Challenge**: Create a versatile tool for non-technical users to extract, analyze, and visualize web data.
--   **Technologies**: **Python**, **Flask**, **BeautifulSoup**, **Pandas**, **NLTK**, **Matplotlib**, **Seaborn**, **WordCloud**.
--   **Key Capabilities**:
-    -   Developed pattern-based extraction system using customizable **regex patterns**.
-    -   Implemented NLP-based **sentiment analysis** for extracted text content.
-    -   Created multi-format visualization generation system with exportable results.
-    -   Built ethical scraping engine respecting **robots.txt** protocols.
-    -   Designed intuitive interface making complex extraction accessible.
--   **Personal Contribution**: Architected and implemented the complete system, including extraction engine, processing pipeline, analysis algorithms, visualization components, and web interface.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Flask](https://img.shields.io/badge/Framework-Flask-black?style=flat-square)
+-   **Goal**: Versatile tool for non-technical users to extract, analyze, and visualize web data.
+-   **Tech**: Python, Flask, BeautifulSoup, Pandas, NLTK, Matplotlib, Seaborn, WordCloud.
+-   **Capabilities**: Pattern-based extraction (regex); NLP sentiment analysis; multi-format visualizations; ethical scraping (respects robots.txt); intuitive interface.
+-   **Role**: Architected and implemented the full system (extraction, processing, analysis, viz, web UI).
 
 ### Python Programming and Utilities
 
 #### 11. 🐍 [Python Exercises](./python_exercises)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![Learning](https://img.shields.io/badge/Focus-Skill%20Building-yellow?style=flat-square)
-
--   **Purpose**: Strengthen core Python programming fundamentals through diverse challenges.
--   **Technologies**: **Python**.
--   **Skills Developed**:
-    -   Mastered function design patterns and advanced parameter handling.
-    -   Implemented module architecture and import management.
-    -   Built file I/O systems with proper error handling.
-    -   Created object-oriented hierarchies using inheritance principles.
-    -   Developed algorithmic solutions to complex programming challenges.
--   **Personal Growth**: Systematically improved coding proficiency through incremental challenges, thoroughly documented solutions, and actively shared learning outcomes.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Learning](https://img.shields.io/badge/Focus-Skill%20Building-yellow?style=flat-square)
+-   **Purpose**: Strengthen core Python fundamentals via diverse challenges.
+-   **Tech**: Python.
+-   **Skills Developed**: Function design, modules, file I/O, OOP, algorithms.
+-   **Growth**: Systematically improved coding proficiency, documented solutions, shared learnings.
 
 #### 12. 🗄️ [File Organizer](./file_organizer)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)
-![GUI](https://img.shields.io/badge/Interface-Tkinter-purple?style=flat-square)
-
--   **Challenge**: Create an intuitive file management utility with graphical interface for automated organization.
--   **Technologies**: **Python**, **Tkinter**, **Pathlib**, **Shutil**, **Logging**.
--   **Key Features**:
-    -   Implemented dynamic file type detection and organization system.
-    -   Created intuitive GUI with visual file selection and operation controls.
-    -   Developed flexible duplicate handling with multiple resolution strategies.
-    -   Built comprehensive logging system for operation tracking.
-    -   Implemented secure state management for macOS compatibility.
-    -   Added configurable destination handling with interactive folder selection.
--   **Personal Contribution**: Designed and implemented the complete utility, including core file management logic, GUI development, and logging/tracking systems.
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![GUI](https://img.shields.io/badge/Interface-Tkinter-purple?style=flat-square)
+-   **Goal**: Intuitive file management utility with GUI for automated organization.
+-   **Tech**: Python, Tkinter, Pathlib, Shutil, Logging.
+-   **Features**: Dynamic file type detection; GUI controls; duplicate handling options; logging; macOS state management; configurable destinations.
+-   **Role**: Designed and implemented the complete utility (logic, GUI, logging).
 
 ### SQL Projects
 
 #### 1. 🌍 [World Life Expectancy Analysis](./world_life_expectancy)
-![SQL](https://img.shields.io/badge/SQL-MySQL%208.0-orange?style=flat-square&logo=mysql)
-![Data Quality](https://img.shields.io/badge/Focus-Data%20Cleaning-lightblue?style=flat-square)
-
--   **Challenge**: Transform and analyze global life expectancy data to uncover meaningful patterns and insights.
--   **Technologies**: **MySQL 8.0**, **MySQL Workbench**, **Git**.
--   **Dataset Scope**: **2,938 records** spanning **183 countries** over **15 years** (2007-2022).
--   **Key Project Metrics**:
-    -   🧹 **Data Quality**: 93.41%
-    -   🧑‍💻 **Development Gap**: 12.36 years
-    -   🦠 **COVID Impact (2020)**: -4.75%
-    -   📈 **Post-COVID Recovery**: +5.91%
--   **Technical Implementation**:
+![SQL](https://img.shields.io/badge/SQL-Intermediate-orange?style=flat-square&logo=mysql) ![Data Quality](https://img.shields.io/badge/Focus-Data%20Cleaning-lightblue?style=flat-square)
+-   **Goal**: Clean and analyze global life expectancy data (2.9k records, 183 countries, 15 years).
+-   **Tech**: MySQL 8.0, MySQL Workbench.
+-   **Metrics**: Data Quality: 93.41%; Development Gap: 12.36 yrs; COVID Impact (2020): -4.75%; Recovery: +5.91%.
+-   **SQL Example**: Advanced window functions for prioritized deduplication.
     ```sql
-    -- Advanced SQL Window Functions for Data Cleaning with Priority Logic
+    -- Prioritized Deduplication using Window Functions
     WITH DuplicatesCTE AS (
-        SELECT *,
+        SELECT Row_ID,
             ROW_NUMBER() OVER (
                 PARTITION BY Country, Year
-                ORDER BY 
-                    CASE WHEN Status != '' THEN 1 ELSE 2 END, -- Prioritize non-empty Status
-                    CASE WHEN Lifeexpectancy != '' THEN 1 ELSE 2 END, -- Prioritize non-empty Life Expectancy
-                    CASE WHEN GDP > 0 THEN 1 ELSE 2 END, -- Prioritize non-zero GDP
-                    Row_ID -- Tie-breaker
-            ) as row_num
+                ORDER BY -- Prioritize records with more complete data
+                    CASE WHEN Status != '' THEN 1 ELSE 2 END,
+                    CASE WHEN Lifeexpectancy != '' THEN 1 ELSE 2 END,
+                    CASE WHEN GDP > 0 THEN 1 ELSE 2 END,
+                    Row_ID -- Tie-breaker for identical completeness
+            ) as rn
         FROM worldlifexpectancy
     )
-    -- Delete rows identified as duplicates based on the priority logic
-    DELETE FROM worldlifexpectancy 
-    WHERE Row_ID IN (
-        SELECT Row_ID FROM DuplicatesCTE WHERE row_num > 1
-    );
+    DELETE FROM worldlifexpectancy WHERE Row_ID IN (SELECT Row_ID FROM DuplicatesCTE WHERE rn > 1);
     ```
--   **Technical Skills Demonstrated**:
-    -   **Advanced SQL**: Common Table Expressions (CTEs), Window Functions, Statistical Aggregations.
-    -   **Data Quality Management**: Multi-stage deduplication, standardization, validation scoring.
-    -   **Analytical Methods**: Time-series analysis, correlation studies, confidence interval calculation.
-    -   **Documentation**: Comprehensive technical documentation with methodology explanations.
-    -   **Performance Optimization**: Strategic indexing, query tuning, execution planning.
--   **Key Findings**:
-    -   Identified significant **12.36-year life expectancy gap** between development categories.
-    -   Quantified and isolated COVID-19's global health impact (**-4.75% decline** in 2020).
-    -   Developed data quality pipeline achieving **98% high-quality** output.
-    -   Established statistical correlations between life expectancy and socioeconomic factors.
-    -   Tracked recovery patterns showing **5.91% average improvement** post-pandemic.
+-   **Skills**: Advanced SQL (CTEs, Window Functions), Data Quality Management, Time-Series Analysis, Performance Tuning.
+-   **Findings**: Significant life expectancy gap by development status; quantified COVID-19 impact; achieved 98% data quality post-cleaning; correlated life expectancy with socioeconomics.
 
 #### 2. 🇺🇸 [US Household Income Analysis](./us-household-income-analysis)
-![SQL](https://img.shields.io/badge/SQL-MySQL%208.0-orange?style=flat-square&logo=mysql)
-![Data Quality](https://img.shields.io/badge/Focus-Statistical%20Analysis-green?style=flat-square)
-
--   **Challenge**: Extract meaningful economic insights from messy demographic data through systematic cleaning and statistical analysis.
--   **Technologies**: **MySQL 8.0+**, **MySQL Workbench**, **Git**.
--   **Dataset Scope**: **32,533 location records** and **32,526 statistics records** across all **50 US states**.
--   **Key Achievements**:
-    -   Developed weighted quality scoring system achieving exceptional **9.62/10 validation score**.
-    -   Uncovered significant **30% income gap** between Northeast ($102,068) and Southeast ($71,307) regions.
-    -   Identified wealth concentration patterns through **mean-to-median ratio analysis**.
-    -   Created reusable data quality framework with domain-specific validation components.
--   **Technical Implementation**:
+![SQL](https://img.shields.io/badge/SQL-Intermediate-orange?style=flat-square&logo=mysql) ![Data Quality](https://img.shields.io/badge/Focus-Statistical%20Analysis-green?style=flat-square)
+-   **Goal**: Extract economic insights from US demographic data (32k+ records, 50 states).
+-   **Tech**: MySQL 8.0+, MySQL Workbench.
+-   **Achievements**: Weighted quality scoring (**9.62/10**); identified **30% regional income gap** (NE vs SE); analyzed wealth concentration (mean/median ratio); created reusable quality framework.
+-   **SQL Example**: Weighted data quality scoring calculation.
     ```sql
-    -- Weighted Quality Scoring System with Domain-Specific Priorities
-    WITH quality_metrics AS (
-        SELECT
-            -- Calculate quality percentage for Place values (25% weight)
-            (1 - (SUM(CASE WHEN Place IS NULL OR TRIM(Place) = '' THEN 1 ELSE 0 END) / COUNT(*))) * 25 AS place_quality,
-            -- Calculate quality percentage for ZIP codes (35% weight)
-            (1 - (SUM(CASE WHEN invalid_zip_code = TRUE THEN 1 ELSE 0 END) / COUNT(*))) * 35 AS zip_quality,
-            -- Calculate quality percentage for coordinates (40% weight) - highest importance
-            (1 - (SUM(CASE WHEN invalid_coordinates = TRUE THEN 1 ELSE 0 END) / COUNT(*))) * 40 AS coord_quality
-        FROM USHouseholdIncome_Clean
-    )
-    -- Combine weighted scores for a final quality score out of 10
-    SELECT
-        'Enhanced Data Quality Score' AS metric,
-        ROUND((place_quality + zip_quality + coord_quality) / 10, 2) AS score_out_of_10
-    FROM quality_metrics;
+    -- Weighted Quality Scoring Logic (Simplified Example)
+    SELECT ROUND(
+        ( -- Place Quality (Weight: 25%)
+          (1 - SUM(CASE WHEN Place IS NULL OR TRIM(Place) = '' THEN 1 ELSE 0 END) / COUNT(*)) * 25
+        ) +
+        ( -- ZIP Quality (Weight: 35%)
+          (1 - SUM(CASE WHEN invalid_zip_code = TRUE THEN 1 ELSE 0 END) / COUNT(*)) * 35
+        ) +
+        ( -- Coordinate Quality (Weight: 40%)
+          (1 - SUM(CASE WHEN invalid_coordinates = TRUE THEN 1 ELSE 0 END) / COUNT(*)) * 40
+        )
+    ) / 10, 2) AS weighted_quality_score
+    FROM USHouseholdIncome_Clean;
     ```
--   **Technical Skills Demonstrated**:
-    -   **Advanced SQL Techniques**: Window Functions, CTEs, Dynamic SQL, Stored Procedures, Transaction Management.
-    -   **Data Engineering Practices**: Quality Scoring, Multi-stage Data Cleaning, Error Logging.
-    -   **Statistical Methods**: Outlier Detection, Percentile Calculations, Geographic Segmentation.
-    -   **Performance Engineering**: Strategic Indexing, Query Optimization, Resource Management.
--   **Impact & Insights**:
-    -   Mapped clear prosperity gradient from coastal to interior regions.
-    -   Identified communities with concerning income inequality (mean-to-median ratios exceeding **3.65**).
-    -   Provided data-driven recommendations for targeted economic development initiatives.
-    -   Reduced query execution time from **68.5 to 21.9 seconds** through optimization.
+-   **Skills**: Advanced SQL (Window Funcs, CTEs, Stored Procs), Data Engineering (Quality Scoring, Cleaning), Statistical Methods (Outlier Detection), Performance Engineering (Indexing, Optimization).
+-   **Insights**: Mapped prosperity gradient; identified high inequality areas (mean/median > 3.65); provided targeted development recommendations; reduced query time significantly (**68.5s to 21.9s**).
 
 ---
 
 ## 📈 Professional Growth & Learning
 
-<div align="center">
-
-### Continuous Learning Journey
-
 I'm continuously working to expand my skills in data analysis, visualization, and related technologies. My portfolio represents my ongoing journey in developing technical proficiency across multiple domains.
-
-### Key Focus Areas
-
--   **Data Analysis**: Deepening analytical skills with **Python** and **SQL**.
--   **Visualization**: Creating more intuitive and impactful data visualizations (**Tableau**, **Power BI**).
--   **Machine Learning**: Expanding knowledge of algorithms and practical implementation techniques.
--   **Web Development**: Building interactive web interfaces for data applications.
-
-</div>
-
-### 🌱 Future Projects
-
-I'm currently developing several new projects to expand my portfolio:
-
--   📈 **Excel Data Analysis**: Advanced financial modeling, interactive dashboards with VBA automation, BI reporting.
--   📊 **Tableau Visualization**: Interactive public health dashboards, economic trend visualizations, customer behavior analysis.
--   📉 **Power BI Reporting**: Real-time sales performance dashboards, marketing campaign effectiveness reports, supply chain optimization.
 
 ---
 
@@ -379,32 +263,29 @@ I'm currently developing several new projects to expand my portfolio:
 
 ### Technical Growth Trajectory
 
-| Timeline     | Focus Areas             | Technologies                               | Goal                                                    |
-| :----------- | :---------------------- | :----------------------------------------- | :------------------------------------------------------ |
-| **Current**  | JavaScript Programming  | Interactive Web Viz, DOM Manipulation      | Enhance web-based data presentation                     |
-| **Short-term** | TypeScript & React    | Component-based UI, Static Typing          | Build more robust & scalable data applications          |
-| **Mid-term** | Swift Development       | iOS Application Development                | Create mobile interfaces for data insights              |
-| **Ongoing**  | Data Science & ML     | Advanced Stats, Deep Learning, MLOps       | Tackle more complex predictive modeling challenges      |
+| Timeline     | Focus Areas             | Technologies                               | Goal                                          |
+| :----------- | :---------------------- | :----------------------------------------- | :-------------------------------------------- |
+| **Current**  | JavaScript Programming  | Interactive Web Viz, DOM                   | Enhance web-based data presentation           |
+| **Short-term** | TypeScript & React    | Component UI, Static Typing              | Build robust & scalable data apps             |
+| **Mid-term** | Swift Development       | iOS App Development                        | Create mobile interfaces for data insights    |
+| **Ongoing**  | Data Science & ML     | Advanced Stats, Deep Learning, MLOps       | Tackle complex predictive modeling challenges |
+| **Ongoing**  | Database Systems        | PostgreSQL Deep Dive, MSSQL, NoSQL       | Broaden database expertise                    |
 
 </div>
 
-My learning path focuses on building complementary skills that enhance my core data expertise:
+My learning path focuses on complementary skills:
+-   **Web Stack (JS → TS → React)**: For sophisticated interactive visualizations and full-stack applications.
+-   **Mobile (Swift)**: To create data-driven iOS applications.
+-   **Data Science & ML**: Continuously improving statistical, ML, and MLOps knowledge.
+-   **Databases**: Deepening expertise in relational (PostgreSQL, MSSQL) and exploring NoSQL systems.
 
--   **JavaScript → TypeScript → React**: Creating more sophisticated interactive data visualizations and full-stack web applications.
--   **Swift**: Expanding into mobile development for data-driven iOS applications.
--   **Advanced Data Science**: Continuously improving statistical analysis, machine learning implementation, and understanding MLOps principles.
-
-This strategic approach aims to enable the creation of end-to-end data solutions across multiple platforms.
+This approach aims to enable end-to-end data solution development across platforms.
 
 ---
 
 ## 💬 Learning Journey & Approach
 
-<div align="center">
-
 > *"I believe in continuous learning and practical application. Each project represents both a learning opportunity and a chance to solve real-world problems with data."*
-
-</div>
 
 As someone actively developing my skills, I focus on projects that challenge me to grow while delivering practical value. I embrace transparency in my learning journey, utilizing online resources, courses, and AI assistance to tackle complex problems, always aiming to deepen my understanding and capabilities.
 
@@ -422,46 +303,38 @@ I'm particularly interested in:
 
 ### Core Technical Competencies
 
-| Skill              | Proficiency        | Key Areas                                                                 |
-| :----------------- | :----------------- | :------------------------------------------------------------------------ |
-| Python             | `▰▰▰▰▰▰▰▱▱▱` 70% | Pandas, NumPy, Scikit-Learn, Flask, Streamlit, Data Analysis, Automation |
-| SQL                | `▰▰▰▰▰▰▰▱▱▱` 70% | MySQL, PostgreSQL, Querying, Optimization, Stored Procs, Window Funcs   |
-| Data Analysis      | `▰▰▰▰▰▰▱▱▱▱` 65% | EDA, Statistical Testing, Hypothesis Validation, Interpretation           |
-| Data Visualization | `▰▰▰▰▰▰▱▱▱▱` 65% | Tableau, Looker, Matplotlib, Seaborn, Plotly.js, Dashboard Design       |
-| HTML/CSS           | `▰▰▰▰▰▰▱▱▱▱` 60% | Basic Web Structure, Styling for Data Presentation                      |
-| JavaScript         | `▰▰▰▰▱▱▱▱▱▱` 40% | DOM Manipulation, Interactive Elements (Learning)                       |
-| Machine Learning   | `▰▰▰▰▱▱▱▱▱▱` 40% | Classification, Regression, Clustering, Model Evaluation (Foundational) |
-| ETL Processes      | `▰▰▰▰▰▱▱▱▱▱` 50% | Data Cleaning, Transformation, Basic Pipeline Concepts                  |
+| Category           | Skills                                                                       | Proficiency Level   |
+| :----------------- | :--------------------------------------------------------------------------- | :------------------ |
+| **Programming**    | Python (Pandas, NumPy, Scikit-Learn, Flask, Streamlit), SQL (MySQL, PostgreSQL) | **Intermediate**    |
+|                    | JavaScript, HTML, CSS                                                        | **Foundational**    |
+| **Data Analysis**  | EDA, Statistical Testing, Hypothesis Validation, Interpretation              | **Intermediate**    |
+| **Visualization**  | Tableau, Looker, Matplotlib, Seaborn, Plotly.js, Dashboard Design            | **Intermediate**    |
+| **Machine Learning**| Classification, Regression, Clustering, Model Evaluation, Feature Engineering | **Foundational**    |
+| **Databases**      | Querying, Optimization, Stored Procedures, Window Functions, Data Modeling   | **Intermediate**    |
+| **ETL/Pipelines**  | Data Cleaning, Transformation, Basic Pipeline Concepts                       | **Foundational**    |
+| **Tools & Platforms**| Git/GitHub, Jupyter, VS Code, DataGrip, MySQL Workbench, pgAdmin, Excel (Adv) | **Proficient**      |
+
+*Self-assessment based on project experience and continuous learning.*
 
 </div>
 
-### Programming & Languages
--   **Python**: **Pandas**, **NumPy**, **Scikit-Learn**, **Matplotlib**, **Seaborn**, **Flask**, **Streamlit**, **Selenium**.
--   **SQL**: **MySQL**, **PostgreSQL** (learning **MSSQL**).
--   **Web**: **HTML**, **CSS**, **JavaScript** (learning), future focus on **TypeScript**, **React** & **Swift**.
--   **Current Focus**: Improving **JavaScript** skills for interactive data applications.
-
-### Data Skills
--   **Analysis**: Exploratory data analysis (EDA), statistical testing, hypothesis validation, A/B testing.
--   **Visualization**: **Tableau**, **Looker**, **Matplotlib**, **Seaborn**, **Plotly.js**, chart design, dashboard creation, interactive visualization.
--   **Machine Learning**: Classification, regression, clustering, model evaluation, feature engineering.
--   **Processing**: ETL workflows, data cleaning & standardization, feature engineering, data quality assessment.
-
-### Development Tools
--   **Version Control**: **Git**, **GitHub**.
--   **Environments**: **Jupyter Notebooks**, **VS Code**, **DataGrip**.
--   **Databases**: **MySQL Workbench**, **pgAdmin**.
--   **Other Tools**: Microsoft Access, REDCap, Excel (Advanced).
+### Key Technologies & Libraries
+-   **Python**: Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Flask, Streamlit, Selenium, Tkinter
+-   **SQL**: MySQL, PostgreSQL (Learning: MSSQL)
+-   **Web**: HTML, CSS, JavaScript (Learning: TypeScript, React)
+-   **Visualization**: Tableau, Looker, Plotly.js
+-   **Version Control**: Git, GitHub
+-   **Databases/Tools**: MySQL Workbench, pgAdmin, DataGrip, VS Code, Jupyter, Excel (Advanced), REDCap
 
 ---
 
 ## 🤝 Soft Skills & Professional Attributes
 
--   🗣️ **Communication**: Translating complex technical findings into clear, actionable insights for diverse audiences using visualizations and concise explanations.
--   👥 **Collaboration**: Experience working in cross-functional teams, contributing code via version control (**Git/GitHub**), and participating in peer reviews.
--   🧩 **Problem-Solving**: Methodical approach to deconstructing complex challenges, identifying data-driven solutions, and iterating based on results.
--   🌱 **Continuous Learning**: Proactive commitment to expanding technical knowledge through self-directed projects, online courses (**Coursera**, **DataCamp**), and staying updated on industry trends.
--   🤸 **Adaptability**: Flexibility in quickly learning and applying new tools, technologies, and methodologies as required by project needs.
+-   🗣️ **Communication**: Translating technical findings into clear, actionable insights for diverse audiences.
+-   👥 **Collaboration**: Working effectively in cross-functional teams, using version control (Git/GitHub), participating in peer reviews.
+-   🧩 **Problem-Solving**: Methodical approach to deconstructing challenges and identifying data-driven solutions.
+-   🌱 **Continuous Learning**: Proactive commitment to expanding technical knowledge (self-directed projects, Coursera, DataCamp).
+-   🤸 **Adaptability**: Quickly learning and applying new tools, technologies, and methodologies.
 
 ---
 
