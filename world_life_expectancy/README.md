@@ -105,13 +105,13 @@ Behind these numbers lie stories of development, education, healthcare access, a
 | [Raw Data Source]           |      | [Data Cleaning]             |      | [Temporal Trends]   |      | [Statistical Reports]     |
 |        |                    |      |        |                    |      | [Correlation]       |      | [Interactive Dashboards]  |
 |        v                    |      |        v                    |      | [Development Gap]   |      | [Policy Recommendations]  |
-| [MySQL Database]            |      | [Quality Scoring]           |      | [COVID-19 Impact]   |      | [Predictive Models]       |
-|                             |      |        |                    |      |                     |      |                           |
-|                             |      |        v                    |      +---------+-----------+      +------------+--------------+
+| [MySQL Database] -----------+----->| [Quality Scoring]           |      | [COVID-19 Impact]   |      | [Predictive Models]       |
+|                             |      |        |                    |      |         |           |      |         |                 |
+|                             |      |        v                    |      +---------+-----------+      +---------+-----------------+
 |                             |      | [Standardization]           |                |                          |
 |                             |      |        |                    |                +--------------------------+
-|                             |      |        v                    |
-|                             |      | [Missing Value Interpolation] |
+|                             |      |        v                    |                          |
+|                             |      | [Missing Value Interpolation] | <------------------------+
 +-----------------------------+      +-----------------------------+
 ```
 
@@ -384,17 +384,15 @@ Our analysis reveals persistent but narrowing global health disparities:
 
 ### Global Health Determinants
 ```ascii
-+---------------------+      +---------------------+      +---------------------+
-|   Key Determinants  | ---> |       Outcome       |
-+---------------------+      +---------------------+
-| - Schooling (r=0.56)|      |                     |
-| - Adult Mort. (-0.69)| ---> | [Life Expectancy]   |
-| - BMI (r=0.50)      |      |                     |
-| - GDP (r=0.40)      | ---> +---------------------+
-| - Infant Deaths (-0.17)|
-+---------------------+
-  |         |         |
-  +---(+)---+---(-)---+
++--------------------------+
+|   Key Determinants       |
+|--------------------------|
+| (+) Schooling (r=0.56)   | --\
+| (-) Adult Mort. (r=-0.69)| ---> +-------------------+
+| (+) BMI (r=0.50)         | ---> | [Life Expectancy] |
+| (+) GDP (r=0.40)         | --/  +-------------------+
+| (-) Infant Deaths (r=-0.17)|
++--------------------------+
 ```
 
 ### COVID-19's Global Health Impact
