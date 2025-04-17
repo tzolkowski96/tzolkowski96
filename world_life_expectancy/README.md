@@ -99,20 +99,38 @@ Behind these numbers lie stories of development, education, healthcare access, a
 
 ## 🛠️ Technical Architecture
 ```ascii
-+-----------------------------+      +-----------------------------+      +---------------------+      +---------------------------+
-| Data Acquisition & Storage  | ---> | Data Processing Pipeline    | ---> | Analytical Engine   | ---> | Output & Visualization    |
-|-----------------------------|      |-----------------------------|      |---------------------|      |---------------------------|
-| [Raw Data Source]           |      | [Data Cleaning]             |      | [Temporal Trends]   |      | [Statistical Reports]     |
-|        |                    |      |        |                    |      | [Correlation]       |      | [Interactive Dashboards]  |
-|        v                    |      |        v                    |      | [Development Gap]   |      | [Policy Recommendations]  |
-| [MySQL Database] -----------+----->| [Quality Scoring]           |      | [COVID-19 Impact]   |      | [Predictive Models]       |
-|                             |      |        |                    |      |         |           |      |         |                 |
-|                             |      |        v                    |      +---------+-----------+      +---------+-----------------+
-|                             |      | [Standardization]           |                |                          |
-|                             |      |        |                    |                +--------------------------+
-|                             |      |        v                    |                          |
-|                             |      | [Missing Value Interpolation] | <------------------------+
-+-----------------------------+      +-----------------------------+
++-----------------------------+
+| Data Acquisition & Storage  |
+|  • Raw Data Source          |
+|  • MySQL Database           |
++-------------+---------------+
+              |
+              v
++-----------------------------+
+| Data Processing Pipeline    |
+|  • Data Cleaning            |
+|  • Quality Scoring          |
+|  • Standardization          |
+|  • Missing Value Interp.    |
++-------------+---------------+
+              |
+              v
++-----------------------------+
+| Analytical Engine           |
+|  • Temporal Trends Analysis |
+|  • Correlation Analysis     |
+|  • Dev Gap Analysis         |
+|  • COVID‑19 Impact          |
++-------------+---------------+
+              |
+              v
++-----------------------------+
+| Output & Visualization      |
+|  • Statistical Reports      |
+|  • Interactive Dashboards   |
+|  • Policy Recommendations   |
+|  • Predictive Models        |
++-----------------------------+
 ```
 
 ### 🧰 Technical Setup
@@ -384,15 +402,19 @@ Our analysis reveals persistent but narrowing global health disparities:
 
 ### Global Health Determinants
 ```ascii
-+--------------------------+
-|   Key Determinants       |
-|--------------------------|
-| (+) Schooling (r=0.56)   | --\
-| (-) Adult Mort. (r=-0.69)| ---> +-------------------+
-| (+) BMI (r=0.50)         | ---> | [Life Expectancy] |
-| (+) GDP (r=0.40)         | --/  +-------------------+
-| (-) Infant Deaths (r=-0.17)|
-+--------------------------+
++----------------------------------+
+| Key Determinants                 |
+|  + Schooling (r = +0.56)         |
+|  - Adult Mortality (r = -0.69)   |
+|  + BMI (r = +0.50)               |
+|  + GDP (r = +0.40)               |
+|  - Infant Deaths (r = -0.17)     |
++---------------+------------------+
+                |
+                v
++-----------------------------+
+| Life Expectancy             |
++-----------------------------+
 ```
 
 ### COVID-19's Global Health Impact
