@@ -6,8 +6,8 @@
   <img src="https://img.shields.io/badge/Last%20Updated-April%202025-yellow" alt="Last Updated"/>
 </p>
 <p align="center">
-  <img src="https://images.unsplash.com/photo-1587502536263-d63fd9d3a4d6?auto=format&fit=crop&w=1200&q=80"
-       alt="Globe with heartbeat overlay representing global health trends" width="100%"/>
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+       alt="A world map with data points representing global health trends" width="100%"/>
 </p>
 
 ## ⚡ TL;DR (30‑sec read)
@@ -399,12 +399,19 @@ flowchart LR
 
 ### COVID-19's Global Health Impact
 
-The pandemic created a singular disruption in global health progress:
-
-```mermaid
-flowchart LR
-  A2007["2007  66.75"] --> A2008["2008  67.15"] --> A2009["2009  67.60"] --> A2010["2010  68.20"] --> A2011["2011  68.85"] --> A2012["2012  69.40"] --> A2013["2013  69.80"] --> A2014["2014  70.25"] --> A2015["2015  70.55"] --> A2016["2016  70.72"] --> A2017["2017  70.85"] --> A2018["2018  70.92"] --> A2019["2019  70.92"] --> A2020["2020  67.55"] --> A2021["2021  71.54"] --> A2022["2022  71.62"]
-```
+<pre>
+Life Expectancy Trend (2007‑2022)  –  values in years
+Key: ● data point, ─ trajectory
+72 │                                                          ● 2022
+71 │                                            ●─────────────┘
+70 │                           ●───────────────● 2019
+69 │                  ●────────┘
+68 │         ●────────┘
+67 │●────────┘
+66 │
+   └─2007  2009  2011  2013  2015  2017  2019  2020  2021  2022
+                 ▼ COVID‑19 dip (67.55)    ▲ Rebound
+</pre>
 
 Key observations:
 1. **Pre-pandemic trajectory:** Steady growth from 66.75 years (2007) to 70.92 years (2019)
