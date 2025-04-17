@@ -101,7 +101,7 @@ Behind these numbers lie stories of development, education, healthcare access, a
 ```mermaid
 graph TD
     subgraph "Data Acquisition & Storage"
-        A1[Raw Data Source] --> A2(MySQL Database);
+        A1[Raw Data Source] --> A2[MySQL Database];
     end
 
     subgraph "Data Processing Pipeline"
@@ -122,7 +122,7 @@ graph TD
     subgraph "Output & Visualization"
         direction LR
         D1[Statistical Reports]
-        D2[Interactive Dashboards (Tableau/PowerBI)]
+        D2[Interactive Dashboards - Tableau/PowerBI]
         D3[Policy Recommendations]
         D4[Predictive Models]
     end
