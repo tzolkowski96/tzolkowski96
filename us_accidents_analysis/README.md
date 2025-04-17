@@ -1,16 +1,38 @@
 # 🚦 Road Safety Analytics: The Traffic Accident Investigation Engine
 
-## A Comprehensive Deep Dive into 7.7 Million US Traffic Accidents
+## A Comprehensive Deep Dive into 7.7 Million US Traffic Accidents
 
-![Traffic Accident Analysis Overview](visualizations/traffic_accident_temporal_analysis_4panel.png)
-*Four-panel visualization showing accident distribution by time of day, day of week, month, and year*
-
-[![GitHub stars](https://img.shields.io/github/stars/tzolkowski96/us_accidents_analysis?style=social)](https://github.com/tzolkowski96/us_accidents_analysis/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/tzolkowski96/us_accidents_analysis?style=social)](https://github.com/tzolkowski96/us_accidents_analysis/network/members)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/tzolkowski96/us_accidents_analysis/blob/main/LICENSE)
-[![Data Quality](https://img.shields.io/badge/data%20coverage-49%20states-brightgreen.svg)](https://github.com/tzolkowski96/us_accidents_analysis)
+[![GitHub Stars](https://img.shields.io/github/stars/tzolkowski96/us_accidents_analysis?style=flat&color=yellow)](../stargazers)
+[![Forks](https://img.shields.io/github/forks/tzolkowski96/us_accidents_analysis?style=flat&color=orange)](../network/members)
+[![License](https://img.shields.io/github/license/tzolkowski96/us_accidents_analysis.svg?color=blue)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org)
+[![Coverage 49 States](https://img.shields.io/badge/coverage-49%20states-brightgreen)](#data-insights-and-limitations)
 
 > **Unlocking the patterns behind America's traffic accidents to make roads safer for everyone**
+
+### ⚡ TL;DR
+- 7.7 M accident records (2016‑2023) across 49 states  
+- Clear/cloudy weather ➜ 77 % of accidents  
+- Barometric pressure is the top severity driver  
+- Morning & afternoon rush hours = 41 % of all crashes  
+- Urban areas show 3.7× higher accident density than rural zones  
+
+### 📑 Table of Contents
+- [Project Overview](#-project-overview-the-story-behind-77-million-accidents)
+- [Key Insights](#-key-insights-that-might-surprise-you)
+- [Technology Stack](#-technology-and-tools-how-we-built-this)
+- [Getting Started](#-getting-started-installation--setup)
+- [Methodology (details)](#methodology)
+- [Data Insights & Limitations](#-data-insights-and-limitations)
+- [Results](#-results--key-findings)
+- [FAQ](#-frequently-asked-questions)
+- [Future Work](#-future-directions)
+- [Attribution](#-attribution--data-source)
+- [Contact & Contribute](#-contact--contribution)
+
+![Traffic Accident Analysis Overview](visualizations/traffic_accident_temporal_analysis_4panel.png)  
+*Four‑panel visualization showing accident distribution by time of day, day of week, month, and year*  
+<sub>All project images are released under the same MIT license unless noted otherwise.</sub>
 
 ## 🔍 Project Overview: The Story Behind 7.7 Million Accidents
 
@@ -114,19 +136,25 @@ Our analysis leveraged sophisticated algorithms to uncover hidden patterns:
 ```python
 # Sample code: Feature importance extraction
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 # Prepare features
+weather_features = ["Pressure", "Temperature", "Wind_Speed", "Visibility"]
 X = df[weather_features].copy()
-y = df['Severity']
+y = df["Severity"]
+
+# Split & scale
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
 
 # Train model and extract importance
 rf = RandomForestClassifier(n_estimators=100, random_state=42)
 rf.fit(X_train, y_train)
-importances = pd.Series(rf.feature_importances_, index=weather_features)
-importances.sort_values(ascending=False).plot(kind='barh')
+importances = pd.Series(rf.feature_importances_, index=weather_features).sort_values()
+importances.plot(kind="barh", title="Weather Feature Importance")
 ```
 
 ### Data Engineering
@@ -318,55 +346,9 @@ To address these challenges, we implemented:
 - **Feature engineering** to improve signal for severity prediction
 - **Ensemble techniques** combining multiple models for better rare class detection
 
-## 📊 Data Insights and Limitations
-
-Our analysis acknowledges several important data considerations:
-
-### What Makes This Dataset Valuable
-- **Unprecedented scale**: 7.7 million records across 49 states
-- **Rich detail**: 46 variables for each accident, including precise location, timing, and environmental conditions
-- **Longitudinal view**: Seven years of data capturing long-term trends
-
-### Important Limitations
-
-For transparency, we acknowledge these limitations:
-
-1. **Geographic representation**: California (22.5%) and Florida (11.4%) are over-represented relative to their population
-2. **Reporting differences**: States and jurisdictions vary in their accident reporting standards and thresholds
-3. **Urban bias**: Rural accidents may be under-reported due to limited police coverage
-4. **Temporal consistency**: Collection methods evolved during the 7-year period, particularly during 2020-2021
-5. **Severity subjectivity**: The 1-4 severity scale may be applied inconsistently across jurisdictions
-
-## 🚀 Getting Started: Installation & Setup
-
-For those who want to explore this dataset themselves:
-
-```bash
-# Clone the repository
-git clone https://github.com/tzolkowski96/us_accidents_analysis.git
-cd us_accidents_analysis
-
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Download the dataset (requires Kaggle API)
-python scripts/download_data.py
-
-# Run analysis notebook
-jupyter notebook notebooks/accident_analysis.ipynb
-```
-
-### System Requirements
-- **Python**: 3.8+
-- **Memory**: 16GB+ RAM recommended
-- **Storage**: 10GB+ free disk space
-- **API**: Kaggle API credentials (for dataset access)
-
-## 📝 Our Methodology: How We Analyzed 7.7 Million Accidents
+## 📝 Our Methodology: How We Analyzed 7.7 Million Accidents <a id="methodology"></a>
+<details>
+<summary>Click to expand full technical workflow</summary>
 
 ### 1. Data Preparation
 
@@ -397,6 +379,29 @@ To ensure our findings were robust:
 - **External validation**: Compared results with published transportation safety research
 - **Peer review**: Subjected methods and conclusions to expert review
 
+</details>
+
+## 📊 Data Insights and Limitations
+
+Our analysis acknowledges several important data considerations:
+
+### What Makes This Dataset Valuable
+- **Unprecedented scale**: 7.7 million records across 49 states
+- **Rich detail**: 46 variables for each accident, including precise location, timing, and environmental conditions
+- **Longitudinal view**: Seven years of data capturing long-term trends
+
+### Important Limitations
+
+For transparency, we acknowledge these limitations:
+
+1. **Geographic representation**: California (22.5%) and Florida (11.4%) are over-represented relative to their population
+2. **Reporting differences**: States and jurisdictions vary in their accident reporting standards and thresholds
+3. **Urban bias**: Rural accidents may be under-reported due to limited police coverage
+4. **Temporal consistency**: Collection methods evolved during the 7-year period, particularly during 2020-2021
+5. **Severity subjectivity**: The 1-4 severity scale may be applied inconsistently across jurisdictions
+
+- **Tiny sample dataset (50 k rows)** for quick exploration is available in `data/sample_us_accidents.csv`.
+
 ## 🌟 Results & Key Findings
 
 ![Weather Conditions](visualizations/weather_conditions.png)
@@ -424,6 +429,18 @@ Our comprehensive analysis revealed several actionable insights:
 - **Infrastructure Impact**: Proximity to junctions increases severity by an average of 0.31 points
 - **Time Factors**: Night accidents (10PM-4AM) are 27% more severe than daytime accidents
 
+## 📚 Attribution & Data Source
+
+This analysis would not be possible without the excellent dataset provided by:
+
+Dataset: US Accidents (2016-2023)  
+Authors: Sobhan Moosavi et al.  
+License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+- Visual assets created by project authors under MIT license.  
+
+If you use this analysis or dataset in your work, please cite both the original dataset authors and this analysis.
+
 ## 👩‍💻 Contact & Contribution
 
 We welcome collaboration and contributions to this project:
@@ -440,16 +457,6 @@ This project can benefit from:
 - Novel visualization approaches
 - Regional analysis for specific states or cities
 - Integration with real-time traffic data
-
-## 📚 Attribution & Data Source
-
-This analysis would not be possible without the excellent dataset provided by:
-
-Dataset: US Accidents (2016-2023)  
-Authors: Sobhan Moosavi et al.  
-License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
-If you use this analysis or dataset in your work, please cite both the original dataset authors and this analysis.
 
 ## 🔮 Future Directions
 
