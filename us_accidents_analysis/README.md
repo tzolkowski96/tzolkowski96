@@ -1,4 +1,4 @@
-# 🚗 Traffic Accident Analytics Engine
+# Traffic Accident Analytics Engine
 ## Advanced Geospatial-Temporal Analysis System
 
 ![Traffic Accident Analysis Overview](visualizations/traffic_accident_temporal_analysis_4panel.png)
@@ -9,7 +9,7 @@
 
 > Comprehensive analysis of 7.7 million US traffic accidents with advanced statistical modeling, machine learning, and interactive visualizations
 
-## 📊 Project Overview
+## Project Overview
 
 This project analyzes **7.7 million US traffic accidents** (2016-2023) using advanced data science techniques to generate actionable insights for traffic management and public safety. The system leverages:
 
@@ -31,7 +31,7 @@ This project analyzes **7.7 million US traffic accidents** (2016-2023) using adv
   </tr>
 </table>
 
-## 🔬 Technical Achievements
+## Technical Achievements
 
 ### Statistical Analysis
 - Implemented robust weather impact analysis using chi-square testing (**χ² = 96229.39, p < 0.001**) and ANOVA
@@ -71,7 +71,7 @@ importances.sort_values(ascending=False).plot(kind='barh')
 - Developed multi-panel dashboards for analyzing temporal and weather patterns
 - Generated geospatial visualizations of high-risk corridors
 
-## 🗺️ GIS and Geospatial Analytics
+## GIS and Geospatial Analytics
 
 ![Weather Condition Analysis](visualizations/weather_severity_analysis_quad_stats.png)
 
@@ -80,7 +80,7 @@ importances.sort_values(ascending=False).plot(kind='barh')
 - Implemented coordinate-based analysis for high-risk corridor detection
 - Generated dynamic Folium maps for temporal-spatial pattern visualization
 
-## 🧰 Technology Stack
+## Technology Stack
 
 <table>
   <tr>
@@ -105,7 +105,7 @@ importances.sort_values(ascending=False).plot(kind='barh')
   </tr>
 </table>
 
-## 📋 Key Features
+## Key Features
 
 ### Weather Impact Analysis
 - Pressure and temperature correlation analysis
@@ -127,14 +127,50 @@ importances.sort_values(ascending=False).plot(kind='barh')
 - Day-of-week distribution analysis
 - Time-weather interaction mapping
 
-## 🚀 Real-World Applications
+## Model Performance Analysis
+
+The Random Forest classifier achieved 78% accuracy overall, but performance varied significantly across severity classes:
+
+```
+             precision    recall  f1-score   support
+          1       0.40      0.07      0.12     13677
+          2       0.81      0.96      0.88   1230834
+          3       0.39      0.12      0.19    260285
+          4       0.36      0.08      0.13     40833
+```
+
+### Class Imbalance Challenges
+- **Severity 2 dominance**: 79.6% of incidents are Severity 2, leading to model bias
+- **Recall issues**: Low recall values for classes 1 (0.07), 3 (0.12), and 4 (0.08)
+- **Mitigation strategies**: Implemented SMOTE oversampling and class weighting to improve minority class prediction
+
+### Performance Optimization
+- Conducted feature selection to reduce dimensionality and improve model generalization
+- Implemented ensemble techniques combining multiple models to improve rare class detection
+- Refined hyperparameters through grid search with stratified cross-validation
+
+## Data Limitations and Biases
+
+Our analysis acknowledges several important data limitations:
+
+1. **Reporting bias**: Accident data is influenced by jurisdictional reporting standards, potentially underrepresenting rural areas with limited police coverage
+   
+2. **Geographic coverage**: While the dataset includes 49 states, representation varies significantly, with California (22.5%) and Florida (11.4%) disproportionately represented
+
+3. **Temporal consistency**: Data collection methods evolved over time, with significant collection methodology changes in 2020-2021 potentially impacting trend analysis
+
+4. **Severity classification subjectivity**: The 1-4 severity scale may be applied inconsistently across jurisdictions, affecting comparative analysis
+
+5. **Environmental data quality**: Weather data is collected from nearest weather stations, not accident sites, introducing potential environmental condition inaccuracies
+
+## Real-World Applications
 
 - **Emergency Response**: Data-driven resource allocation optimization
 - **Urban Planning**: Evidence-based infrastructure development recommendations
 - **Traffic Management**: Real-time risk assessment capabilities
 - **Public Safety**: Weather-specific safety protocol development
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 ```bash
 # Clone the repository
@@ -161,7 +197,7 @@ jupyter notebook notebooks/accident_analysis.ipynb
 - 10GB+ free disk space
 - Kaggle API credentials (for dataset access)
 
-## 📝 Methodology
+## Methodology
 
 ### 1. Data Preparation
 - Standardization of 7.7M multi-jurisdictional records
@@ -181,7 +217,39 @@ jupyter notebook notebooks/accident_analysis.ipynb
 - Weather correlation matrices
 - Severity distribution analysis
 
-## 📊 Results & Findings
+## Visualization Enhancement Strategies
+
+To improve visualization clarity and information density:
+
+1. **Weather condition grouping**: Consolidated similar weather conditions into interpretable categories
+   
+2. **Color scheme optimization**: Used colorblind-friendly palettes with proper contrast
+   
+3. **Interactive elements**: Implemented tooltips and filtering in Folium maps
+   
+4. **Layout improvements**: Redesigned multi-panel visualizations with consistent scales
+   
+5. **Simplified legends**: Reduced visual clutter while maintaining information integrity
+
+Example improvement (Weather conditions chart):
+```python
+# Original overcrowded chart
+weather_counts = df_clean['Weather_Condition'].value_counts().head(10)
+sns.barplot(x=weather_counts.index, y=weather_counts.values)
+
+# Improved visualization with grouped conditions
+weather_mapping = {
+    'Fair': 'Clear/Fair', 'Clear': 'Clear/Fair',
+    'Mostly Cloudy': 'Cloudy', 'Partly Cloudy': 'Cloudy',
+    # Additional mappings...
+}
+df_clean['Weather_Simple'] = df_clean['Weather_Condition'].map(
+    lambda x: next((v for k, v in weather_mapping.items() 
+                   if k in x), 'Other')
+)
+```
+
+## Results & Findings
 
 ![Weather Conditions](visualizations/weather_conditions.png)
 
@@ -192,19 +260,19 @@ Key insights from the analysis:
 - **Temporal Factors**: Peak accident times occur during 7-9am and 4-6pm rush hours on weekdays
 - **Severity Drivers**: Pressure systems and temperature are the top weather predictors of accident severity
 
-## 📧 Contact & Contribution
+## Contact & Contribution
 
 - **Source Code**: Due to GitHub's 100MB file size limitation, the complete Jupyter notebook is available via [request](mailto:example@email.com)
 - **Questions**: Feel free to [open an issue](https://github.com/tzolkowski96/us_accidents_analysis/issues) or contact me directly
 - **Contributions**: Pull requests are welcome! Please see the [contributing guidelines](CONTRIBUTING.md)
 
-## 📚 Attribution
+## Attribution
 
 Dataset: US Accidents (2016-2023)  
 Authors: Sobhan Moosavi et al.  
 License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-## 🔮 Future Development
+## Future Development
 
 - Integration of real-time weather data
 - Enhancement of predictive modeling accuracy
