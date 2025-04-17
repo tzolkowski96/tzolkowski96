@@ -98,48 +98,21 @@ Behind these numbers lie stories of development, education, healthcare access, a
 ---
 
 ## 🛠️ Technical Architecture
-```mermaid
-graph TD
-    subgraph "Data Acquisition & Storage"
-        A1[Raw Data Source] --> A2[MySQL Database];
-    end
-
-    subgraph "Data Processing Pipeline"
-        direction LR
-        B1[Data Cleaning] --> B2[Quality Scoring];
-        B2 --> B3[Standardization];
-        B3 --> B4[Missing Value Interpolation];
-    end
-
-    subgraph "Analytical Engine"
-        direction LR
-        C1[Temporal Trends Analysis]
-        C2[Correlation Analysis]
-        C3[Development Gap Analysis]
-        C4[COVID-19 Impact Analysis]
-    end
-
-    subgraph "Output & Visualization"
-        direction LR
-        D1[Statistical Reports]
-        D2[Interactive Dashboards - Tableau/PowerBI]
-        D3[Policy Recommendations]
-        D4[Predictive Models]
-    end
-
-    A2 --> B1;
-    B4 --> C1;
-    B4 --> C2;
-    B4 --> C3;
-    B4 --> C4;
-    C1 --> D1; C1 --> D2; C1 --> D4;
-    C2 --> D1; C2 --> D3; C2 --> D4;
-    C3 --> D1; C3 --> D2; C3 --> D3;
-    C4 --> D1; C4 --> D2; C4 --> D3;
-
-    style A1 fill:#f9f,stroke:#333,stroke-width:2px
-    style D2 fill:#ccf,stroke:#333,stroke-width:2px
-    style D3 fill:#cfc,stroke:#333,stroke-width:2px
+```ascii
++-----------------------------+      +-----------------------------+      +---------------------+      +---------------------------+
+| Data Acquisition & Storage  | ---> | Data Processing Pipeline    | ---> | Analytical Engine   | ---> | Output & Visualization    |
+|-----------------------------|      |-----------------------------|      |---------------------|      |---------------------------|
+| [Raw Data Source]           |      | [Data Cleaning]             |      | [Temporal Trends]   |      | [Statistical Reports]     |
+|        |                    |      |        |                    |      | [Correlation]       |      | [Interactive Dashboards]  |
+|        v                    |      |        v                    |      | [Development Gap]   |      | [Policy Recommendations]  |
+| [MySQL Database]            |      | [Quality Scoring]           |      | [COVID-19 Impact]   |      | [Predictive Models]       |
+|                             |      |        |                    |      |                     |      |                           |
+|                             |      |        v                    |      +---------+-----------+      +------------+--------------+
+|                             |      | [Standardization]           |                |                          |
+|                             |      |        |                    |                +--------------------------+
+|                             |      |        v                    |
+|                             |      | [Missing Value Interpolation] |
++-----------------------------+      +-----------------------------+
 ```
 
 ### 🧰 Technical Setup
@@ -410,26 +383,18 @@ Our analysis reveals persistent but narrowing global health disparities:
 </table>
 
 ### Global Health Determinants
-```mermaid
-graph LR
-    subgraph "Key Determinants"
-        Schooling("Schooling<br>r = 0.56");
-        Mortality("Adult Mortality<br>r = -0.69");
-        BMI("BMI<br>r = 0.50");
-        GDP("GDP<br>r = 0.40");
-        InfantDeaths("Infant Deaths<br>r = -0.17");
-    end
-    subgraph "Outcome"
-        LE[("Life Expectancy")];
-    end
-
-    Schooling -- "+ Correlation" --> LE;
-    Mortality -- "- Correlation" --> LE;
-    BMI -- "+ Correlation" --> LE;
-    GDP -- "+ Correlation" --> LE;
-    InfantDeaths -- "- Correlation" --> LE;
-
-    style LE fill:#bbf,stroke:#333,stroke-width:4px
+```ascii
++---------------------+      +---------------------+      +---------------------+
+|   Key Determinants  | ---> |       Outcome       |
++---------------------+      +---------------------+
+| - Schooling (r=0.56)|      |                     |
+| - Adult Mort. (-0.69)| ---> | [Life Expectancy]   |
+| - BMI (r=0.50)      |      |                     |
+| - GDP (r=0.40)      | ---> +---------------------+
+| - Infant Deaths (-0.17)|
++---------------------+
+  |         |         |
+  +---(+)---+---(-)---+
 ```
 
 ### COVID-19's Global Health Impact
