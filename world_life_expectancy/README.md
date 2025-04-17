@@ -1,12 +1,14 @@
 # 🌍 Global Life Expectancy Analysis Project
-<div align="center">
-  ![Project Status](https://img.shields.io/badge/Status-Complete-brightgreen)
-  ![SQL](https://img.shields.io/badge/MySQL-8.0%2B-blue)
-  ![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202025-yellow)
-
-  <img src="https://via.placeholder.com/1200x400/4a90e2/ffffff?text=Global+Health+Trends+2007-2022"
-       alt="Global Health Trends Banner" width="100%">
-</div>
+<!-- centered badges + banner -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Complete-brightgreen" alt="Project Status"/>
+  <img src="https://img.shields.io/badge/MySQL-8.0%2B-blue" alt="MySQL Version"/>
+  <img src="https://img.shields.io/badge/Last%20Updated-April%202025-yellow" alt="Last Updated"/>
+</p>
+<p align="center">
+  <img src="https://images.unsplash.com/photo-1587502536263-d63fd9d3a4d6?auto=format&fit=crop&w=1200&q=80"
+       alt="Globe with heartbeat overlay representing global health trends" width="100%"/>
+</p>
 
 ## ⚡ TL;DR (30‑sec read)
 - **Scope:** 2,938 records, 183 countries (2007‑2022)
@@ -97,25 +99,25 @@ Behind these numbers lie stories of development, education, healthcare access, a
 
 ## 🛠️ Technical Architecture
 ```mermaid
-%% World Life Expectancy Analysis Pipeline
-subgraph Data Preprocessing
-  DC[Data Cleaning] --> QS[Quality Scoring] --> ST[Standardization] --> MV[Missing Value Interpolation]
-end
-subgraph Statistical Analysis
-  TT[Temporal Trends]
-  COR[Correlations]
-  GA[Development Gap Analysis]
-  CI[COVID‑19 Impact]
-end
-subgraph Insight Generation
-  VIS[Visualization] --> DB[Interactive Dashboards] --> PR[Policy Recommendations]
-  PM[Predictive Modeling] --> PR
-end
-MV --> TT
-TT --> VIS
-COR --> VIS
-GA  --> VIS
-CI  --> VIS
+flowchart TD
+  subgraph "Data Preprocessing"
+    DC[Data Cleaning] --> QS[Quality Scoring] --> ST[Standardization] --> MV[Missing Value Interpolation]
+  end
+  subgraph "Statistical Analysis"
+    TT[Temporal Trends]
+    COR[Correlations]
+    GA[Development Gap Analysis]
+    CI[COVID‑19 Impact]
+  end
+  subgraph "Insight Generation"
+    VIS[Visualization] --> DB[Interactive Dashboards] --> PR[Policy Recommendations]
+    PM[Predictive Modeling] --> PR
+  end
+  MV --> TT
+  TT --> VIS
+  COR --> VIS
+  GA  --> VIS
+  CI  --> VIS
 ```
 
 ### 🧰 Technical Setup
@@ -400,11 +402,8 @@ flowchart LR
 The pandemic created a singular disruption in global health progress:
 
 ```mermaid
-%% Line chart – Global Life Expectancy (2007‑2022)
-line
-    title Life Expectancy Trend (2007‑2022)
-    x-axis 2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022
-    "Life Expectancy" 66.75,67.15,67.60,68.20,68.85,69.40,69.80,70.25,70.55,70.72,70.85,70.92,70.92,67.55,71.54,71.62
+flowchart LR
+  A2007["2007  66.75"] --> A2008["2008  67.15"] --> A2009["2009  67.60"] --> A2010["2010  68.20"] --> A2011["2011  68.85"] --> A2012["2012  69.40"] --> A2013["2013  69.80"] --> A2014["2014  70.25"] --> A2015["2015  70.55"] --> A2016["2016  70.72"] --> A2017["2017  70.85"] --> A2018["2018  70.92"] --> A2019["2019  70.92"] --> A2020["2020  67.55"] --> A2021["2021  71.54"] --> A2022["2022  71.62"]
 ```
 
 Key observations:
