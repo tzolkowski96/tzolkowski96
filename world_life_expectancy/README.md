@@ -99,25 +99,47 @@ Behind these numbers lie stories of development, education, healthcare access, a
 
 ## 🛠️ Technical Architecture
 ```mermaid
-flowchart TD
-  subgraph "Data Preprocessing"
-    DC[Data Cleaning] --> QS[Quality Scoring] --> ST[Standardization] --> MV[Missing Value Interpolation]
-  end
-  subgraph "Statistical Analysis"
-    TT[Temporal Trends]
-    COR[Correlations]
-    GA[Development Gap Analysis]
-    CI[COVID‑19 Impact]
-  end
-  subgraph "Insight Generation"
-    VIS[Visualization] --> DB[Interactive Dashboards] --> PR[Policy Recommendations]
-    PM[Predictive Modeling] --> PR
-  end
-  MV --> TT
-  TT --> VIS
-  COR --> VIS
-  GA  --> VIS
-  CI  --> VIS
+graph TD
+    subgraph "Data Acquisition & Storage"
+        A1[Raw Data Source] --> A2(MySQL Database);
+    end
+
+    subgraph "Data Processing Pipeline"
+        direction LR
+        B1[Data Cleaning] --> B2[Quality Scoring];
+        B2 --> B3[Standardization];
+        B3 --> B4[Missing Value Interpolation];
+    end
+
+    subgraph "Analytical Engine"
+        direction LR
+        C1[Temporal Trends Analysis]
+        C2[Correlation Analysis]
+        C3[Development Gap Analysis]
+        C4[COVID-19 Impact Analysis]
+    end
+
+    subgraph "Output & Visualization"
+        direction LR
+        D1[Statistical Reports]
+        D2[Interactive Dashboards (Tableau/PowerBI)]
+        D3[Policy Recommendations]
+        D4[Predictive Models]
+    end
+
+    A2 --> B1;
+    B4 --> C1;
+    B4 --> C2;
+    B4 --> C3;
+    B4 --> C4;
+    C1 --> D1; C1 --> D2; C1 --> D4;
+    C2 --> D1; C2 --> D3; C2 --> D4;
+    C3 --> D1; C3 --> D2; C3 --> D3;
+    C4 --> D1; C4 --> D2; C4 --> D3;
+
+    style A1 fill:#f9f,stroke:#333,stroke-width:2px
+    style D2 fill:#ccf,stroke:#333,stroke-width:2px
+    style D3 fill:#cfc,stroke:#333,stroke-width:2px
 ```
 
 ### 🧰 Technical Setup
@@ -389,29 +411,43 @@ Our analysis reveals persistent but narrowing global health disparities:
 
 ### Global Health Determinants
 ```mermaid
-flowchart LR
-  Schooling(["Schooling r = 0.56"]) --> LE[Life Expectancy]
-  Mortality(["Adult Mortality r = ‑0.69"]) --> LE
-  BMI(["BMI r = 0.50"]) --> LE
-  GDP(["GDP r = 0.40"]) --> LE
-  InfantDeaths(["Infant Deaths r = ‑0.17"]) --> LE
+graph LR
+    subgraph "Key Determinants"
+        Schooling("Schooling<br>r = 0.56");
+        Mortality("Adult Mortality<br>r = -0.69");
+        BMI("BMI<br>r = 0.50");
+        GDP("GDP<br>r = 0.40");
+        InfantDeaths("Infant Deaths<br>r = -0.17");
+    end
+    subgraph "Outcome"
+        LE[("Life Expectancy")];
+    end
+
+    Schooling -- "+ Correlation" --> LE;
+    Mortality -- "- Correlation" --> LE;
+    BMI -- "+ Correlation" --> LE;
+    GDP -- "+ Correlation" --> LE;
+    InfantDeaths -- "- Correlation" --> LE;
+
+    style LE fill:#bbf,stroke:#333,stroke-width:4px
 ```
 
 ### COVID-19's Global Health Impact
 
-<pre>
-Life Expectancy Trend (2007‑2022)  –  values in years
-Key: ● data point, ─ trajectory
-72 │                                                          ● 2022
-71 │                                            ●─────────────┘
-70 │                           ●───────────────● 2019
-69 │                  ●────────┘
-68 │         ●────────┘
-67 │●────────┘
-66 │
-   └─2007  2009  2011  2013  2015  2017  2019  2020  2021  2022
-                 ▼ COVID‑19 dip (67.55)    ▲ Rebound
-</pre>
+```ascii
+Life Expectancy Trend (2007‑2022)  –  Global Average (Years)
+▲ 72 │                                                          ● 2022 (71.62)
+│ 71 │                                            ●─────────────┘
+│ 70 │                           ●───────────────● 2019 (70.92)
+│ 69 │                  ●────────┘
+│ 68 │         ●────────┘
+│ 67 │●────────┘
+▼ 66 │ 2007 (66.75)
+   └─┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬── Years
+    2007  2009  2011  2013  2015  2017  2019 '20 '21  2022
+                                              │   └─▲ Rebound (71.54)
+                                              ▼ COVID‑19 Dip (67.55)
+```
 
 Key observations:
 1. **Pre-pandemic trajectory:** Steady growth from 66.75 years (2007) to 70.92 years (2019)
@@ -754,7 +790,7 @@ This project was developed as part of the MySQL for Data Analytics and Business 
 ---
 
 <div align="center">
-  <p><i>Developed by Tobin Zolkowski • April 2025</i></p>
+  <p><i>Developed by Tobin Zolkowski • Last updated: April 2025</i></p>
   <p>
     <a href="https://github.com/tzolkowski96"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github" alt="GitHub"></a>
     <a href="https://www.linkedin.com/in/tobinzolkowski/"><img src="https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin" alt="LinkedIn"></a>
