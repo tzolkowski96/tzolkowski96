@@ -400,6 +400,13 @@ Thank you for exploring my project collection! I welcome feedback and am open to
 
 ---
 
+## 🚀 Upcoming Projects
+
+- Coming Soon: Excel Analytics
+- Coming Soon: Tableau Dashboards
+- In Progress: Power BI Reports
+- Planning Phase
+
 ## 🔗 Quick Navigation
 Navigate directly to key showcase projects:
 
