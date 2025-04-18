@@ -109,21 +109,21 @@ This repository showcases my technical skills through personal projects. Each in
 
 ### Data Analysis and Machine Learning
 
-#### 1. 🤖 [Employee Churn Prediction](./Employee-Churn-Prediction)
+#### 1. 🤖 [Employee Churn Prediction](https://github.com/tzolkowski96/tzolkowski96/tree/main/Employee-Churn-Prediction)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![ML](https://img.shields.io/badge/ML-Classification-green?style=flat-square)
 -   **Goal**: Predict employee turnover using ML models.
 -   **Tech**: Python, Pandas, Scikit-Learn, XGBoost, Matplotlib, Seaborn.
 -   **Achievements**: Developed models with **98% accuracy**; identified key churn drivers (overtime, project count, satisfaction); provided actionable HR recommendations.
 -   **Role**: End-to-end project execution (data cleaning, feature engineering, modeling, evaluation).
 
-#### 2. 🎬 [Movie Genre Analysis](./Movie_Genre_Analysis)
+#### 2. 🎬 [Movie Genre Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/Movie_Genre_Analysis)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![EDA](https://img.shields.io/badge/EDA-Statistical%20Analysis-orange?style=flat-square)
 -   **Goal**: Analyze film industry data for genre impact on performance.
 -   **Tech**: Python, Pandas, Matplotlib, Seaborn, Scikit-learn.
 -   **Findings**: Significant correlation between genre and financial success; identified demographic viewing patterns; validated success factors via statistical tests; created visualizations.
 -   **Role**: Data prep, EDA, statistical validation, interpretation.
 
-#### 3. 🎓 [Portuguese Students Higher Education Analysis](./portuguese-students-higher-education-analysis)
+#### 3. 🎓 [Portuguese Students Higher Education Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/portuguese-students-higher-education-analysis)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![ML](https://img.shields.io/badge/ML-Educational%20Analytics-purple?style=flat-square)
 -   **Goal**: Identify factors influencing student academic performance.
 -   **Tech**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn.
@@ -131,7 +131,7 @@ This repository showcases my technical skills through personal projects. Each in
 -   **Live Demo**: [Student Education Analysis](https://tzolkowski96.github.io/student-education-analysis/)
 -   **Role**: Analysis design, data prep, feature engineering, modeling, recommendations.
 
-#### 4. 🛒 [UFood Customer Analysis](./ufood_analysis)
+#### 4. 🛒 [UFood Customer Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/ufood_analysis)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Marketing](https://img.shields.io/badge/Marketing-Analytics-red?style=flat-square)
 -   **Goal**: Optimize marketing for a food delivery app via customer data analysis.
 -   **Tech**: Python, Pandas, Scikit-learn, Matplotlib, Seaborn, SciPy.
@@ -139,14 +139,14 @@ This repository showcases my technical skills through personal projects. Each in
 -   **Live Demo**: [Food Marketing Project](https://tzolkowski96.github.io/analyst-builder-food-marketing-project/)
 -   **Role**: Comprehensive analysis (segmentation, campaign measurement, product preferences, strategy).
 
-#### 5. ₿ [Crypto Market Insights](./crypto_market_insights)
+#### 5. ₿ [Crypto Market Insights](https://github.com/tzolkowski96/tzolkowski96/tree/main/crypto_market_insights)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Web Scraping](https://img.shields.io/badge/Web%20Scraping-Selenium-lightgrey?style=flat-square)
 -   **Goal**: Automate real-time crypto market analysis and reporting.
 -   **Tech**: Python, Selenium, Pandas, Matplotlib, Seaborn, SciPy.
 -   **Features**: Robust **web scraping** (CoinMarketCap); **technical analysis** metrics; dynamic visualizations; automated **Excel report generation**.
 -   **Role**: Designed and built the full data pipeline (scraping, processing, analysis, visualization).
 
-#### 6. 🚗 [Traffic Accident Analytics Engine](./us_accidents_analysis)
+#### 6. 🚗 [Traffic Accident Analytics Engine](https://github.com/tzolkowski96/tzolkowski96/tree/main/us_accidents_analysis)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Geospatial](https://img.shields.io/badge/Analysis-Geospatial-darkgreen?style=flat-square)
 -   **Goal**: Analyze **7.7M** US traffic accident records for public safety insights.
 -   **Tech**: Python, NumPy, Pandas, Scikit-learn, SciPy, Matplotlib, Seaborn, Folium.
@@ -163,21 +163,21 @@ This repository showcases my technical skills through personal projects. Each in
 -   **Live Demo**: [Global Population Insights](https://tzolkowski96.github.io/global-population-insights/)
 -   **Role**: Designed and built the complete platform.
 
-#### 8. 📏 [Length Unit Converter](./measurement_converter)
+#### 8. 📏 [Length Unit Converter](https://github.com/tzolkowski96/tzolkowski96/tree/main/measurement_converter)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Shiny](https://img.shields.io/badge/Framework-Shiny-darkblue?style=flat-square)
 -   **Goal**: Intuitive web app for unit conversion.
 -   **Tech**: Python, Shiny for Python.
 -   **Features**: Comprehensive length conversions; intuitive UI; real-time validation; error handling; responsive design.
 -   **Role**: Developed full application (logic, UI/UX, validation).
 
-#### 9. 🧮 [Streamlit Calculator](./streamlit_calculator)
+#### 9. 🧮 [Streamlit Calculator](https://github.com/tzolkowski96/tzolkowski96/tree/main/streamlit_calculator)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red?style=flat-square)
 -   **Goal**: Web-based calculator with operation history.
 -   **Tech**: Python, Streamlit.
 -   **Features**: Core arithmetic operations; session-based history tracking; clear UI; state management; error handling (e.g., division by zero).
 -   **Role**: Built complete application (logic, interface, state management, error handling).
 
-#### 10. 🌐 [Web Data Insights Explorer](./advanced_web_scraping_toolkit)
+#### 10. 🌐 [Web Data Insights Explorer](https://github.com/tzolkowski96/tzolkowski96/tree/main/advanced_web_scraping_toolkit)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Flask](https://img.shields.io/badge/Framework-Flask-black?style=flat-square)
 -   **Goal**: Versatile tool for non-technical users to extract, analyze, and visualize web data.
 -   **Tech**: Python, Flask, BeautifulSoup, Pandas, NLTK, Matplotlib, Seaborn, WordCloud.
@@ -186,14 +186,14 @@ This repository showcases my technical skills through personal projects. Each in
 
 ### Python Programming and Utilities
 
-#### 11. 🐍 [Python Exercises](./python_exercises)
+#### 11. 🐍 [Python Exercises](https://github.com/tzolkowski96/tzolkowski96/tree/main/python_exercises)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![Learning](https://img.shields.io/badge/Focus-Skill%20Building-yellow?style=flat-square)
 -   **Purpose**: Strengthen core Python fundamentals via diverse challenges.
 -   **Tech**: Python.
 -   **Skills Developed**: Function design, modules, file I/O, OOP, algorithms.
 -   **Growth**: Systematically improved coding proficiency, documented solutions, shared learnings.
 
-#### 12. 🗄️ [File Organizer](./file_organizer)
+#### 12. 🗄️ [File Organizer](https://github.com/tzolkowski96/tzolkowski96/tree/main/file_organizer)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![GUI](https://img.shields.io/badge/Interface-Tkinter-purple?style=flat-square)
 -   **Goal**: Intuitive file management utility with GUI for automated organization.
 -   **Tech**: Python, Tkinter, Pathlib, Shutil, Logging.
@@ -202,7 +202,7 @@ This repository showcases my technical skills through personal projects. Each in
 
 ### SQL Projects
 
-#### 1. 🌍 [World Life Expectancy Analysis](./world_life_expectancy)
+#### 1. 🌍 [World Life Expectancy Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/world_life_expectancy)
 ![SQL](https://img.shields.io/badge/SQL-Intermediate-orange?style=flat-square&logo=mysql) ![Data Quality](https://img.shields.io/badge/Focus-Data%20Cleaning-lightblue?style=flat-square)
 -   **Goal**: Clean and analyze global life expectancy data (2.9k records, 183 countries, 15 years).
 -   **Tech**: MySQL 8.0, MySQL Workbench.
@@ -227,7 +227,7 @@ This repository showcases my technical skills through personal projects. Each in
 -   **Skills**: Advanced SQL (CTEs, Window Functions), Data Quality Management, Time-Series Analysis, Performance Tuning.
 -   **Findings**: Significant life expectancy gap by development status; quantified COVID-19 impact; achieved 98% data quality post-cleaning; correlated life expectancy with socioeconomics.
 
-#### 2. 🇺🇸 [US Household Income Analysis](./us-household-income-analysis)
+#### 2. 🇺🇸 [US Household Income Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/us-household-income-analysis)
 ![SQL](https://img.shields.io/badge/SQL-Intermediate-orange?style=flat-square&logo=mysql) ![Data Quality](https://img.shields.io/badge/Focus-Statistical%20Analysis-green?style=flat-square)
 -   **Goal**: Extract economic insights from US demographic data (32k+ records, 50 states).
 -   **Tech**: MySQL 8.0+, MySQL Workbench.
@@ -376,18 +376,17 @@ I'm particularly interested in:
 
 ---
 
-## 📬 Let's Connect
+## 📬 Contact Information
 
-<div align="center">
-  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Tobin_Zolkowski-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tobin-zolkowski-844873200/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit_Website-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://tzolkowski96.github.io/portfolio/)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tzolkowski96)
-[![Contact Me](https://img.shields.io/badge/📧_Contact_Me-Send_a_Message-2ea44f?style=for-the-badge)](https://formspree.io/f/myzggjel) <!-- This is the correct way to link. Ensure the form 'myzggjel' is active on Formspree. -->
+- Email: Available via contact form on my [portfolio website](https://tzolkowski96.github.io/portfolio/)
+- Location: Madison, Wisconsin, USA
+- Phone: Available upon request
 
-</div>
-
-I'm passionate about data-driven problem solving and always eager to collaborate on interesting projects. Please feel free to reach out through LinkedIn or via the contact form above.
+**Connect with me:**
+- LinkedIn: https://www.linkedin.com/in/tobin-zolkowski-844873200/
+- GitHub: https://github.com/tzolkowski96
+- Medium: https://medium.com/@grateful_aqua_goat_147
+- Substack: https://tobinzolkowski.substack.com/
 
 ### 📅 Available For
 -   Data analysis and visualization projects
@@ -403,9 +402,9 @@ Thank you for exploring my project collection! I welcome feedback and am open to
 ## 🔗 Quick Navigation
 Navigate directly to key showcase projects:
 
-1.  🌍 [World Life Expectancy Analysis](./world_life_expectancy) - Advanced SQL Data Quality & Analysis
-2.  🤖 [Employee Churn Prediction](./Employee-Churn-Prediction) - Machine Learning Classification
-3.  🇺🇸 [US Household Income Analysis](./us-household-income-analysis) - Economic Data Insights & SQL Cleaning
-4.  🚗 [Traffic Accident Analytics](./us_accidents_analysis) - Geospatial Analysis & ML Prediction
-5.  🎬 [Movie Genre Analysis](./Movie_Genre_Analysis) - EDA & Statistical Insights
-6.  🌐 [Web Data Insights Explorer](./advanced_web_scraping_toolkit) - Web Scraping, NLP & Flask App
+1.  🌍 [World Life Expectancy Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/world_life_expectancy) - Advanced SQL Data Quality & Analysis
+2.  🤖 [Employee Churn Prediction](https://github.com/tzolkowski96/tzolkowski96/tree/main/Employee-Churn-Prediction) - Machine Learning Classification
+3.  🇺🇸 [US Household Income Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/us-household-income-analysis) - Economic Data Insights & SQL Cleaning
+4.  🚗 [Traffic Accident Analytics](https://github.com/tzolkowski96/tzolkowski96/tree/main/us_accidents_analysis) - Geospatial Analysis & ML Prediction
+5.  🎬 [Movie Genre Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/Movie_Genre_Analysis) - EDA & Statistical Insights
+6.  🌐 [Web Data Insights Explorer](https://github.com/tzolkowski96/tzolkowski96/tree/main/advanced_web_scraping_toolkit) - Web Scraping, NLP & Flask App
