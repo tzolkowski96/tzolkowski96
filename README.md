@@ -115,6 +115,7 @@ This repository showcases my technical skills through personal projects. Each in
 -   **Tech**: Python, Pandas, Scikit-Learn, XGBoost, Matplotlib, Seaborn.
 -   **Achievements**: Developed models with **98% accuracy**; identified key churn drivers (overtime, project count, satisfaction); provided actionable HR recommendations.
 -   **Role**: End-to-end project execution (data cleaning, feature engineering, modeling, evaluation).
+-   **Live Demo**: https://tzolkowski96.github.io/Salifort-Motors-Project/
 
 #### 2. 🎬 [Movie Genre Analysis](https://github.com/tzolkowski96/tzolkowski96/tree/main/Movie_Genre_Analysis)
 ![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=flat-square&logo=python) ![EDA](https://img.shields.io/badge/EDA-Statistical%20Analysis-orange?style=flat-square)
