@@ -19,11 +19,13 @@
   - [Advanced SQL Techniques](#advanced-sql-techniques)
   - [Data Engineering Best Practices](#data-engineering-best-practices)
   - [Statistical Analysis Methods](#statistical-analysis-methods)
+- [Analytical Framework Evolution](#analytical-framework-evolution)
 - [Project Structure](#project-structure)
 - [Sample Queries & Results](#sample-queries--results)
   - [Regional Income Analysis](#regional-income-analysis)
   - [Income Distribution Analysis](#income-distribution-analysis)
   - [Advanced Text Standardization Procedure](#advanced-text-standardization-procedure)
+  - [Executive Dashboard](#executive-dashboard-from-eda-framework)
 - [Quality Assurance](#quality-assurance)
 - [Database Design](#database-design)
 - [Workflow](#workflow)
@@ -49,7 +51,7 @@
 <img src="https://images.unsplash.com/photo-1564939558297-fc396f18e5c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="US Income Distribution Map" width="700"/>
 </div>
 
-Ever wondered why some regions in the US seem to thrive while others struggle? I tackled this question by diving deep into household income data across the United States. Using MySQL 8.0+, I transformed messy demographic data into a clear economic story through careful cleaning and statistical analysis. My investigation uncovered a striking 30% income gap between Northeast ($102,068) and Southeast ($71,307) regions, painting a vivid picture of America's economic divide. After improving data quality to an exceptional 9.62/10 score, I revealed patterns of income inequality that could inform regional development strategies for years to come.
+Ever wondered why some regions in the US seem to thrive while others struggle? I tackled this question through a comprehensive two-phase approach. First, I cleaned and analyzed household income data using advanced SQL techniques, uncovering a striking 30% income gap between Northeast ($102,068) and Southeast ($71,307) regions. Then, I built a reusable EDA framework that transforms these insights into executive-ready business intelligence through 4 focused analytical procedures. Using MySQL 8.0+, I created an enterprise-grade solution that not only reveals America's economic divide but also provides actionable recommendations for policymakers and business leaders. After improving data quality to an exceptional 9.62/10 score, I revealed patterns of income inequality that could inform regional development strategies for years to come.
 
 ```mermaid
 pie
@@ -130,6 +132,7 @@ flowchart TD
     A --> D[Dynamic SQL]
     A --> E[Stored Procedures]
     A --> F[Transaction Management]
+    A --> G[Business Intelligence Framework]
     
     B --> B1[DENSE_RANK for<br>inequality rankings]
     B --> B2[ROW_NUMBER for<br>percentile calculations]
@@ -147,13 +150,17 @@ flowchart TD
     F --> F1[Savepoints for<br>granular error recovery]
     F --> F2[Comprehensive<br>logging for debugging]
     
+    G --> G1[Executive dashboards<br>with visual alerts]
+    G --> G2[Threshold-based<br>recommendations]
+    G --> G3[Chart-ready<br>data exports]
+    
     classDef main fill:#3498db,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold
     classDef sub fill:#2ecc71,stroke:#333,stroke-width:1px,color:#fff,font-weight:bold
     classDef leaf fill:#f1c40f,stroke:#333,stroke-width:1px,color:#333
     
     class A main
-    class B,C,D,E,F sub
-    class B1,B2,B3,C1,C2,D1,D2,E1,E2,F1,F2 leaf
+    class B,C,D,E,F,G sub
+    class B1,B2,B3,C1,C2,D1,D2,E1,E2,F1,F2,G1,G2,G3 leaf
 ```
 
 ### Data Engineering Best Practices
@@ -198,9 +205,28 @@ graph TD
     class B1,B2,C1,C2,D1,D2,E1,E2 leaf
 ```
 
+## Analytical Framework Evolution
+
+This project demonstrates analytical maturity through two complementary SQL scripts:
+
+### 📊 Phase 1: Data Cleaning & Initial Analysis (`us_household_income_cleaning_analysis.sql`)
+- Comprehensive data quality improvement (achieving 9.62/10 score)
+- Deep exploratory analysis revealing regional patterns
+- 2,000+ lines of detailed data transformation and discovery
+
+### 🎯 Phase 2: Production-Ready EDA Framework (`us_household_income_eda_framework.sql`)
+- 4 focused analytical procedures delivering core business insights
+- Executive dashboard with visual alert signals (🔴🟡🟢)
+- Chart-ready data exports for business intelligence tools
+- 15-45 second total execution time for quarterly reviews
+
+The progression from exploratory analysis to production framework showcases the ability to transform initial findings into sustainable business tools.
+
 ## Project Structure
 
-I designed my SQL script with a methodical, step-by-step approach to ensure thorough analysis:
+I designed my SQL approach with two complementary components:
+
+### Data Cleaning and Analysis Script (`us_household_income_cleaning_analysis.sql`)
 
 <div class="project-steps">
 <ol style="list-style-position: inside; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
@@ -216,6 +242,18 @@ I designed my SQL script with a methodical, step-by-step approach to ensure thor
   <li><strong>Statistical Analysis:</strong> Calculated percentiles, regional aggregations, and inequality metrics with documented methodology</li>
   <li><strong>Performance Optimization:</strong> Implemented strategic indexing and helper procedures reducing query execution time from 68.5 to 21.9 seconds</li>
   <li><strong>Results Presentation:</strong> Summarized findings with actionable recommendations for economic development strategies</li>
+</ol>
+</div>
+
+### EDA Framework Script (`us_household_income_eda_framework.sql`)
+
+<div class="framework-components">
+<ol style="list-style-position: inside; background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+  <li><strong>Infrastructure Setup:</strong> Session configuration, logging tables, regional classifications, utility functions</li>
+  <li><strong>Core Analytical Procedures:</strong> Four focused insights - national baseline, regional gaps, coastal premium, performance outliers</li>
+  <li><strong>Executive Reporting:</strong> Comprehensive dashboard with KPIs and visual alerts, strategic recommendations</li>
+  <li><strong>Data Export Procedures:</strong> Chart-ready outputs for visualization tools (regional charts, state rankings)</li>
+  <li><strong>Performance Monitoring:</strong> Execution tracking, data quality validation, framework diagnostics</li>
 </ol>
 </div>
 
@@ -397,6 +435,22 @@ SELECT City FROM USHouseholdIncome_Clean WHERE City LIKE '% %' LIMIT 5;
 | San Francisco   |
 | Saint Louis     |
 | Salt Lake       |
+
+### Executive Dashboard (From EDA Framework)
+
+The framework provides executive-ready insights with visual indicators:
+
+```sql
+CALL executive_summary();
+```
+
+**Results:**
+
+| summary_type | locations_analyzed | national_median | inequality_index | regional_disparity_ratio | inequality_signal | regional_signal |
+|--------------|-------------------|-----------------|------------------|-------------------------|-------------------|-----------------|
+| EXECUTIVE ECONOMIC SUMMARY | 32,526 | $85,453 | 1.027 | 1.43 | 🔴 HIGH PRIORITY: Income inequality intervention needed | 🔴 HIGH PRIORITY: Regional development investment needed |
+
+The visual alert system immediately highlights areas requiring strategic attention.
 
 ## Quality Assurance
 
@@ -627,9 +681,13 @@ This methodical approach ensured data integrity throughout the process while cre
    IGNORE 1 ROWS;
    ```
 
-3. Execute the SQL script:
-   ```
+3. Execute the SQL scripts:
+   ```sql
+   -- First, run the cleaning and analysis script
    SOURCE us_household_income_cleaning_analysis.sql;
+   
+   -- Then, run the EDA framework
+   SOURCE us_household_income_eda_framework.sql;
    ```
 
 4. Verify installation success:
@@ -639,6 +697,9 @@ This methodical approach ensured data integrity throughout the process while cre
    
    -- Verify view creation
    SHOW FULL TABLES IN us_income_analysis WHERE table_type = 'VIEW';
+   
+   -- Check EDA framework execution
+   SELECT * FROM analysis_log ORDER BY timestamp DESC;
    ```
 
 ### Working with the Results
@@ -1015,6 +1076,8 @@ The exceptional data quality (9.62/10) achieved through systematic validation gi
 
 For policymakers, economic developers, and community leaders, this analysis offers data-driven insights that could inform more targeted approaches to addressing regional economic divides. The patterns uncovered here suggest that one-size-fits-all economic policies may fall short of addressing America's complex economic landscape.
 
+The development of the EDA framework represents the evolution from analysis to actionable intelligence. By transforming initial discoveries into repeatable procedures that deliver focused insights in under a minute, I've created a tool that could drive real business decisions. The framework's ability to generate executive dashboards with visual alerts and strategic recommendations demonstrates not just technical SQL skills, but the ability to bridge the gap between data and decision-making.
+
 Through advanced SQL techniques—window functions, CTEs, dynamic SQL, and parameterized procedures—I've created an enterprise-grade analysis that transforms raw data into meaningful economic insights. But beyond the technical achievement lies a deeper understanding of the diverse economic realities that shape American communities from coast to coast.
 </div>
 
@@ -1074,7 +1137,7 @@ gitGraph
 I welcome contributions! Here's how you can help improve this project:
 
 1. **Fork the repository** and create your branch from `main`
-2. **Enhance the SQL script** by:
+2. **Enhance the SQL scripts** by:
    - Optimizing existing queries
    - Adding new analytical perspectives
    - Improving data validation techniques
