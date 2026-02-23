@@ -778,6 +778,5 @@ This project was developed as part of the MySQL for Data Analytics and Business 
   <p><i>Developed by Tobin Zolkowski • Last updated: April 2025</i></p>
   <p>
     <a href="https://github.com/tzolkowski96"><img src="https://img.shields.io/badge/GitHub-Profile-blue?style=flat&logo=github" alt="GitHub"></a>
-    <a href="https://www.linkedin.com/in/tobinzolkowski/"><img src="https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat&logo=linkedin" alt="LinkedIn"></a>
   </p>
 </div>

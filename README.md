@@ -3,7 +3,6 @@
 <div align="center">
 
   ![Data Professional Banner](https://img.shields.io/badge/🔍%20Data%20Professional-Portfolio-2ea44f?style=for-the-badge)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/tobin-zolkowski-844873200/)
   [![Portfolio Website](https://img.shields.io/badge/Portfolio-Visit-brightgreen?style=flat-square)](https://tzolkowski96.github.io/portfolio/)
   ![Skills](https://img.shields.io/badge/Skills-Python%20%7C%20SQL%20%7C%20Tableau-yellowgreen?style=flat-square)
 
@@ -384,10 +383,7 @@ I'm particularly interested in:
 - Phone: Available upon request
 
 **Connect with me:**
-- LinkedIn: https://www.linkedin.com/in/tobin-zolkowski-844873200/
 - GitHub: https://github.com/tzolkowski96
-- Medium: https://medium.com/@grateful_aqua_goat_147
-- Substack: https://tobinzolkowski.substack.com/
 
 ### 📅 Available For
 -   Data analysis and visualization projects

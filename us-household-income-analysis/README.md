@@ -1173,9 +1173,6 @@ For major changes, please open an issue first to discuss your ideas.
       <a href="https://github.com/tzolkowski96" style="text-decoration: none; margin-right: 15px;">
         <img src="https://img.shields.io/badge/GitHub-Profile-lightgrey?style=flat&logo=github" alt="GitHub Profile">
       </a>
-      <a href="https://www.linkedin.com/in/tobin-zolkowski-844873200/" style="text-decoration: none;">
-        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin" alt="LinkedIn Profile">
-      </a>
     </div>
   </div>
 </div>
